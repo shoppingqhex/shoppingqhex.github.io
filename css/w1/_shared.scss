@@ -1,0 +1,73 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 32px;
+    line-height: 45px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'PingFang TC';
+}
+
+.title-en {
+    font-size: 24px;
+    line-height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Roboto;
+    margin-left: 16px;
+}
+
+.content {
+
+    font-family: 'PingFang TC', ' Microsoft JhengHei';
+
+    h3,ul {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.timeline-section {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        bottom: 18px;
+        left: 24px;
+        width: 1px;
+        transform: translateX(-50%);
+        background-color: $theme_color_light;
+    }
+}
+.full-timeline.timeline-section::after {
+    top: 0px;
+    bottom: 0px;
+}
+
+.timeline-pointer {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        bottom: 0;
+        left: 24px;
+        width: 16px;
+        height: 16px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background-color: $theme_color_light;
+        z-index: 1;
+    }
+}
