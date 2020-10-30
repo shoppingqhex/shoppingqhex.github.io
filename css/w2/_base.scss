@@ -1,0 +1,75 @@
+//字型樣式
+.text-white{
+    color: #ffffff;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-bold{
+    font-weight:bold;
+}
+.text-medium{
+    font-weight:medium;
+}
+.text-italic{
+    font-style: italic;
+}
+
+.text-ch
+{
+    font-size: 20px;
+}
+
+.multiLineHeight{
+    line-height: 36px;
+}
+.multiLineHeight-ch{
+    line-height: 30px;
+}
+
+
+
+//間距
+@for $i from 1 through 20{
+    .mt-#{$i} {
+        margin-top: $i * 0.5rem;
+    }
+    .mr-#{$i} {
+        margin-right: $i * 0.5rem;
+    }
+    .mb-#{$i} {
+        margin-bottom: $i * 0.5rem;
+    }
+    .ml-#{$i} {
+        margin-left: $i * 0.5rem;
+    }
+    .mx-#{$i} {
+        margin-left: $i * 0.5rem;
+        margin-right: $i * 0.5rem;
+    }
+    .my-#{$i} {
+        margin-top: $i * 0.5rem;
+        margin-bottom: $i * 0.5rem;
+    }
+    .pt-#{$i} {
+        padding-top: $i * 0.5rem;
+    }
+    .pr-#{$i} {
+        padding-right: $i * 0.5rem;
+    }
+    .pb-#{$i} {
+        padding-bottom: $i * 0.5rem;
+    }
+    .pl-#{$i} {
+        padding-left: $i * 0.5rem;
+    }
+    .px-#{$i} {
+        padding-left: $i * 0.5rem;
+        padding-right: $i * 0.5rem;
+    }
+    .py-#{$i} {
+        padding-top: $i * 0.5rem;
+        padding-bottom: $i * 0.5rem;
+    }  
+}
