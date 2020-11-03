@@ -19,7 +19,7 @@ header{
     background-size: cover;
     background-position: center center;
 
-    ul{
+    .header__box{
         width: 304px;
         margin: 0 auto;
         padding-top: 356px;
@@ -27,9 +27,6 @@ header{
         .header__tittle{
             font-size: 80px;
             line-height: 94px;
-        }
-        .header__subtittle{
-            padding: 0 10px;
         }
         .header__links{
             padding: 0 10px;
@@ -42,13 +39,15 @@ header{
 .about{
     width: 412px;
     margin: 0 auto;
-    .listbox{
+    .exlist::before{
+        content: "";
         display: inline-block;
         vertical-align: middle;
         width: 22px;
         height: 22px;
         background-color: $theme_color;
         border-radius: 50%;
+        margin-right: 1rem;
     }
 }
 .myBrand{
@@ -70,8 +69,13 @@ header{
     .work_img{
         display:flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 footer{
     background-color: #000;
+}
+
+a:hover{
+    color: #FCBC0C;
 }

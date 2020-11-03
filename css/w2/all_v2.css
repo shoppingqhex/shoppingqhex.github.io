@@ -1164,23 +1164,19 @@ header {
   background-position: center center;
 }
 
-header ul {
+header .header__box {
   width: 304px;
   margin: 0 auto;
   padding-top: 356px;
   font-family: Roboto;
 }
 
-header ul .header__tittle {
+header .header__box .header__tittle {
   font-size: 80px;
   line-height: 94px;
 }
 
-header ul .header__subtittle {
-  padding: 0 10px;
-}
-
-header ul .header__links {
+header .header__box .header__links {
   padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1195,13 +1191,15 @@ header ul .header__links {
   margin: 0 auto;
 }
 
-.about .listbox {
+.about .exlist::before {
+  content: "";
   display: inline-block;
   vertical-align: middle;
   width: 22px;
   height: 22px;
   background-color: #891818;
   border-radius: 50%;
+  margin-right: 1rem;
 }
 
 .myBrand {
@@ -1232,9 +1230,16 @@ header ul .header__links {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer {
   background-color: #000;
 }
-/*# sourceMappingURL=all.css.map */
+
+a:hover {
+  color: #FCBC0C;
+}
+/*# sourceMappingURL=all_v2.css.map */
