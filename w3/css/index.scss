@@ -1,0 +1,661 @@
+@import 'reset';
+@import 'var';
+@import 'mixin';
+@import 'shared';
+@import 'base';
+
+nav {
+    height: 138px;
+    background-color: $theme_primary;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @include md {
+        height: 108px;
+        padding: 0 39px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include lg {
+        padding: 0 88px;
+    }
+
+
+    h1 {
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        a {
+            background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/logo.png');
+            background-size: cover;
+            background-position: center center;
+            width: 48px;
+            height: 29.14px;
+            display: block;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+            
+            @include md {
+                width: 80px;
+                height: 48.57px;
+            }
+        }
+    }
+
+
+    .links {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+        font-size: 20px;
+        line-height: 28px;
+        @include md {
+            width: 420px;
+        }
+        @include lg {
+            width: 492px;
+        }
+        
+        .link{
+            border: 1px solid #fff;
+            width: 50%;
+            height: 44px;
+            line-height: 44px;
+            @include md {
+                border: 0;
+                width: auto;
+            }
+            a{
+                display: block;
+                &:hover {
+                    color: $theme_primary;
+                    background-color: #fff;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/banner-sm.png');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 394px;
+    @include md {
+        
+        height: 840px;
+    }
+    @include lg {
+        background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/banner.png');
+    }
+
+    .banner-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        height: 100%;
+        // border: 1px solid #000;
+
+        p {
+            font-size: 16px;
+            line-height: 22px;
+            @include md {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            @include lg {
+                font-size: 36px;
+                line-height: 50px;
+            }
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 45px;
+            @include md {
+                font-size: 48px;
+                line-height: 67px;
+            }
+            @include lg {
+                font-size: 64px;
+                line-height: 90px;
+            }
+        }
+    }
+}
+
+//section1
+.sec1-spacing{
+    padding-top: 32px;
+    padding-bottom: 52px;
+    @include md{
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+    @include lg {
+        padding-top: 64px;
+    }
+}
+.sec1_cards {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+
+    .sec1_card {
+        max-width: 237px;
+        @include lg{
+            max-width: 208px;
+        }
+        .sec1_card_title {
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 16px;
+            @include lg {
+                margin-top: 40px;
+                font-size: 24px;
+                line-height: 33px;
+            }
+        }
+        .sec1_card_body {
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 8px;
+            @include lg {
+                margin-top: 4px;
+            }
+        }
+    }
+    .sec1_card_order{
+        @include lg {
+            order: -1;
+        }
+    }
+    
+}
+
+//section2
+.classic_boxs {
+    text-transform: uppercase;
+    
+    @include md{
+        display: flex;
+    }
+
+    .classic_product {
+    
+        @include md{
+            width: 57.2%;
+            margin-right: 30px;
+        }
+    }
+
+    .classic_product-sp {
+        order: 0;
+
+        @include lg {
+            order: 1;
+            margin-left: 30px;
+            margin-right: 0;
+        }
+    }
+
+    .classic_boxs_text {
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        color: white;
+
+        @include md{
+            color: $theme_primary;
+            position: static;
+            transform: translate(0,0);
+        }
+        
+        .classic_text_img{
+            width: 32px;
+            height: 32px;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            @include lg{
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .classic_text_img_1{
+            background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond-white.svg');
+            @include md{
+                background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond.svg');
+            }
+        }
+        .classic_text_img_2{
+            background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun-white.svg');
+            @include md{
+                background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun.svg');
+            }
+        }
+        .classic_text_img_3{
+            background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder-white.svg');
+            @include md{
+                background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder.svg');
+            }
+        }
+
+        p {
+            font-weight: 900;
+            font-size: 28px;
+            line-height: 37px;
+            @include lg {
+                font-size: 48px;
+                line-height: 63px;
+            }
+        }
+    }
+}
+
+.classic_flexend {
+    justify-content: flex-start;
+
+    @include lg {
+        justify-content: flex-end;
+    }
+}
+
+//section3
+.coBranding {
+    background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/bg.png');
+    background-position: center center;
+
+    .coBranding-boxs {
+        @include md {
+            display: flex;
+        }
+
+        .coBranding_box {
+            position: relative;
+
+            p {
+                white-space: nowrap;
+                font-size: 32px;
+                line-height: 43px;
+                font-weight: bold;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 10;
+                transform: translate(-50%, -50%);
+                @include lg{
+                    font-size: 72px;
+                    line-height: 95px; 
+                }
+            }
+        }
+        .coBranding_box_spacing{
+            margin-bottom: 16px;
+            @include md {
+                margin-bottom: 0;
+                margin-right: 30px;
+            }
+        }
+
+        .coBranding_img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index: 5;
+        }
+    }
+
+}
+
+//section4
+.sec4_cards {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .sec4_card {
+        font-size: 14px;
+        line-height: 19px;
+        color: #212529;
+        @include md {
+            width: calc(50% - 15px);
+        }
+        @include lg {
+            width: calc(25% - 22.5px);
+        }
+        .sec4_card_header{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .sec4_card_body {
+            // width: 100%;
+            border: 1px solid #DEE2E6;
+            padding: 16px;
+            @include lg{
+                padding: 14px 16px 15px 16px;
+            }
+
+            .sec4_card_body_content {
+                font-size: 16px;
+                line-height: 24px;
+                margin: 16px 0;
+                @include lg{
+                    margin: 7px 0 10px 0; 
+                }
+            }
+        }
+    }
+    .sec4_card_spacing{
+        margin-bottom: 16px;
+        @include md{
+            margin-right: 30px;
+            margin-bottom: 28px;
+        }
+        @include lg {
+            margin-bottom: 0;
+        }
+    }
+    .sec4_card_spacing-sp{
+        margin-right: 0px;
+        @include lg{
+            margin-right: 30px;
+        }
+    }
+}
+
+//section5
+.form_container {
+    max-width: 345px;
+    margin: 0 auto;
+    @include md{
+        max-width: 450px;
+    }
+    @include lg {
+        max-width: 730px;
+    }
+
+    .form_subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        @include md{
+            margin-bottom: 12px;
+        }
+        @include lg{
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+    }
+    form{
+        font-size: 14px;
+        line-height: 20px;
+        @include lg{
+            font-size: 16px;
+            line-height: 22px;
+        }
+        label {
+            display: block;
+        }
+        .formstyle{
+            margin-bottom: 8px;
+            @include lg{
+                margin-bottom: 16px;
+            }
+        }
+        .formstyle-sp{
+            display: flex;
+            margin-bottom: 24px;
+            @include md{
+                margin-bottom: 20px;
+            }
+            @include lg {
+                margin-bottom: 42px;
+            }
+        }
+        
+        .form-mainstyle {
+            width: 100%;
+            border: 1px solid #000000;
+            border-radius: 0px;
+            text-indent: 16px;
+            font-size: 14px;
+            line-height: 20px;
+            @include lg{
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        .form_input-height {
+            height: 50px;
+        }
+        textarea {
+            height: 136px;
+            padding-top: 14px;
+        }
+        .checkbox_text{
+            font-size: 14px;
+            line-height: 21px;
+            @include lg{
+                font-size: 16px;
+                line-height: 24px;
+            } 
+        }
+    }
+    
+    .bynstyle {
+        display: flex;
+        justify-content: center;
+        .recommend_btn {
+            width: 165px;
+            height: 36px;
+            border: 0;
+            @include md{
+                width: 210px;
+            }
+            @include lg {
+                width: 350px;
+                height: 54px;
+            }
+        }
+    }
+}
+
+
+//section共用
+.section-spacing{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include md{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @include lg{
+        padding-top: 64px;
+        padding-bottom: 80px;
+    }
+}
+.section-spacing-sp{
+    @include lg{
+        padding-bottom: 64px;
+    }
+}
+
+//footer
+
+.footer-spacing{
+  padding-top: 24px;
+  padding-bottom: 25px;
+  @include md{
+    padding-top: 40px;
+    padding-bottom: 40px;  
+  }
+  @include lg {
+    padding-top: 48px;
+    padding-bottom: 40px;  
+  }  
+}
+.footer_top{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+
+    padding-bottom: 24px;
+    @include md{
+        padding-bottom: 27px;
+    }
+    @include lg {
+        padding-bottom: 22px;
+    }
+    .footer_top_leftSide{
+        .footer_top_leftSide_links{
+            display: none;
+            @include md{
+                display: flex;
+                margin-bottom: 24px;
+            }
+            @include lg {
+                margin-bottom: 36px;
+            }
+        }
+        .leftSide_links-spacing{
+            margin-right: 40px;
+            @include lg{
+                margin-right: 48px;
+            }
+        }
+        .footer_box{
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 21px;
+            @include md{
+                font-size: 20px;
+                line-height: 26px;
+            }
+            @include lg {
+                font-size: 36px;
+                line-height: 48px;
+            }
+            img{
+                width: 20px;
+                margin-right: 5px;
+                @include md {
+                    width: 24px;
+                    margin-right: 12px;
+                }
+                @include lg {
+                    width: 44px;
+                    margin-right: 16px;
+                }
+            }
+        }
+        .footer_box_spacing{
+            margin-bottom: 7px;
+            @include md{
+                margin-bottom: 11px;
+            }
+            @include lg {
+                margin-bottom: 17px;
+            }
+        }
+    }
+  
+    .footer_top_rightSide{
+        display: flex;
+        img{
+            width: 24px;
+            @include lg{
+                width: 48px;
+            }
+        }
+        .rightSide_img-spacing{
+            margin-right: 24px;
+            @include lg{
+                margin-right: 32px;
+            }
+        }
+    }  
+}
+.footer_bottom{
+    padding-top: 18px;
+    @include md{
+        padding-top: 24px;
+    }
+    .footer_bot_items{
+        // border: 1px solid #000;
+        font-size: 14px;
+        line-height: 20px;
+        @include md{
+            display: flex;
+            align-items: center;
+        }
+        .footer_bot_item1{
+            width: 46px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include md{
+                display: none;
+            }
+            @include lg {
+                display: block;
+                margin-right: 38px;
+
+                width: 80px;
+                position: static;
+            }
+        }
+        .footer_bot_item2{
+            font-size: 14px;
+            line-height: 19px;    
+            @include md{
+                margin-right: auto;
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+        .footer_bot_item3{
+            margin-top: 7px;
+            @include md{
+                margin-top: 0;
+                margin-right: 24px;
+            }
+            @include lg {
+                margin-right: 62px;
+            }
+        }
+        .footer_bot_item4{
+            margin-top: 8px;
+            @include md{
+                margin-top: 0;
+            }
+        }
+    }
+    
+}
+
