@@ -1,8 +1,8 @@
 @import 'reset';
 @import 'var';
 @import 'mixin';
-@import 'shared';
 @import 'base';
+@import 'helper';
 
 nav {
     height: 138px;
@@ -79,7 +79,6 @@ nav {
                 &:hover {
                     color: $theme_primary;
                     background-color: #fff;
-                    font-weight: bold;
                 }
             }
         }
@@ -137,7 +136,7 @@ nav {
 }
 
 //section1
-.sec1-spacing{
+.slogan-spacing{
     padding-top: 32px;
     padding-bottom: 52px;
     @include md{
@@ -148,17 +147,17 @@ nav {
         padding-top: 64px;
     }
 }
-.sec1_cards {
+.slogan_cards {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
 
-    .sec1_card {
+    .slogan_card {
         max-width: 237px;
         @include lg{
             max-width: 208px;
         }
-        .sec1_card_title {
+        .slogan_card_title {
             font-size: 20px;
             line-height: 28px;
             margin-top: 16px;
@@ -168,7 +167,7 @@ nav {
                 line-height: 33px;
             }
         }
-        .sec1_card_body {
+        .slogan_card_body {
             font-size: 16px;
             line-height: 24px;
             margin-top: 8px;
@@ -177,7 +176,7 @@ nav {
             }
         }
     }
-    .sec1_card_order{
+    .slogan_card_order{
         @include lg {
             order: -1;
         }
@@ -330,12 +329,12 @@ nav {
 }
 
 //section4
-.sec4_cards {
+.feedback_cards {
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
 
-    .sec4_card {
+    .feedback_card {
         font-size: 14px;
         line-height: 19px;
         color: #212529;
@@ -345,13 +344,13 @@ nav {
         @include lg {
             width: calc(25% - 22.5px);
         }
-        .sec4_card_header{
+        .feedback_card_header{
             width: 100%;
             img{
                 width: 100%;
             }
         }
-        .sec4_card_body {
+        .feedback_card_body {
             // width: 100%;
             border: 1px solid #DEE2E6;
             padding: 16px;
@@ -359,7 +358,7 @@ nav {
                 padding: 14px 16px 15px 16px;
             }
 
-            .sec4_card_body_content {
+            .feedback_card_body_content {
                 font-size: 16px;
                 line-height: 24px;
                 margin: 16px 0;
@@ -369,7 +368,7 @@ nav {
             }
         }
     }
-    .sec4_card_spacing{
+    .feedback_card_spacing{
         margin-bottom: 16px;
         @include md{
             margin-right: 30px;
@@ -379,7 +378,7 @@ nav {
             margin-bottom: 0;
         }
     }
-    .sec4_card_spacing-sp{
+    .feedback_card_spacing-sp{
         margin-right: 0px;
         @include lg{
             margin-right: 30px;
@@ -467,13 +466,22 @@ nav {
         }
     }
     
-    .bynstyle {
+    .btnstyle {
         display: flex;
         justify-content: center;
+
         .recommend_btn {
+            cursor: pointer;
             width: 165px;
             height: 36px;
             border: 0;
+
+            background-color:rgb(170,6,1);
+            transition: 0.2s;
+            &:hover{
+                background-color: rgb(101,3,0);
+                font-size: 16px;
+            }
             @include md{
                 width: 210px;
             }
@@ -542,7 +550,7 @@ nav {
                 margin-bottom: 36px;
             }
         }
-        .leftSide_links-spacing{
+        .leftSide_link-spacing{
             margin-right: 40px;
             @include lg{
                 margin-right: 48px;
@@ -560,6 +568,11 @@ nav {
             @include lg {
                 font-size: 36px;
                 line-height: 48px;
+            }
+            &:hover {
+                opacity: 0.6;
+                color: #ffffff;
+                font-weight: normal;
             }
             img{
                 width: 20px;
@@ -587,10 +600,14 @@ nav {
   
     .footer_top_rightSide{
         display: flex;
+        
         img{
             width: 24px;
             @include lg{
                 width: 48px;
+            }
+            &:hover {
+                filter: invert(100%);
             }
         }
         .rightSide_img-spacing{

@@ -1,120 +1,87 @@
-//背景色
-.bg-light{
-    background-color: $bg_light;
+*,*::before,*::after {
+    box-sizing: border-box;
 }
-.bg-primary{
-    background-color: $theme_primary;
+body{
+    font-family: 'Roboto', 'Noto Sans', sans-serif;
 }
-
-//字型樣式
-.text-white{
-    color: #ffffff;
+img{
+    display:block;
+    max-width:100%;
+    height:auto; 
 }
-.text-gray{
-    color: #707070;
+ul{
+    list-style: none;
 }
-.text-primary{
-    color: $theme_primary;
-}
-.text-primary-dark{
-    color: $theme_primary_dark;
-}
-
-
-.text-center{
-    text-align: center;
-}
-.text-bold{
-    font-weight:bold;
-}
-.text-medium{
-    font-weight: 500;
-}
-.text-italic{
-    font-style: italic;
-}
-
-
-//間距
-$spacing: (
-    "mt": 'margin-top',
-    "mb": 'margin-bottom',
-    "ml": 'margin-left',
-    "mr": 'margin-right',
-    "pt": 'padding-top',
-    "pb": 'padding-bottom',
-    "pl": 'padding-left',
-    "pr": 'padding-right',
-);
-
-@each $key,$value in $spacing {
-    @for $i from 1 through 20{
-        .#{$key}-#{$i} {
-            #{$value} : $i * 0.5rem;
-        }
-        .mx-#{$i} {
-            margin-left: $i * 0.5rem;
-            margin-right: $i * 0.5rem;
-        }
-        .my-#{$i} {
-            margin-top: $i * 0.5rem;
-            margin-bottom: $i * 0.5rem;
-        }
-        .px-#{$i} {
-            padding-left: $i * 0.5rem;
-            padding-right: $i * 0.5rem;
-        }
-        .py-#{$i} {
-            padding-top: $i * 0.5rem;
-            padding-bottom: $i * 0.5rem;
-        }  
+a{
+    color: unset;
+    text-decoration: none;
+    &:hover{
+        color: $theme_primary_dark;
+        font-weight: bold;
     }
-    .#{$key}-md-0{
-        @include md{
-            #{$value} : 0 !important;
-        }  
+}
+h3{
+    margin-bottom: 20px;
+    
+    font-size: 20px;
+    line-height: 28px;
+    @include md{
+        margin-bottom: 32px;
+
+        font-size: 32px;
+        line-height: 45px;
     }
-    .#{$key}-lg-0{
-        @include lg{
-            #{$value} : 0 !important;
-        }  
+    @include lg{
+        margin-bottom: 60px;
+        
+        font-size: 48px;
+        line-height: 67px;
+    }
+}
+.h3-style{
+    font-size: 24px;
+    line-height: 33px;
+    @include md{
+        font-size: 32px;
+        line-height: 45px;
+    }
+    @include lg{
+        font-size: 48px;
+        line-height: 67px;
+    }
+}
+.h3-sp{
+    margin-bottom: 20px;
+    @include md{
+        margin-bottom: 16px;
+    }
+    @include lg{
+        margin-bottom: 24px;
     }
 }
 
-.mt-60p{
-    margin-top: 60px;
-}
-.mt-20p{
-    margin-top: 20px;
-}
-.mt-4p{
-    margin-top: 4px;
-}
-.ml-30p{
-    margin-left: 30px;
-}
-.mr-30p{
-    margin-right: 30px;
-}
-
-.pb-52p{
-    padding-bottom: 52px;
+.container{
+    max-width: 1110px;
+    padding: 0 15px;
+    @include md {
+        padding: 0 39px;
+    }
+    @include lg {
+        margin: 0 auto;
+    }
 }
 
 
-@include md{
-    .mb-md-0{
-        margin-bottom: 0;
-    }
-    .pb-md-80p{
-        padding-bottom: 80px;
-    }
+
+.position-r{
+    position: relative;
 }
-@include lg{
-    .mt-lg-4{
-        margin-top: 32px;
-    }
-    .mb-lg-0{
-        margin-bottom: 0;
+
+.cards{
+    display: flex;
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
     }
 }

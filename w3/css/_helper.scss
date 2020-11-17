@@ -1,0 +1,120 @@
+//背景色
+.bg-light{
+    background-color: $bg_light;
+}
+.bg-primary{
+    background-color: $theme_primary;
+}
+
+//字型樣式
+.text-white{
+    color: #ffffff;
+}
+.text-gray{
+    color: #707070;
+}
+.text-primary{
+    color: $theme_primary;
+}
+.text-primary-dark{
+    color: $theme_primary_dark;
+}
+
+
+.text-center{
+    text-align: center;
+}
+.text-bold{
+    font-weight:bold;
+}
+.text-medium{
+    font-weight: 500;
+}
+.text-italic{
+    font-style: italic;
+}
+
+
+//間距
+$spacing: (
+    "mt": 'margin-top',
+    "mb": 'margin-bottom',
+    "ml": 'margin-left',
+    "mr": 'margin-right',
+    "pt": 'padding-top',
+    "pb": 'padding-bottom',
+    "pl": 'padding-left',
+    "pr": 'padding-right',
+);
+
+@each $key,$value in $spacing {
+    @for $i from 1 through 20{
+        .#{$key}-#{$i} {
+            #{$value} : $i * 0.5rem;
+        }
+        .mx-#{$i} {
+            margin-left: $i * 0.5rem;
+            margin-right: $i * 0.5rem;
+        }
+        .my-#{$i} {
+            margin-top: $i * 0.5rem;
+            margin-bottom: $i * 0.5rem;
+        }
+        .px-#{$i} {
+            padding-left: $i * 0.5rem;
+            padding-right: $i * 0.5rem;
+        }
+        .py-#{$i} {
+            padding-top: $i * 0.5rem;
+            padding-bottom: $i * 0.5rem;
+        }  
+    }
+    .#{$key}-md-0{
+        @include md{
+            #{$value} : 0 !important;
+        }  
+    }
+    .#{$key}-lg-0{
+        @include lg{
+            #{$value} : 0 !important;
+        }  
+    }
+}
+
+.mt-60p{
+    margin-top: 60px;
+}
+.mt-20p{
+    margin-top: 20px;
+}
+.mt-4p{
+    margin-top: 4px;
+}
+.ml-30p{
+    margin-left: 30px;
+}
+.mr-30p{
+    margin-right: 30px;
+}
+
+.pb-52p{
+    padding-bottom: 52px;
+}
+
+
+@include md{
+    .mb-md-0{
+        margin-bottom: 0;
+    }
+    .pb-md-80p{
+        padding-bottom: 80px;
+    }
+}
+@include lg{
+    .mt-lg-4{
+        margin-top: 32px;
+    }
+    .mb-lg-0{
+        margin-bottom: 0;
+    }
+}
