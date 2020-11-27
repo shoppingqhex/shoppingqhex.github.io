@@ -35,7 +35,7 @@
           </li>
           <!-- Assignment -->
           <li class="mb-3 a-hover-bg">
-            <a href="index.html" class="link d-flex align-items-center active">
+            <a href="index.html" class="link d-flex align-items-center assignment">
               <span class="material-icons mr-3">assignment</span>
               <span>Assignment</span>
             </a>
@@ -48,7 +48,7 @@
           </li>
           <!-- Admin -->
           <li class="mb-3 a-hover-bg">
-            <a href="admin.html" class="link d-flex align-items-center">
+            <a href="admin.html" class="link d-flex align-items-center admin">
               <span class="material-icons mr-3">people</span>
               <span>Admin</span>
             </a>
@@ -78,11 +78,11 @@
             <h2 class="mr-5 mb-0">Assignment</h2>
             <div class="d-flex">
                 <p class="mr-2">All Courses</p>
-                <span class="material-icons mr-3" style="color: #2A8356">keyboard_arrow_down</span>
+                <span class="material-icons" style="color: #2A8356">keyboard_arrow_down</span>
             </div>
 
         </div>
-        <ul class="d-flex">
+        <ul class="d-flex mb-0">
             <li><a href="#" class="material-icons mr-3" title="進階搜尋">search</a></li>
             <li><a href="#" class="material-icons" title="設定提醒">notifications_active</a></li>
         </ul>
@@ -96,10 +96,10 @@
     </div>
     <!-- table -->
     <div class="d-flex">
-        <table class="table_leftside mr-3">
+        <table class="table_leftside mr-3 assignment_table">
             <tr>
-                <td class="a-hover-bg">
-                    <a href="#" class="active">
+                <td class="a-hover-bg bg-secondary">
+                    <a href="#">
                         <div class="d-flex justify-content-between">
                             <small>Chapter Assignment 2</small>
                             <small>4 hrs ago</small>
@@ -154,9 +154,9 @@
                 </td>
             </tr>
         </table>
-        <table class="table_rightside">
+        <table class="table_rightside assignment_table">
             <tr>
-                <th>
+                <th class="bg-secondary">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <p class="small">Chapter Assignment 2 / HTML&CSS</p>
@@ -167,49 +167,76 @@
                 </th>
             </tr>
             <tr>
-                <td>
-                    <div class="media profile mr-3 mb-3">
-                        <img src="https://hexschool.github.io/webLayoutTraining1st/week5/emilywang.jpeg"
-                            class="mr-2 rounded-circle" alt="Photo sticker">
-                        <div class="media-body">
-                            <h5 class="mt-0 font-weight-bold">Emily Wang</h5>
-                            <p class="text-light">10:38 AM (4 hours ago)</p>
+                <td class="position-r">
+                    <div class="td-padding">
+                        <div class="media profile mr-3 mb-3">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/week5/emilywang.jpeg"
+                                class="mr-2 rounded-circle" alt="Photo sticker">
+                            <div class="media-body">
+                                <h5 class="mt-0 font-weight-bold">Emily Wang</h5>
+                                <p class="text-light">10:38 AM (4 hours ago)</p>
+                            </div>
+                        </div>
+                        <div class="media-body_bottomline pb-3 ml-5 mr-3">
+                            <p style="line-height: 21px;" class="mb-3">Hi Teacher, the attached file is my homework of
+                                chapter 2. And here comes a question: Why in the following code the height of the <span
+                                    class="texttag">div</span> is
+                                bigger than the height of the <span class="texttag">img</span> ? There is a gap below
+                                the image, but it doesn’t seems
+                                to be a padding/margin. <br> What is the gap or extra space below image?</p>
+                            <div class="attachment d-flex align-items-center">
+                                <span class="material-icons mr-2">attach_file</span>
+                                <p class="font-weight-bold">HW-2-David.zip</p>
+                            </div>
+                        </div>
+                        <div class="media profile mr-3 my-3">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg"
+                                class="mr-2 rounded-circle" alt="Photo sticker">
+                            <div class="media-body">
+                                <h5 class="mt-0 font-weight-bold">Andy Chen (You)</h5>
+                                <p class="text-light">13:24 AM (1 hours ago)</p>
+                            </div>
+                            <div class="media-body_right">
+                                <span class="material-icons mr-4">star_border</span>
+                                <span class="material-icons">edit</span>
+                            </div>
+                        </div>
+                        <div class="ml-5  mr-3">
+                            <p style="line-height: 21px;" class="mb-4">Hi David, by default, an image is rendered
+                                inline,
+                                like a letter so it sits on the same line that a, b, c and d sit on. There is space
+                                below
+                                that line for the descenders you find on letters like g, j, p and q.</p>
+                            <p style="line-height: 21px;" class="mb-4">You can:</p>
+                            <ul class="ml-3">
+                                <li>• adjust the <span class="texttag">vertical-align</span> of the image to position it
+                                    elsewhere (e.g. the <span class="texttag">middle</span> ) or</li>
+                                <li>• change the <span class="texttag">display</span> so it isn’t inline.</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="media-body_bottomline pb-3 ml-5 mr-3">
-                        <p style="line-height: 21px;" class="mb-3">Hi Teacher, the attached file is my homework of
-                            chapter 2. And here comes a question: Why in the following code the height of the <span
-                                class="texttag">div</span> is
-                            bigger than the height of the <span class="texttag">img</span> ? There is a gap below
-                            the image, but it doesn’t seems
-                            to be a padding/margin. <br> What is the gap or extra space below image?</p>
-                        <div class="attachment d-flex align-items-center">
-                            <span class="material-icons mr-2">attach_file</span>
-                            <p class="font-weight-bold">HW-2-David.zip</p>
+                    <div class="collapse collapse_reply" id="collapseExample">
+                        <div class="card card-body p-0">
+                            <div class="collapse_head bg-secondary d-flex align-items-center mb-3">
+                               <span class="ml-3 mr-2">Body Text</span>
+                               <span class="material-icons mr-4">arrow_drop_down</span>
+                               <span class="material-icons mr-3">format_bold</span>
+                               <span class="material-icons mr-3">format_italic</span>
+                               <span class="material-icons mr-3">format_list_bulleted</span>
+                               <span class="material-icons mr-3">format_list_numbered</span>
+                               <span class="material-icons mr-3">insert_photo</span>
+                               <span class="material-icons mr-3">insert_link</span>
+                               <span class="material-icons">code</span>
+                            </div>
+                            <div class="collapse_body ml-3">
+                                <p style="color: #00000062;">Reply an answer…</p>
+                            </div>
+                            <div class="d-flex justify-content-end mb-3 mr-3">
+                                <button class="btn btn-outline-primary rounded-0 mr-3" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Cancel</button>
+                                <button class="btn btn-primary rounded-0">Reply</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="media profile mr-3 my-3">
-                        <img src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg"
-                            class="mr-2 rounded-circle" alt="Photo sticker">
-                        <div class="media-body">
-                            <h5 class="mt-0 font-weight-bold">Andy Chen (You)</h5>
-                            <p class="text-light">13:24 AM (1 hours ago)</p>
-                        </div>
-                        <div class="media-body_right">
-                            <span class="material-icons mr-4">star_border</span>
-                            <span class="material-icons">edit</span>
-                        </div>
-                    </div>
-                    <div class="ml-5  mr-3">
-                        <p style="line-height: 21px;" class="mb-4">Hi David, by default, an image is rendered inline,
-                            like a letter so it sits on the same line that a, b, c and d sit on. There is space below
-                            that line for the descenders you find on letters like g, j, p and q.</p>
-                        <p style="line-height: 21px;" class="mb-4">You can:</p>
-                        <ul class="ml-3">
-                            <li>• adjust the <span class="texttag">vertical-align</span> of the image to position it
-                                elsewhere (e.g. the <span class="texttag">middle</span> ) or</li>
-                            <li>• change the <span class="texttag">display</span> so it isn’t inline.</li>
-                        </ul>
+                        
                     </div>
                 </td>
             </tr>
@@ -219,15 +246,16 @@
                         <span class="material-icons mr-3">keyboard_arrow_left</span>
                         <span class="material-icons">keyboard_arrow_right</span>
                     </div>
-                    <div>
-                        <div class="btn btn-outline-primary rounded-0 mr-3">Mark as read</div>
-                        <div class="btn btn-primary rounded-0">Reply</div>
+                    <div class="mr-1">
+                        <button class="btn btn-outline-primary rounded-0 mr-3">Mark as read</button>
+                        <button class="btn btn-primary rounded-0" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Reply</button>
                     </div>
-                    
-                </td> 
+
+                </td>
             </tr>
         </table>
     </div>
+
 </main>
     </article>
   </div>
