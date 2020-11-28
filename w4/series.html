@@ -54,10 +54,8 @@
                 <li class="demo_img2"></li>
             </ul>
             <div class="container">
-                <h2 class="text-center series_title">
-                    <p class="series_title_en text-medium">Celluloid Combi</p>
-                    <p class="series_title_zh">賽璐珞鈦金屬混合鏡框</p>
-                </h2>
+                <h2 class="text-center series_title_en text-medium">Celluloid Combi</h2>
+                <h2 class="text-center series_title_bot series_title_zh">賽璐珞鈦金屬混合鏡框</h2>
                 <ul class="cards series_cards">
                     <!-- #1 -->
                     <li class="card series_card mb-4 mr-md-30p mb-md-72p mb-lg-104p">
@@ -232,10 +230,8 @@
                 <li class="demo_img4"></li>
             </ul>
             <div class="container">
-                <h2 class="text-center series_title">
-                    <p class="series_title_en text-medium">2020 NEW COLLECTION</p>
-                    <p class="series_title_zh">賽璐珞鈦金屬混合鏡框</p>
-                </h2>
+                <h2 class="text-center series_title_en text-medium">2020 NEW COLLECTION</h2>
+                <h2 class="text-center series_title_bot series_title_zh">賽璐珞鈦金屬混合鏡框</h2>
                 <ul class="cards series_cards">
                     <!-- #1 -->
                     <li class="card series_card series_card_sunglasses mb-4 mr-md-30p mb-md-72p mb-lg-104p">
@@ -382,33 +378,6 @@
         </div>
     </section>
 </main>
-<script>
-    /////// 分頁 ///////
-    var btns = document.querySelectorAll('.btn');
-    var contents = document.querySelectorAll('.content')
-
-    for (let i = 0; i < btns.length; i++) {
-        const index = i;
-        const btn = btns[i]
-        const content = contents[i]
-
-        btns[i].onclick = function () {
-            // console.log(index);
-
-            remove_active();
-
-            btn.classList.add('active');
-            content.classList.add('active');
-        }
-    }
-    function remove_active() {
-        for (let i = 0; i < btns.length; i++) {
-            btns[i].classList.remove('active');
-            contents[i].classList.remove('active');
-        }
-    }
-    /////// 分頁 ///////
-</script>
 
   <footer class="bg-primary text-white">
     <div class="container footer-spacing">
