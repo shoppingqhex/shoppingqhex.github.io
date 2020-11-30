@@ -25,6 +25,7 @@
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #0000009A;
+  --lighter: #00000062;
   --dark: #121212;
   --border: #CDDDCD;
   --caution: #E3006E;
@@ -1649,6 +1650,23 @@ pre {
   .table-hover .table-light:hover > th {
     background-color: rgba(205, 205, 205, 0.889098); }
 
+.table-lighter,
+.table-lighter > th,
+.table-lighter > td {
+  background-color: rgba(233, 233, 233, 0.827608); }
+
+.table-lighter th,
+.table-lighter td,
+.table-lighter thead th,
+.table-lighter tbody + tbody {
+  border-color: rgba(203, 203, 203, 0.679843); }
+
+.table-hover .table-lighter:hover {
+  background-color: rgba(220, 220, 220, 0.827608); }
+  .table-hover .table-lighter:hover > td,
+  .table-hover .table-lighter:hover > th {
+    background-color: rgba(220, 220, 220, 0.827608); }
+
 .table-dark,
 .table-dark > th,
 .table-dark > td {
@@ -2443,6 +2461,34 @@ fieldset:disabled a.btn {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(74, 74, 74, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(74, 74, 74, 0.5); }
 
+.btn-lighter {
+  color: #fff;
+  background-color: #00000062;
+  border-color: #00000062; }
+  .btn-lighter:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.384314);
+    border-color: rgba(0, 0, 0, 0.384314); }
+  .btn-lighter:focus, .btn-lighter.focus {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.384314);
+    border-color: rgba(0, 0, 0, 0.384314);
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(109, 109, 109, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(109, 109, 109, 0.5); }
+  .btn-lighter.disabled, .btn-lighter:disabled {
+    color: #fff;
+    background-color: #00000062;
+    border-color: #00000062; }
+  .btn-lighter:not(:disabled):not(.disabled):active, .btn-lighter:not(:disabled):not(.disabled).active,
+  .show > .btn-lighter.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.384314);
+    border-color: rgba(0, 0, 0, 0.384314); }
+    .btn-lighter:not(:disabled):not(.disabled):active:focus, .btn-lighter:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-lighter.dropdown-toggle:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(109, 109, 109, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(109, 109, 109, 0.5); }
+
 .btn-dark {
   color: #fff;
   background-color: #121212;
@@ -2685,6 +2731,29 @@ fieldset:disabled a.btn {
     border-color: #0000009A; }
     .btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-light.dropdown-toggle:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); }
+
+.btn-outline-lighter {
+  color: #00000062;
+  border-color: #00000062; }
+  .btn-outline-lighter:hover {
+    color: #fff;
+    background-color: #00000062;
+    border-color: #00000062; }
+  .btn-outline-lighter:focus, .btn-outline-lighter.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); }
+  .btn-outline-lighter.disabled, .btn-outline-lighter:disabled {
+    color: #00000062;
+    background-color: transparent; }
+  .btn-outline-lighter:not(:disabled):not(.disabled):active, .btn-outline-lighter:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-lighter.dropdown-toggle {
+    color: #fff;
+    background-color: #00000062;
+    border-color: #00000062; }
+    .btn-outline-lighter:not(:disabled):not(.disabled):active:focus, .btn-outline-lighter:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-outline-lighter.dropdown-toggle:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); }
 
@@ -4488,6 +4557,17 @@ input[type="button"].btn-block {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); }
 
+.badge-lighter {
+  color: #fff;
+  background-color: #00000062; }
+  a.badge-lighter:hover, a.badge-lighter:focus {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.384314); }
+  a.badge-lighter:focus, a.badge-lighter.focus {
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); }
+
 .badge-dark {
   color: #fff;
   background-color: #121212; }
@@ -4620,6 +4700,15 @@ input[type="button"].btn-block {
     border-top-color: rgba(205, 205, 205, 0.889098); }
   .alert-light .alert-link {
     color: rgba(0, 0, 0, 0.794039); }
+
+.alert-lighter {
+  color: rgba(0, 0, 0, 0.679843);
+  background-color: rgba(241, 241, 241, 0.876863);
+  border-color: rgba(233, 233, 233, 0.827608); }
+  .alert-lighter hr {
+    border-top-color: rgba(220, 220, 220, 0.827608); }
+  .alert-lighter .alert-link {
+    color: rgba(0, 0, 0, 0.679843); }
 
 .alert-dark {
   color: #090909;
@@ -4961,6 +5050,17 @@ input[type="button"].btn-block {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.794039);
     border-color: rgba(0, 0, 0, 0.794039); }
+
+.list-group-item-lighter {
+  color: rgba(0, 0, 0, 0.679843);
+  background-color: rgba(233, 233, 233, 0.827608); }
+  .list-group-item-lighter.list-group-item-action:hover, .list-group-item-lighter.list-group-item-action:focus {
+    color: rgba(0, 0, 0, 0.679843);
+    background-color: rgba(220, 220, 220, 0.827608); }
+  .list-group-item-lighter.list-group-item-action.active {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.679843);
+    border-color: rgba(0, 0, 0, 0.679843); }
 
 .list-group-item-dark {
   color: #090909;
@@ -5787,6 +5887,14 @@ button.bg-light:hover,
 button.bg-light:focus {
   background-color: rgba(0, 0, 0, 0.603922) !important; }
 
+.bg-lighter {
+  background-color: #00000062 !important; }
+
+a.bg-lighter:hover, a.bg-lighter:focus,
+button.bg-lighter:hover,
+button.bg-lighter:focus {
+  background-color: rgba(0, 0, 0, 0.384314) !important; }
+
 .bg-dark {
   background-color: #121212 !important; }
 
@@ -5867,6 +5975,9 @@ button.bg-caution:focus {
 
 .border-light {
   border-color: #0000009A !important; }
+
+.border-lighter {
+  border-color: #00000062 !important; }
 
 .border-dark {
   border-color: #121212 !important; }
@@ -8666,6 +8777,12 @@ a.text-danger:hover, a.text-danger:focus {
 a.text-light:hover, a.text-light:focus {
   color: rgba(0, 0, 0, 0.603922) !important; }
 
+.text-lighter {
+  color: #00000062 !important; }
+
+a.text-lighter:hover, a.text-lighter:focus {
+  color: rgba(0, 0, 0, 0.384314) !important; }
+
 .text-dark {
   color: #121212 !important; }
 
@@ -8778,6 +8895,36 @@ a.text-caution:hover, a.text-caution:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+.border-1px {
+  border: 1px solid #CDDDCD; }
+
+.border-bot-0 {
+  border-bottom: 0; }
+
+.border-0 {
+  border: 0; }
+
+.border_bot-1px {
+  border-bottom: 1px solid #CDDDCD; }
+
+.lh-24 {
+  line-height: 24px; }
+
+.lh-21 {
+  line-height: 21px; }
+
+.lh-19 {
+  line-height: 19px; }
+
+.vertical-align-bot {
+  vertical-align: bottom; }
+
+.vertical-align-base {
+  vertical-align: baseline; }
+
+.vertical-align-mid {
+  vertical-align: middle; }
+
 *,
 *::before,
 *::after {
@@ -8807,6 +8954,12 @@ a {
 
 .a-hover-bg:hover {
   background-color: #CDDDCD; }
+
+.a-hover-text-dark:hover {
+  color: #121212; }
+
+.a-hover-text-primary:hover {
+  color: #2A8356; }
 
 p {
   margin-bottom: 0; }
@@ -8868,45 +9021,50 @@ aside {
 article {
   width: 77%; }
 
-main {
+article {
   padding: 32px; }
 
-.assignment_table th, .assignment_table td {
-  border: 1px solid #CDDDCD; }
+.allCourses .dropdown-toggle::after {
+  display: none; }
 
-.table_leftside {
+.assignment_leftside {
   width: 35.65%; }
-  .table_leftside a {
+  .assignment_leftside a {
     padding: 12px; }
 
-.table_rightside {
+.assignment_rightside {
   width: 64.35%; }
-  .table_rightside th, .table_rightside .td-padding {
+  .assignment_rightside h3 {
+    font-size: 16px;
+    line-height: 24px; }
+  .assignment_rightside .assignment_r_title {
     padding: 12px 16px; }
-  .table_rightside .texttag {
+  .assignment_rightside .assignment_r_content {
+    padding: 16px; }
+  .assignment_rightside .texttag {
     color: #2A8356;
     background-color: #EDF4EE; }
-  .table_rightside .attachment {
+  .assignment_rightside .attachment {
     border: 1px solid #CDDDCD;
-    background-color: #EDF4EE;
     width: 180px;
     height: 40px;
     padding: 11px 16px 10px 12px; }
-  .table_rightside .media-body_bottomline {
-    border-bottom: 1px solid #CDDDCD; }
-  .table_rightside .no-border {
-    border: 0;
+  .assignment_rightside .assignment_r_footer {
     padding: 16px 0; }
-  .table_rightside .collapse_reply {
+  .assignment_rightside .collapse_reply {
     width: 100%;
     position: absolute;
     top: 48%;
     left: 0; }
-    .table_rightside .collapse_reply .collapse_head {
+    .assignment_rightside .collapse_reply .collapse_head {
       height: 56px; }
-    .table_rightside .collapse_reply .collapse_body {
+      .assignment_rightside .collapse_reply .collapse_head .dropdown-toggle::after {
+        margin-left: 0.5rem; }
+    .assignment_rightside .collapse_reply .collapse_body {
       height: 220px; }
-  .table_rightside .collapse_reply.collapsing {
+    .assignment_rightside .collapse_reply textarea {
+      width: 100%; }
+  .assignment_rightside .collapse_reply.collapsing {
     height: auto !important;
     margin-right: 50%;
     right: -50%;
@@ -8924,6 +9082,7 @@ main {
     height: 55px; }
   .admin_table .admin_table_head {
     width: 100%;
+    height: auto;
     border-bottom: 2px solid #121212; }
   .admin_table .admin_table_body {
     border-bottom: 1px solid #CDDDCD; }
@@ -8960,7 +9119,7 @@ main {
   font-size: 20px;
   line-height: 24px; }
 
-.adminModal .form_section label, .adminModal .form_section .smalltext {
+.adminModal .form_section .label-block label, .adminModal .form_section .smalltext {
   display: block;
   font-size: 14px;
   line-height: 17px; }
@@ -8973,9 +9132,6 @@ main {
 .adminModal .form_section select {
   width: 100%;
   height: 51px; }
-
-.adminModal .form_section .no-border {
-  border: 0; }
 
 .adminModal .form_section .checkbox {
   width: 16px;
@@ -8990,5 +9146,8 @@ main {
 
 .adminModal .btn-outline-sp {
   border: 1px solid #CDDDCD; }
+
+.bg-y {
+  background-color: yellow; }
 
 /*# sourceMappingURL=all.css.map */

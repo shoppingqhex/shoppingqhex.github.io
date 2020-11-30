@@ -66,47 +66,52 @@
           alt="Photo sticker">
         <div class="media-body">
           <h5 class="mt-0 font-weight-bold">Andy Chen</h5>
-          <p class="text-light">andy0401@mail.com</p>
+          <p class="text-light"><a href="mailto:andy0401@mail.com" class="a-hover-text-dark"
+              title="寄信給Andy">andy0401@mail.com</a></p>
+
         </div>
       </div>
     </aside>
     <article>
       
-<main>
-    <div class="d-flex justify-content-between align-items-end mb-5">
-        <div class="d-flex align-items-end font-weight-bold">
-            <h2 class="mr-5 mb-0">Admin</h2>
-            <a href="#" class="d-flex admin_link" data-toggle="modal" data-target="#adminModal_add">
-                <span class="material-icons mr-3" style="color: #2A8356">add</span>
-                <p class="mr-2">Add New Admin</p>
-            </a>
-        </div>
-        <ul class="d-flex mb-0">
-            <li><a href="#" class="material-icons mr-3" title="進階搜尋">search</a></li>
-            <li><a href="#" class="material-icons" title="設定提醒">notifications_active</a></li>
-        </ul>
+<div class="d-flex justify-content-between align-items-end mb-5">
+    <div class="d-flex align-items-end font-weight-bold">
+        <h2 class="mr-5 mb-0">Admin</h2>
+        <a href="#" class="d-flex admin_link" data-toggle="modal" data-target="#adminModal_add">
+            <span class="material-icons text-primary mr-3">add</span>
+            <p class="mr-2">Add New Admin</p>
+        </a>
     </div>
-    <!-- table -->
-    <table class="admin_table mb-6">
-        <tr class="admin_table_head">
-            <th class="font-weight-bold" width="8.21%">ID<span class="material-icons text-primary"
-                    style="vertical-align: bottom;">arrow_downward</span></th>
-            <th class="font-weight-bold" width="25.2%">Name</th>
-            <th class="font-weight-bold" width="35%">Email</th>
-            <th class="font-weight-bold" width="19.1%">Verified</th>
-            <th width="12.49%">　</th>
+    <ul class="d-flex mb-0">
+        <li><a href="#" class="material-icons a-hover-text-primary mr-3" title="進階搜尋">search</a></li>
+        <li><a href="#" class="material-icons a-hover-text-primary" title="設定提醒">notifications_active</a></li>
+    </ul>
+</div>
+<!-- table -->
+<table class="admin_table mb-6">
+    <thead>
+        <tr class="admin_table_head font-weight-bold vertical-align-bot">
+            <th>ID<span class="material-icons text-primary vertical-align-bot">arrow_downward</span></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Verified</th>
+            <th>　</th>
         </tr>
+    </thead>
+    <tbody>
         <tr class="admin_table_body a-hover-bg cursor-point">
             <td data-toggle="modal" data-target="#profileModal">#1</td>
             <td data-toggle="modal" data-target="#profileModal">Emir Wicks</td>
             <td data-toggle="modal" data-target="#profileModal">emir.wicks@mail.com</td>
             <td data-toggle="modal" data-target="#profileModal">Yes</td>
             <td class="modal_link">
-                <a href="#" class="mr-3" data-toggle="modal" data-target="#profileModal"><span class="material-icons">remove_red_eye</span></a>
-                <a href="#" data-toggle="modal" data-target="#adminModal_edit"><span class="material-icons" >edit</span></a>
+                <a href="#" class="mr-3" data-toggle="modal" data-target="#profileModal"><span
+                        class="material-icons">remove_red_eye</span></a>
+                <a href="#" data-toggle="modal" data-target="#adminModal_edit"><span
+                        class="material-icons">edit</span></a>
             </td>
         </tr>
-        <tr class="admin_table_body a-hover-bg">
+        <tr class="admin_table_body a-hover-bg cursor-point">
             <td>#2</td>
             <td>Zaina Goldsmith</td>
             <td>zaina.goldsmith@mail.com</td>
@@ -116,7 +121,7 @@
                 <span class="material-icons">edit</span>
             </td>
         </tr>
-        <tr class="admin_table_body a-hover-bg">
+        <tr class="admin_table_body a-hover-bg cursor-point">
             <td>#3</td>
             <td>Mahima Lopez</td>
             <td>Mahima.Lopez@mail.com</td>
@@ -126,7 +131,7 @@
                 <span class="material-icons">edit</span>
             </td>
         </tr>
-        <tr class="admin_table_body a-hover-bg">
+        <tr class="admin_table_body a-hover-bg cursor-point">
             <td>#4</td>
             <td>Pharrell Murray</td>
             <td>Pharrell.Murray@mail.com</td>
@@ -136,7 +141,7 @@
                 <span class="material-icons">edit</span>
             </td>
         </tr>
-        <tr class="admin_table_body a-hover-bg">
+        <tr class="admin_table_body a-hover-bg cursor-point">
             <td>#5</td>
             <td>Annika Mcbride</td>
             <td>Annika.Mcbride@mail.com</td>
@@ -146,7 +151,7 @@
                 <span class="material-icons">edit</span>
             </td>
         </tr>
-        <tr class="admin_table_body a-hover-bg">
+        <tr class="admin_table_body a-hover-bg cursor-point">
             <td>#6</td>
             <td>Fatimah Clark</td>
             <td>Fatimah.Clark@mail.com</td>
@@ -156,7 +161,7 @@
                 <span class="material-icons">edit</span>
             </td>
         </tr>
-        <tr class="admin_table_body a-hover-bg">
+        <tr class="admin_table_body a-hover-bg cursor-point">
             <td>#7</td>
             <td>Klaudia Rhodes</td>
             <td>Klaudia.Rhodes@mail.com</td>
@@ -166,7 +171,7 @@
                 <span class="material-icons">edit</span>
             </td>
         </tr>
-        <tr class="admin_table_body a-hover-bg">
+        <tr class="admin_table_body a-hover-bg cursor-point">
             <td>#8</td>
             <td>Tillie Lucero</td>
             <td>Tillie.Lucero@mail.com</td>
@@ -176,7 +181,7 @@
                 <span class="material-icons">edit</span>
             </td>
         </tr>
-        <tr class="admin_table_body a-hover-bg">
+        <tr class="admin_table_body a-hover-bg cursor-point">
             <td>#9</td>
             <td>Sabrina Stephenson</td>
             <td>Sabrina.Stephenson@mail.com</td>
@@ -186,7 +191,7 @@
                 <span class="material-icons">edit</span>
             </td>
         </tr>
-        <tr class="admin_table_body a-hover-bg">
+        <tr class="admin_table_body a-hover-bg cursor-point">
             <td>#10</td>
             <td>Annie Smith</td>
             <td>Annie.Smith@mail.com</td>
@@ -196,169 +201,200 @@
                 <span class="material-icons">edit</span>
             </td>
         </tr>
-
-    </table>
-    <!-- Pagination -->
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-end">
-            <li class="page-item">
-                <a class="page-link p-1 text-primary" href="#" aria-label="Previous">
-                    <span class="material-icons">chevron_left</span>
-                </a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link p-1 text-primary" href="#" aria-label="Next">
-                    <span class="material-icons">chevron_right</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <!-- adminModal_add -->
-    <div class="modal fade" id="adminModal_add" tabindex="-1" role="dialog" aria-labelledby="adminModalLabel_add"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header p-4">
-                    <h5 class="modal-title" id="adminModalLabel_add">New Admin</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body adminModal p-4">
-                    <form class="form_section form_border pb-3 mb-3">
+    </tbody>
+</table>
+<!-- Pagination -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+        <li class="page-item">
+            <a class="page-link p-1 text-primary" href="#" aria-label="Previous">
+                <span class="material-icons">chevron_left</span>
+            </a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link p-1 text-primary" href="#" aria-label="Next">
+                <span class="material-icons">chevron_right</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- adminModal_add -->
+<div class="modal fade" id="adminModal_add" tabindex="-1" role="dialog" aria-labelledby="adminModalLabel_add"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header p-4">
+                <h5 class="modal-title" id="adminModalLabel_add">New Admin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body adminModal p-4">
+                <form class="form_section">
+                    <div class="form_border pb-4 mb-4 label-block">
                         <h6>Account</h6>
                         <label for="username">Name</label>
                         <input type="text" id="username" name="username" value="" class="mb-3" readonly>
                         <label for="mail">Email</label>
                         <input type="text" id="mail" name="mail" value="">
-                    </form>
-                    <form class="form_section form_border pb-3 mb-3">
+                    </div>
+                    <div class="form_border pb-4 mb-4">
                         <h6 class="mb-3">Verification</h6>
-                        <p class="d-flex align-items-center font-weight-bold mb-3"><span class="material-icons mr-1" style="color: #E3006E">report_problem</span>Unverified</p>
-                        <input type="button" id="sendmail" name="sendmail" value="Send Verification Mail" class="btn btn-outline-primary btn-outline-sp font-weight-bold mb-3">
-                    </form>
-                    <form class="form_section form_border pb-3 mb-3">
+                        <p class="d-flex align-items-center font-weight-bold mb-3"><span
+                                class="material-icons text-caution mr-1">report_problem</span>Unverified</p>
+                        <input type="button" id="sendmail" name="sendmail" value="Send Verification Mail"
+                            class="btn btn-outline-primary btn-outline-sp font-weight-bold">
+                    </div>
+                    <div class="form_border pb-4 mb-4">
                         <h6 class="mb-3">Access Level</h6>
                         <select name="level" id="level" class="pl-3">
                             <option value="admin">-Choose access level-</option>
                         </select>
-                    </form>
-                    <form class="form_section">
+                    </div>
+                    <div>
                         <h6 class="mb-3">Custom Access</h6>
-                        <input type="checkbox" name="custom" id="custom" class="checkbox mb-2"><span class="ml-2">Lecture</span><br>
-                        <input type="checkbox" name="custom" id="custom" class="checkbox mb-2"><span class="ml-2">Coupon</span><br> 
-                        <input type="checkbox" name="custom" id="custom" class="checkbox mb-2"><span class="ml-2">Message</span><br>
-                        <input type="checkbox" name="custom" id="custom" class="checkbox mb-2"><span class="ml-2">Setting</span><br> 
-                        <input type="checkbox" name="custom" id="custom" class="checkbox"><span class="ml-2">Task Menu</span>  
-                    </form>
-                </div>
-                <div class="modal-footer p-4">
-                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Add</button>
-                </div>
+                        
+                        <input type="checkbox" name="custom" id="lecture" value="lecture" class="checkbox lh-24">
+                        <label for="lecture" class="cursor-point ml-2 mb-3">Lecture</label><br>
+
+                        <input type="checkbox" name="custom" id="coupon" value="coupon" class="checkbox lh-24">
+                        <label for="coupon" class="cursor-point ml-2 mb-3">Coupon</label><br>
+
+                        <input type="checkbox" name="custom" id="message" value="message" class="checkbox lh-24">
+                        <label for="message" class="cursor-point ml-2 mb-3">Message</label><br>
+
+                        <input type="checkbox" name="custom" id="setting" value="setting" class="checkbox lh-24">
+                        <label for="setting" class="cursor-point ml-2 mb-3">Setting</label><br>
+
+                        <input type="checkbox" name="custom" id="taskMenu" value="taskMenu" class="checkbox lh-24">
+                        <label for="taskMenu" class="cursor-point ml-2 mb-0">Task Menu</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer p-4">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add</button>
             </div>
         </div>
     </div>
-    <!-- adminModal_edit -->
-    <div class="modal fade" id="adminModal_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header p-4">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Admin</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body adminModal p-4">
-                    <form class="form_section form_border pb-3 mb-3">
+</div>
+<!-- adminModal_edit -->
+<div class="modal fade" id="adminModal_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header p-4">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Admin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body adminModal p-4">
+                <form class="form_section">
+                    <div class="form_border pb-4 mb-4">
                         <h6>Account</h6>
                         <label for="username">Name</label>
-                        <input type="text" id="username" name="username" value="Emir Wicks" class="bg-secondary no-border mb-3" readonly>
+                        <input type="text" id="username" name="username" value="Emir Wicks"
+                            class="bg-secondary border-0 mb-3">
                         <label for="mail">Email</label>
-                        <input type="text" id="mail" name="mail" value="emir.wicks@mail.com" class="bg-secondary no-border" readonly>
-                    </form>
-                    <form class="form_section form_border pb-3 mb-3">
+                        <input type="text" id="mail" name="mail" value="emir.wicks@mail.com"
+                            class="bg-secondary border-0">
+                    </div>
+                    <div class="form_border pb-4 mb-4">
                         <h6 class="mb-3">Verification</h6>
                         <div class="d-flex justify-content-between mb-3">
-                            <p class="d-flex align-items-center font-weight-bold"><span class="material-icons mr-1" style="color: #2A8356">check_circle</span>Verified</p>
+                            <p class="d-flex align-items-center font-weight-bold"><span
+                                    class="material-icons text-primary mr-1">check_circle</span>Verified</p>
                             <p class="smalltext">2020/4/12</p>
                         </div>
-                        <input type="button" id="sendmail" name="sendmail" value="Send Verification Mail" class="btn btn-outline-border font-weight-bold mb-3" disabled>
-                    </form>
-                    <form class="form_section form_border pb-3 mb-3">
+                        <input type="button" id="sendmail" name="sendmail" value="Send Verification Mail"
+                            class="btn btn-outline-border font-weight-bold" disabled>
+                    </div>
+                    <div class="form_border pb-4 mb-4">
                         <h6 class="mb-3">Access Level</h6>
                         <select name="level" id="level" class="pl-3">
                             <option value="admin">Admin</option>
                         </select>
-                    </form>
-                    <form class="form_section form_border pb-3 mb-3">
+                    </div>
+                    <div class="form_border pb-4 mb-4">
                         <h6 class="mb-3">Custom Access</h6>
-                        <input type="checkbox" name="custom" id="custom" class="checkbox mb-2"><span class="ml-2">Lecture</span><br>
-                        <input type="checkbox" name="custom" id="custom" class="checkbox mb-2"><span class="ml-2">Coupon</span><br> 
-                        <input type="checkbox" name="custom" id="custom" class="checkbox mb-2"><span class="ml-2">Message</span><br>
-                        <input type="checkbox" name="custom" id="custom" class="checkbox mb-2"><span class="ml-2">Setting</span><br> 
-                        <input type="checkbox" name="custom" id="custom" class="checkbox"><span class="ml-2">Task Menu</span>  
-                    </form>
-                    <form class="form_section">
+                        <input type="checkbox" name="custom" id="lecture" value="lecture" class="checkbox lh-24">
+                        <label for="lecture" class="cursor-point ml-2 mb-3">Lecture</label><br>
+
+                        <input type="checkbox" name="custom" id="coupon" value="coupon" class="checkbox lh-24">
+                        <label for="coupon" class="cursor-point ml-2 mb-3">Coupon</label><br>
+
+                        <input type="checkbox" name="custom" id="message" value="message" class="checkbox lh-24">
+                        <label for="message" class="cursor-point ml-2 mb-3">Message</label><br>
+
+                        <input type="checkbox" name="custom" id="setting" value="setting" class="checkbox lh-24">
+                        <label for="setting" class="cursor-point ml-2 mb-3">Setting</label><br>
+
+                        <input type="checkbox" name="custom" id="taskMenu" value="taskMenu" class="checkbox lh-24">
+                        <label for="taskMenu" class="cursor-point ml-2 mb-0">Task Menu</label>
+                    </div>
+                    <div>
                         <h6 class="mb-3">Deactivate Account</h6>
                         <div class="caution">
-                            <p class="d-flex align-items-center font-weight-bold mb-3"><span class="material-icons mr-1">report_problem</span>This cannot be undone!</p>
-                            <input type="button" id="sendmail" name="sendmail" value="Send Verification Mail" class="btn btn-outline-caution font-weight-bold mb-3">
+                            <p class="d-flex align-items-center font-weight-bold mb-3"><span
+                                    class="material-icons mr-1">report_problem</span>This cannot be undone!</p>
+                            <input type="button" id="sendmail" name="sendmail" value="Send Verification Mail"
+                                class="btn btn-outline-caution font-weight-bold">
                         </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer p-4">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- profileModal -->
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex">
+                    <div class="photo mr-4"></div>
+                    <div class="mb-0">
+                        <div class="mb-1">#1</div>
+                        <div>Admin</div>
+                        <div class="mb-1">
+                            <h5 id="profileModalLabel">Emir Wicks</h5>
+                        </div>
+                        <div class="text-light email mb-3"><a href="mailto:emir.wicks@mail.com" class="a-hover-text-dark"
+                                title="寄信給Emir">emir.wicks@mail.com</a></div>
+                        <div><span class="bg-secondary">Verified</span></div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-center justify-content-between iconBtn">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <p>
+                        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                            aria-controls="collapseExample">
+                            <span class="material-icons expand_more">expand_more</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-caution" data-dismiss="modal">Deactivate</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adminModal_edit" data-dismiss="modal">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                    </form>  
-                </div>
-                <div class="modal-footer p-4">
-                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Update</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- profileModal -->
-    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="d-flex">
-                        <div class="photo mr-4"></div>
-                        <ul class="mb-0">
-                            <li class="mb-1">#1</li>
-                            <li>Admin</li>
-                            <li class="mb-1">
-                                <h5 id="profileModalLabel">Emir Wicks</h5>
-                            </li>
-                            <li class="text-light email mb-3">emir.wicks@mail.com</li>
-                            <li><span class="bg-secondary">Verified</span></li>
-                        </ul>
-                    </div>
-                    <div class="d-flex flex-column align-items-center justify-content-between iconBtn">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <p>
-                            <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                                aria-controls="collapseExample">
-                                <span class="material-icons expand_more">expand_more</span>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                <div class="collapse" id="collapseExample">
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-caution" data-dismiss="modal">Deactivate</button>
-                        <button type="button" class="btn btn-primary">Edit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
     </article>
   </div>
 

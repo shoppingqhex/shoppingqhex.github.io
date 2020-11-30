@@ -66,197 +66,214 @@
           alt="Photo sticker">
         <div class="media-body">
           <h5 class="mt-0 font-weight-bold">Andy Chen</h5>
-          <p class="text-light">andy0401@mail.com</p>
+          <p class="text-light"><a href="mailto:andy0401@mail.com" class="a-hover-text-dark"
+              title="寄信給Andy">andy0401@mail.com</a></p>
+
         </div>
       </div>
     </aside>
     <article>
       
-<main>
-    <div class="d-flex justify-content-between align-items-end mb-5">
-        <div class="d-flex align-items-end font-weight-bold">
-            <h2 class="mr-5 mb-0">Assignment</h2>
-            <div class="d-flex">
-                <p class="mr-2">All Courses</p>
-                <span class="material-icons" style="color: #2A8356">keyboard_arrow_down</span>
+<div class="d-flex justify-content-between align-items-end mb-5">
+    <div class="d-flex align-items-end font-weight-bold">
+        <h2 class="mr-5 mb-0">Assignment</h2>
+        <div class="d-flex allCourses">
+            <div class="dropdown">
+                <a class="btn dropdown-toggle font-weight-bold d-flex" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <p class="mr-2">All Courses</p>
+                    <span class="material-icons text-primary">keyboard_arrow_down</span>
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">HTML</a>
+                    <a class="dropdown-item" href="#">CSS</a>
+                    <a class="dropdown-item" href="#">JavaScript</a>
+                </div>
             </div>
 
         </div>
-        <ul class="d-flex mb-0">
-            <li><a href="#" class="material-icons mr-3" title="進階搜尋">search</a></li>
-            <li><a href="#" class="material-icons" title="設定提醒">notifications_active</a></li>
-        </ul>
+
     </div>
-    <div class="d-flex justify-content-between">
-        <div class="d-flex font-weight-bold">
+    <ul class="d-flex mb-0">
+        <li><a href="#" class="material-icons a-hover-text-primary mr-3" title="進階搜尋">search</a></li>
+        <li><a href="#" class="material-icons a-hover-text-primary" title="設定提醒">notifications_active</a></li>
+    </ul>
+</div>
+<div class="d-flex">
+    <!-- L-side -->
+    <div class="d-flex flex-column assignment_leftside">
+        <a class="d-flex font-weight-bold btn assignment_toggle p-0">
             <p class="mb-0 mr-2">All(4)</p>
-            <span class="material-icons mr-3" style="color: #2A8356">keyboard_arrow_down</span>
+            <span class="material-icons text-primary mr-3">keyboard_arrow_down</span>
+        </a>
+        <ul class="mr-3 assignment_toggle_body">
+            <li class="a-hover-bg bg-secondary border-1px border-bot-0">
+                <a href="#">
+                    <div class="d-flex justify-content-between">
+                        <small>Chapter Assignment 2</small>
+                        <small>4 hrs ago</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="font-weight-bold">Please check this file…</p>
+                        <small class="text-light">Emily Wang</small>
+                    </div>
+                </a>
+            </li>
+            <li class="a-hover-bg border-1px border-bot-0">
+                <a href="#">
+                    <div class="d-flex justify-content-between">
+                        <small>Chapter Assignment 1</small>
+                        <small>12 hrs ago</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="font-weight-bold">My Homework</p>
+                        <small class="text-light">David Xu</small>
+                    </div>
+                </a>
+            </li>
+            <li class="a-hover-bg border-1px border-bot-0">
+                <a href="#">
+                    <div class="d-flex justify-content-between">
+                        <small>Final Assignment</small>
+                        <small>18 hrs ago</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="font-weight-bold">Have a problem with this…</p>
+                        <small class="text-light">Tony Wei</small>
+                    </div>
+                </a>
+            </li>
+            <li class="a-hover-bg border-1px">
+                <a href="#">
+                    <div class="d-flex justify-content-between">
+                        <small>Final Assignment</small>
+                        <small>19 hrs ago</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="font-weight-bold">Did I do it right?</p>
+                        <small class="text-light">Christina Lin</small>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <!-- R-side -->
+    <div class="d-flex flex-column align-items-end assignment_rightside">
+        <small class="text-light lh-21 mb-1">2 comments</small>
+        <div>
+            <div class="d-flex justify-content-between align-items-center bg-secondary border-1px border-bot-0 assignment_r_title">
+                <div>
+                    <p class="small">Chapter Assignment 2 / HTML&CSS</p>
+                    <h3 class="font-weight-bold mb-0">Please check this file for me, thanks!</h3>
+                </div>
+                <a href="#"><span class="material-icons a-hover-text-primary">more_vert</span></a>
+            </div>
+            <div class="position-r border-1px assignment_r_content">
+                <div class="media profile mr-3 mb-3">
+                    <img src="https://hexschool.github.io/webLayoutTraining1st/week5/emilywang.jpeg"
+                        class="mr-2 rounded-circle" alt="Photo sticker">
+                    <div class="media-body">
+                        <h5 class="mt-0 font-weight-bold">Emily Wang</h5>
+                        <p class="text-light">10:38 AM (4 hours ago)</p>
+                    </div>
+                </div>
+                <div class="border_bot-1px pb-3 ml-5 mr-3">
+                    <p class="mb-3 lh-21">Hi Teacher, the attached file is my homework of
+                        chapter 2. And here comes a question: Why in the following code the height of the <span
+                            class="texttag">div</span> is
+                        bigger than the height of the <span class="texttag">img</span> ? There is a gap below
+                        the image, but it doesn’t seems
+                        to be a padding/margin. <br> What is the gap or extra space below image?</p>
+                    <button type="button" class="btn btn-secondary rounded-0 attachment d-flex align-items-center">
+                        <span class="material-icons mr-2">attach_file</span>
+                        <p class="font-weight-bold">HW-2-David.zip</p>
+                    </button>
+                </div>
+                <div class="media profile mr-3 my-3">
+                    <img src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg"
+                        class="mr-2 rounded-circle" alt="Photo sticker">
+                    <div class="media-body">
+                        <h5 class="mt-0 font-weight-bold">Andy Chen (You)</h5>
+                        <p class="text-light">13:24 AM (1 hours ago)</p>
+                    </div>
+                    <ul class="d-flex">
+                        <li><a href="#" class="material-icons a-hover-text-primary mr-4" title="加入標籤">star_border</a></li>
+                        <li><a href="#" class="material-icons a-hover-text-primary" title="編輯">edit</a></li>
+    
+                    </ul>
+                </div>
+                <div class="ml-5  mr-3">
+                    <p class="mb-4 lh-21">Hi David, by default, an image is rendered
+                        inline,
+                        like a letter so it sits on the same line that a, b, c and d sit on. There is space
+                        below
+                        that line for the descenders you find on letters like g, j, p and q.</p>
+                    <p class="mb-4 lh-21">You can:</p>
+                    <ul class="ml-3">
+                        <li>• adjust the <span class="texttag">vertical-align</span> of the image to position it
+                            elsewhere (e.g. the <span class="texttag">middle</span> ) or</li>
+                        <li>• change the <span class="texttag">display</span> so it isn’t inline.</li>
+                    </ul>
+                </div>
+                <div class="collapse collapse_reply" id="collapseExample">
+                    <div class="card card-body p-0">
+                        <div class="collapse_head bg-secondary d-flex align-items-center">
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle ml-3 mr-4 p-0" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Body Text
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Normal</a>
+                                    <a class="dropdown-item h1" href="#">Heading 1</a>
+                                    <a class="dropdown-item h2" href="#">Heading 2</a>
+                                    <a class="dropdown-item h3" href="#">Heading 3</a>
+                                    <a class="dropdown-item h4" href="#">Heading 4</a>
+                                    <a class="dropdown-item h5" href="#">Heading 5</a>
+                                    <a class="dropdown-item h6" href="#">Heading 6</a>
+                                </div>
+                            </div>
+                            <a href="#" class="material-icons a-hover-text-primary mr-3" title="粗體">format_bold</a>
+                            <a href="#" class="material-icons a-hover-text-primary mr-3" title="斜體">format_italic</a>
+                            <a href="#" class="material-icons a-hover-text-primary mr-3"
+                                title="條列(點)">format_list_bulleted</a>
+                            <a href="#" class="material-icons a-hover-text-primary mr-3"
+                                title="條列(數字)">format_list_numbered</a>
+                            <a href="#" class="material-icons a-hover-text-primary mr-3" title="插入照片">insert_photo</a>
+                            <a href="#" class="material-icons a-hover-text-primary mr-3" title="插入連結">insert_link</a>
+                            <a href="#" class="material-icons a-hover-text-primary" title="插入程式">code</a>
+                        </div>
+                        <form>
+                            <textarea name="" id="" placeholder="Reply an answer…"
+                                class="collapse_body pl-3 border-0"></textarea>
+                        </form>
+                        <div class="d-flex justify-content-end mb-3 mr-3">
+                            <button class="btn btn-outline-primary rounded-0 mr-3" data-toggle="collapse"
+                                data-target="#collapseExample" aria-expanded="false"
+                                aria-controls="collapseExample">Cancel</button>
+                            <button class="btn btn-primary rounded-0">Reply</button>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="assignment_r_footer border-0 d-flex justify-content-between">
+                <div>
+                    <span class="material-icons cursor-point a-hover-text-primary mr-3">keyboard_arrow_left</span>
+                    <span class="material-icons cursor-point a-hover-text-primary">keyboard_arrow_right</span>
+                </div>
+                <div class="mr-1">
+                    <button class="btn btn-outline-primary rounded-0 mr-3">Mark as read</button>
+                    <button class="btn btn-primary rounded-0" data-toggle="collapse" data-target="#collapseExample"
+                        aria-expanded="false" aria-controls="collapseExample">Reply</button>
+                </div>
+    
+            </div>
         </div>
-        <small class="text-light">2 comments</small>
     </div>
-    <!-- table -->
-    <div class="d-flex">
-        <table class="table_leftside mr-3 assignment_table">
-            <tr>
-                <td class="a-hover-bg bg-secondary">
-                    <a href="#">
-                        <div class="d-flex justify-content-between">
-                            <small>Chapter Assignment 2</small>
-                            <small>4 hrs ago</small>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p class="font-weight-bold">Please check this file…</p>
-                            <small class="text-light">Emily Wang</small>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="a-hover-bg">
-                    <a href="#">
-                        <div class="d-flex justify-content-between">
-                            <small>Chapter Assignment 1</small>
-                            <small>12 hrs ago</small>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p class="font-weight-bold">My Homework</p>
-                            <small class="text-light">David Xu</small>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="a-hover-bg">
-                    <a href="#">
-                        <div class="d-flex justify-content-between">
-                            <small>Final Assignment</small>
-                            <small>18 hrs ago</small>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p class="font-weight-bold">Have a problem with this…</p>
-                            <small class="text-light">Tony Wei</small>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="a-hover-bg">
-                    <a href="#">
-                        <div class="d-flex justify-content-between">
-                            <small>Final Assignment</small>
-                            <small>19 hrs ago</small>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p class="font-weight-bold">Did I do it right?</p>
-                            <small class="text-light">Christina Lin</small>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-        </table>
-        <table class="table_rightside assignment_table">
-            <tr>
-                <th class="bg-secondary">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <p class="small">Chapter Assignment 2 / HTML&CSS</p>
-                            <p class="font-weight-bold">Please check this file for me, thanks!</p>
-                        </div>
-                        <a href="#"><span class="material-icons">more_vert</span></a>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <td class="position-r">
-                    <div class="td-padding">
-                        <div class="media profile mr-3 mb-3">
-                            <img src="https://hexschool.github.io/webLayoutTraining1st/week5/emilywang.jpeg"
-                                class="mr-2 rounded-circle" alt="Photo sticker">
-                            <div class="media-body">
-                                <h5 class="mt-0 font-weight-bold">Emily Wang</h5>
-                                <p class="text-light">10:38 AM (4 hours ago)</p>
-                            </div>
-                        </div>
-                        <div class="media-body_bottomline pb-3 ml-5 mr-3">
-                            <p style="line-height: 21px;" class="mb-3">Hi Teacher, the attached file is my homework of
-                                chapter 2. And here comes a question: Why in the following code the height of the <span
-                                    class="texttag">div</span> is
-                                bigger than the height of the <span class="texttag">img</span> ? There is a gap below
-                                the image, but it doesn’t seems
-                                to be a padding/margin. <br> What is the gap or extra space below image?</p>
-                            <div class="attachment d-flex align-items-center">
-                                <span class="material-icons mr-2">attach_file</span>
-                                <p class="font-weight-bold">HW-2-David.zip</p>
-                            </div>
-                        </div>
-                        <div class="media profile mr-3 my-3">
-                            <img src="https://hexschool.github.io/webLayoutTraining1st/week5/andychen.jpeg"
-                                class="mr-2 rounded-circle" alt="Photo sticker">
-                            <div class="media-body">
-                                <h5 class="mt-0 font-weight-bold">Andy Chen (You)</h5>
-                                <p class="text-light">13:24 AM (1 hours ago)</p>
-                            </div>
-                            <div class="media-body_right">
-                                <span class="material-icons mr-4">star_border</span>
-                                <span class="material-icons">edit</span>
-                            </div>
-                        </div>
-                        <div class="ml-5  mr-3">
-                            <p style="line-height: 21px;" class="mb-4">Hi David, by default, an image is rendered
-                                inline,
-                                like a letter so it sits on the same line that a, b, c and d sit on. There is space
-                                below
-                                that line for the descenders you find on letters like g, j, p and q.</p>
-                            <p style="line-height: 21px;" class="mb-4">You can:</p>
-                            <ul class="ml-3">
-                                <li>• adjust the <span class="texttag">vertical-align</span> of the image to position it
-                                    elsewhere (e.g. the <span class="texttag">middle</span> ) or</li>
-                                <li>• change the <span class="texttag">display</span> so it isn’t inline.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="collapse collapse_reply" id="collapseExample">
-                        <div class="card card-body p-0">
-                            <div class="collapse_head bg-secondary d-flex align-items-center mb-3">
-                               <span class="ml-3 mr-2">Body Text</span>
-                               <span class="material-icons mr-4">arrow_drop_down</span>
-                               <span class="material-icons mr-3">format_bold</span>
-                               <span class="material-icons mr-3">format_italic</span>
-                               <span class="material-icons mr-3">format_list_bulleted</span>
-                               <span class="material-icons mr-3">format_list_numbered</span>
-                               <span class="material-icons mr-3">insert_photo</span>
-                               <span class="material-icons mr-3">insert_link</span>
-                               <span class="material-icons">code</span>
-                            </div>
-                            <div class="collapse_body ml-3">
-                                <p style="color: #00000062;">Reply an answer…</p>
-                            </div>
-                            <div class="d-flex justify-content-end mb-3 mr-3">
-                                <button class="btn btn-outline-primary rounded-0 mr-3" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Cancel</button>
-                                <button class="btn btn-primary rounded-0">Reply</button>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="no-border d-flex justify-content-between">
-                    <div>
-                        <span class="material-icons mr-3">keyboard_arrow_left</span>
-                        <span class="material-icons">keyboard_arrow_right</span>
-                    </div>
-                    <div class="mr-1">
-                        <button class="btn btn-outline-primary rounded-0 mr-3">Mark as read</button>
-                        <button class="btn btn-primary rounded-0" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Reply</button>
-                    </div>
-
-                </td>
-            </tr>
-        </table>
-    </div>
-
-</main>
+</div>
     </article>
   </div>
 

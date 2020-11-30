@@ -1,5 +1,6 @@
 "use strict";
 
+//選單active設定
 function currentPage() {
   var currentUrl = window.location.pathname.split('/')[2];
   console.log(currentUrl);
@@ -13,5 +14,22 @@ function currentPage() {
   }
 }
 
-currentPage();
+currentPage(); //assignment收合設定
+
+$(".assignment_toggle").click(function () {
+  $(".assignment_toggle_body").slideToggle("slow");
+}); //modal切換
+
+$(document).ready(function () {
+  // console.log("gogogo");
+  $('button[data-toggle="modal"][data-dismiss="modal"]').on('click', function () {
+    // console.log("fighting");
+    var target = $(this).data('target');
+    console.log('target', target);
+    $(target).on('shown.bs.modal', function () {
+      console.log(12 + 12);
+      $('body').addClass('modal-open');
+    });
+  });
+});
 //# sourceMappingURL=all.js.map
