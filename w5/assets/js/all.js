@@ -24,10 +24,10 @@ $(document).ready(function () {
   // console.log("gogogo");
   $('button[data-toggle="modal"][data-dismiss="modal"]').on('click', function () {
     // console.log("fighting");
-    var target = $(this).data('target');
-    console.log('target', target);
+    var target = $(this).data('target'); // console.log('target',target);
+
     $(target).on('shown.bs.modal', function () {
-      console.log(12 + 12);
+      // console.log(12+12);
       $('body').addClass('modal-open');
     });
   });
