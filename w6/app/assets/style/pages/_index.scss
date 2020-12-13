@@ -1,0 +1,28 @@
+.banner{
+    height: 480px;
+    background-image: url('https://hexschool.github.io/webLayoutTraining1st/perfume-week6/index1.jpg');
+    background-size: cover;
+    background-position: 10% center;
+
+    @include lg{
+        height: 870px;
+    }
+}
+
+.index_product{
+    height: 350px;
+    background-size: cover;
+    background-position: center center;
+    @include md{
+        height: 555px;
+    }
+}
+.index_product_long{
+    height: 680px;
+    @include md{
+        height: 1080px;
+    }
+}
+.index_product_i3{
+    background-position: 15% center;
+}

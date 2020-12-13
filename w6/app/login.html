@@ -1,0 +1,33 @@
+---
+title: 產品詳細介紹
+layout: ./app/layout3.ejs
+engine: ejs
+current: index
+---
+<div class="container position-r mt-40p mb-110p my-md-80p mh-74vh">
+    <div class="row align-items-center">
+        <div class="col-12 col-lg-8 mb-30p mb-lg-0">
+            <div class="img_center pt_adjust_login"
+            style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/perfume-week6/login1.jpg');"></div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <h2 class="h3 font-weight-bold mb-12p">Log in</h2>
+            <form class="needs-validation" novalidate>
+                <label for="account" class="d-block">帳號</label>
+                <input type="text" name="account" id="account" class="form-control d-block w-100 pl-12p" placeholder="email@example.com" required>
+                <div class="invalid-feedback">請確實填寫帳號</div>
+                <label for="password" class="d-block mt-20p">密碼</label>
+                <input type="password" name="password" id="password" class="form-control d-block w-100 pl-12p" placeholder="Password" required>
+                <div class="invalid-feedback">請確實填寫密碼</div>
+                <div class="d-flex justify-content-between align-items-center mt-45p">
+                    <a href="#"class="text-primary">忘記密碼</a>
+                    <div class="btns">
+                        <button class="btn btn-outline-primary" type="submit">註冊</button>
+                        <button class="btn btn-primary" type="button" onclick="window.location.href='member.html'">登入</button>
+                    </div>
+                </div> 
+
+            </form>
+        </div>
+    </div>
+</div>

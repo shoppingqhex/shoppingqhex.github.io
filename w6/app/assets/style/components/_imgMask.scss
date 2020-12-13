@@ -1,0 +1,41 @@
+%mask-base{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+
+    background-color:rgba(0,0,0, 0.3);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.img-mask::after{
+    content: "Sold out";
+    @extend %mask-base;
+}
+.hover-mask{
+    transition: 1s;
+    &:hover::after{
+        content: "了解更多";
+        @extend %mask-base;
+    }
+}
+
+//content文字設定
+.img-mask-lh350p{
+    line-height: 350px;
+    @include md {
+        line-height: 540px;
+    }
+}
+.hover-mask-lh165p{
+    line-height: 165px;
+    @include md {
+        line-height: 255px;
+    }
+}
+

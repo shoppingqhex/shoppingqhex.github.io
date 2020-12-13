@@ -1,0 +1,436 @@
+<!-- 上2下3，使用頁面：product -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>產品</title>
+  <!-- googlefont -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:ital,wght@0,400;0,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-perfume container pt-2 pb-0 pb-lg-2 px-0 mx-0 mx-lg-auto">
+        <h1 class="mr-auto pl-3 pl-lg-0"><a href="index.html" class="logo_img1">香水電商</a></h1>
+        <a href="#" class="d-lg-none position-r mr-3"><span class="link_cart"><span
+                    class="material-icons text-mid">shopping_cart</span></span></a>
+        <button class="navbar-toggler border-0 pr-3 pr-lg-0" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mb-1"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-perfume" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item nav-item-border mr-lg-2x"><a href="product.html"
+                        class="nav-link d-flex align-items-center justify-content-center"><span
+                            class="material-icons d-none d-lg-block">store</span>Product</a></li>
+                <li class="nav-item nav-item_1 nav-item-border mr-lg-2x"><a href="#"
+                        class="nav-link d-flex align-items-center justify-content-center"><span
+                            class="material-icons d-none d-lg-block">favorite</span>Wishlist</a></li>
+                <li class="nav-item nav-item-border mr-lg-2x d-lg-none"><a href="#"
+                        class="nav-link d-flex align-items-center justify-content-center">Blog</a></li>
+                <li class="nav-item nav-item-border mr-lg-2x d-lg-none"><a href="#"
+                        class="nav-link d-flex align-items-center justify-content-center">Contact</a></li>
+                <li class="nav-item mr-lg-2x"><a href="login.html"
+                        class="nav-link d-flex align-items-center justify-content-center"><span
+                            class="material-icons d-none d-lg-block">person</span>log in</a></li>
+                <li class="nav-item nav-item_2"><a href="#"
+                        class="nav-link align-items-center justify-content-center d-none d-lg-flex"><span
+                            class="material-icons d-none d-lg-block">shopping_cart</span>Cart(3)</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+  <section class="bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <ul class="col-12 d-none d-md-flex px-12p py-3">
+                <li class="pr-1 mr-4"><a href="#">CHANEL</a></li>
+                <li class="pr-1 mr-4"><a href="#">Jo Malone</a></li>
+                <li class="pr-1 mr-4"><a href="#">Curology</a></li>
+                <li class="pr-1 mr-4"><a href="#">Dior</a></li>
+                <li class="pr-1 mr-4"><a href="#">Chloe</a></li>
+                <li><a href="#">ZARA</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+  <section class="py-40p py-md-60p mt-3">
+    <div class="container px-0">
+        <ul class="row">
+            <!-- #1 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/products1.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380 <span
+                            class="text-mid text-decoration-line-through ml-1">NT$1,580</span></p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #2 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/index6.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md object-position-1" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380 <span
+                            class="text-mid text-decoration-line-through ml-1">NT$1,580</span></p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #3 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/products3.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md object-position-2" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380</p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #4 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/products4.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md object-position-2" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380</p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #5 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/products5.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380 <span
+                            class="text-mid text-decoration-line-through ml-1">NT$1,580</span></p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #6 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="product2.html">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/index4.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md object-position-3" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380 <span
+                            class="text-mid text-decoration-line-through ml-1">NT$1,580</span></p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #7 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/products7.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380</p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #8 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/products8.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380</p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #9 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/index3.png"
+                                class="card-img-top-adj card-img-top-h165-h255md" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380 <span
+                            class="text-mid text-decoration-line-through ml-1">NT$1,580</span></p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #10 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/products10.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380 <span
+                            class="text-mid text-decoration-line-through ml-1">NT$1,580</span></p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #11 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/products11.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380</p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+            <!-- #12 -->
+            <li class="col-6 col-md-4 col-lg-3 mb-2x mb-lg-60p">
+                <div class="card-adj">
+                    <a href="#">
+                        <div class="position-r hover-mask hover-mask-lh165p hvr-wobble-horizontal">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/products12.jpg"
+                                class="card-img-top-adj card-img-top-h165-h255md" alt="設計師產品">
+                        </div>
+                        <h2 class="h6 font-weight-semibold font-size-md-24">Poppy & Barley</h2>
+                    </a>
+                    <p>Jo Malone</p>
+                    <p class="card-text">NT$1,380</p>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="material-icons icon-border active" data-toggle="modal"
+                                data-target="#favoriteModalCenter">favorite_border</span>
+                            <span class="material-icons icon">favorite</span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#cartModalCenter"><span
+                                class="material-icons text-primary">shopping_cart</span></a>        
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="row">
+            <ul class="pagination-custom d-flex justify-content-center">
+                <li class="mr-3 pr-1"><a href="#" class="h6 active">1</a></li>
+                <li class="mr-3 pr-1"><a href="#" class="h6">2</a></li>
+                <li><a href="#" class="h6">3</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+  <!-- footer -->
+  <section class="form_email pb-110p"
+    style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/perfume-week6/index10.jpg');">
+    <div class="container h-100">
+        <div class="row align-items-end h-100">
+            <div class="col-lg-4">
+                <h3 class="font-weight-semibold text-mid mb-4">記得 <br> 訂閱以獲取更多資訊！</h3>
+                <form class="input-group h-60p">
+                    <input type="text" id="mail" class="form-control border border-primary border-2 rounded-left pl-3"
+                        placeholder="Your email address">
+                    <input type="submit" value="Subscribe" class="form-control btn btn-primary px-4">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+  <footer class="bg-primary text-white">
+  <div class="container py-3">
+    <div class="row align-items-center no-gutters">
+      <div class="col-lg-8 d-flex align-items-center justify-content-between justify-content-lg-start">
+        <h1 class="mr-3"><a href="index.html" class="logo_img2">香水電商</a></h1>
+        <p class="footer_copyright mb-0">© 2020. All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <ul class="d-flex align-items-center">
+          <li class="mr-36p h6"><a href="product.html">Product</a></li>
+          <li class="mr-36p h6"><a href="#">Blog</a></li>
+          <li class="h6"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- modal -->
+  <!-- Modal 購物車-->
+<div class="modal fade" id="cartModalCenter" tabindex="-1" role="dialog" aria-labelledby="cartModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border border-light rounded">
+                <h6 class="modal-title text-primary text-center font-weight-semibold w-100" id="favoriteModalCenterTitle">已加入購物車</h6>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!-- Modal 收藏-->
+<div class="modal fade" id="favoriteModalCenter" tabindex="-1" role="dialog" aria-labelledby="favoriteModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-light rounded">
+                <h6 class="modal-title text-primary text-center font-weight-semibold w-100" id="favoriteModalCenterTitle">已加入我的收藏</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  <a href="#" title="返回頁首">
+    <span class="material-icons goTop d-none hvr-wobble-vertical">keyboard_arrow_up</span>
+</a>
+  
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

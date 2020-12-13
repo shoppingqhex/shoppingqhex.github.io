@@ -1,0 +1,36 @@
+<!-- 上2下2，使用頁面：product2、login -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%- title %></title>
+  <!-- googlefont -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:ital,wght@0,400;0,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+<body>
+  <!-- header -->
+  <%- include('layout/01_navbar', {page: current}) %>
+  <%- include('layout/02_topmenu', {page: current}) %>
+
+  <%- contents %>
+
+  <!-- footer -->
+  <%- include('layout/04_footer', {page: current}) %>
+  <!-- modal -->
+  <%- include('layout/05_modal', {page: current}) %>
+  
+  <!-- js -->
+  <%- include('layout/vendors_js', {page: current}) %>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

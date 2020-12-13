@@ -1,0 +1,22 @@
+.icon-border {
+    display: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary;
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.icon {
+    display: none;
+    cursor: pointer;
+    color: $primary;
+
+    &.active {
+        display: block;
+    }
+}

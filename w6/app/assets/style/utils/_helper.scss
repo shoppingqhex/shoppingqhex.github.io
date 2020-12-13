@@ -1,0 +1,71 @@
+//border
+.border-2{
+    border-width: 2px !important;
+}
+.border-bot{
+    border-bottom: 1px solid;
+}
+
+//字型樣式
+h2{
+    font-size: 40px;
+    line-height: 60px;
+}
+h3{
+    font-size: 32px;
+    line-height: 48px;
+}
+h4{
+    font-size: 28px;
+    line-height: 42px;
+}
+h5{
+    font-size: 24px;
+    line-height: 36px;
+}
+h6{
+    font-size: 20px;
+    line-height: 30px;
+}
+.h7{
+    font-size: 16px;
+    line-height: 24px;
+}
+.h8{
+    font-size: 14px;
+    line-height: 21px;
+}
+
+// font-weight設定
+$fontWeight: (
+    'reqular': 400,
+    'medium' : 500,
+    "semibold" :600,
+    "bold" :700,
+);
+@each $key,$value in $fontWeight {
+    .font-weight-#{$key} {
+        font-weight: $value;
+    }
+}
+
+//對齊
+.vertical-align-bot{
+    vertical-align: bottom;
+}
+
+//寬高設定
+.h-60p{
+    height: 60px;
+}
+.w-lg-75{
+    @include lg{
+        width: 75% !important;
+    }
+}
+
+.mh-74vh{
+    min-height: 74vh!important;
+}
+
+

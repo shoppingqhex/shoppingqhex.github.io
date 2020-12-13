@@ -1,0 +1,47 @@
+header{
+    .container{
+        max-width: 100%;
+        @include lg{
+            max-width: 960px;
+        }
+        @include xl{
+            max-width: 1110px;
+        }
+    }
+}
+
+// h1 圖片取代文字
+h1 {
+    height: 38px;
+    display: flex;
+    align-items: center;
+
+    a {
+        width: 128px;
+        height: 38px;
+        display: block;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+        
+    }
+    .logo_img1{
+      background-image: url('https://hexschool.github.io/webLayoutTraining1st/perfume-week6/d’Perfume.png');
+    }
+    .logo_img2{
+      background-image: url('https://hexschool.github.io/webLayoutTraining1st/perfume-week6/d’Perfumewhite.png');
+    }
+}
+
+//訂閱表單
+.form_email{
+  height: 600px;
+  background-size: cover;
+  background-position: center center;
+}
+
+////// footer
+.footer_copyright{
+  font-size: 14px;
+  line-height: 16px;
+}

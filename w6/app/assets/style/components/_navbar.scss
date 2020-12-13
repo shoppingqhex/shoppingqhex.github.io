@@ -1,0 +1,110 @@
+nav {
+    ///購物車連結
+    .link_cart{
+        &::after{
+            content: "3";
+            border-radius: 50%;
+            background-color: $primary;
+            color: #fff;
+            width: 14px;
+            height: 14px;
+            font-size: 10px;
+            text-align: center;
+            line-height: 14px;
+
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+    }
+
+    ///漢堡條
+    .navbar-toggler-icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    ///選單
+    .navbar-collapse{
+        @include lg{
+            width: auto;
+        }
+    }
+    //nav-item
+    .nav-item-border{
+        border-bottom: 1px solid #fff;
+        @include lg{
+            border-bottom: 0;
+        }
+    }
+    //排序
+    .nav-item_1{
+        order: 0;
+        @include lg{
+            order: 1;        
+        }
+    }
+    .nav-item_2{
+        order: 2;
+    }  
+}
+
+// navbar 色系修改
+.navbar-perfume {
+    .navbar-brand {
+      color: $navbar-light-brand-color;
+  
+      &:hover,
+      &:focus {
+        color: $navbar-light-brand-hover-color;
+      }
+    }
+  
+    .navbar-nav {
+      .nav-link {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 16px 0;
+  
+        background: $gray-600;
+        color: #fff;
+        @include lg{
+          background: #fff;
+          color: $gray-500;
+        }
+  
+        // &:hover,
+        // &:focus {
+        //   color: $primary;
+        // }
+  
+        &.disabled {
+          color: $navbar-light-disabled-color;
+        }
+      }
+  
+      .show > .nav-link,
+      .nav-link.active {
+        color: $navbar-light-active-color;
+      }
+    }
+  
+    .navbar-toggler {
+      color: $navbar-light-color;
+      border-color: $navbar-light-toggler-border-color;
+    }
+  
+    .navbar-toggler-icon {
+      background-image: escape-svg($navbar-light-toggler-icon-bg);
+    }
+  
+    .navbar-text {
+      color: $navbar-light-color;
+  
+      a,
+      a:hover,
+      a:focus  {
+        color: $navbar-light-active-color;
+      }
+    }
+  }

@@ -1,0 +1,21 @@
+.img_center{ 
+    background-position: center center;
+    background-size: cover;
+}
+
+.pt_adjust_prduct{
+    padding-top: 133.333%;
+    @include md{
+        padding-top: 66.75%;
+    }
+    @include lg{
+        padding-top: 63%;
+    }
+}
+
+.pt_adjust_login{
+    padding-top: 63.77%;
+    @include lg{
+        padding-top: 100%;
+    }
+}
