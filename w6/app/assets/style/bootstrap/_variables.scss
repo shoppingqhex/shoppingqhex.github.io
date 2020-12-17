@@ -359,8 +359,8 @@ $gutters: $spacers !default;
 
 // Container padding
 
-$container-padding-x: 0 !default;
-// $container-padding-x: $grid-gutter-width / 2 !default;
+
+$container-padding-x: $grid-gutter-width / 2 !default;
 
 
 // Components
@@ -460,7 +460,7 @@ $font-sizes: (
 ) !default;
 // scss-docs-end font-sizes
 
-$headings-margin-bottom:      $spacer / 0 !default;
+$headings-margin-bottom:       0 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        400 !default;

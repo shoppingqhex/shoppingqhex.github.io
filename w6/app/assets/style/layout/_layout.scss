@@ -1,17 +1,5 @@
-header{
-    .container{
-        max-width: 100%;
-        @include lg{
-            max-width: 960px;
-        }
-        @include xl{
-            max-width: 1110px;
-        }
-    }
-}
-
 // h1 圖片取代文字
-h1 {
+h1, footer h2 {
     height: 38px;
     display: flex;
     align-items: center;

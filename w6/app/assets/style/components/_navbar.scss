@@ -90,8 +90,10 @@ nav {
     }
   
     .navbar-toggler {
-      color: $navbar-light-color;
-      border-color: $navbar-light-toggler-border-color;
+      color: transparent;  //漢堡條外框
+      border: none;
+      outline: none;
+      border-color: transparent;
     }
   
     .navbar-toggler-icon {

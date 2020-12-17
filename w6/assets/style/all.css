@@ -75,7 +75,7 @@ hr:not([size]) {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 0;
-  margin-bottom: Infinity;
+  margin-bottom: 0;
   font-weight: 400;
   line-height: 1.2; }
 
@@ -482,8 +482,8 @@ progress {
 .container-lg,
 .container-xl {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0);
-  padding-left: var(--bs-gutter-x, 0);
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto; }
 
@@ -11423,6 +11423,8 @@ a {
     text-shadow: 3px 1px 5px rgba(128, 128, 128, 0.4); }
   a.btn:hover {
     color: #fff !important; }
+  a.btn-outline-black:hover {
+    color: #000 !important; }
   a.disabled:hover {
     color: unset !important;
     font-weight: 400; }
@@ -11448,6 +11450,9 @@ li {
 
 .border-bot {
   border-bottom: 1px solid; }
+
+.outline-none {
+  outline: none !important; }
 
 h2, .h2 {
   font-size: 40px;
@@ -11637,8 +11642,10 @@ nav .nav-item_2 {
   color: rgba(0, 0, 0, 0.9); }
 
 .navbar-perfume .navbar-toggler {
-  color: rgba(0, 0, 0, 0.55);
-  border-color: rgba(0, 0, 0, 0.1); }
+  color: transparent;
+  border: none;
+  outline: none;
+  border-color: transparent; }
 
 .navbar-perfume .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
@@ -11899,68 +11906,7 @@ nav .nav-item_2 {
   background-color: #f8f9fa;
   color: #916019; }
 
-.row {
-  margin-left: 15px;
-  margin-right: 15px; }
-  @media (min-width: 768px) {
-    .row {
-      margin-left: 24px;
-      margin-right: 24px; } }
-  @media (min-width: 992px) {
-    .row {
-      margin-left: -12px;
-      margin-right: -12px; } }
-
-.col-12 {
-  padding-left: 0;
-  padding-right: 0; }
-  @media (min-width: 992px) {
-    .col-12 {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem; } }
-
-.row-mx-0-md {
-  margin-left: 0;
-  margin-right: 0; }
-  @media (min-width: 768px) {
-    .row-mx-0-md {
-      margin-left: -12px;
-      margin-right: -12px; } }
-
-.col-px-0-md {
-  padding-left: 0;
-  padding-right: 0; }
-  @media (min-width: 768px) {
-    .col-px-0-md {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem; } }
-
-.row-mx-0-lg {
-  margin-left: 0;
-  margin-right: 0; }
-  @media (min-width: 992px) {
-    .row-mx-0-lg {
-      margin-left: -12px;
-      margin-right: -12px; } }
-
-.col-px-0-lg {
-  padding-left: 0;
-  padding-right: 0; }
-  @media (min-width: 992px) {
-    .col-px-0-lg {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem; } }
-
-header .container {
-  max-width: 100%; }
-  @media (min-width: 992px) {
-    header .container {
-      max-width: 960px; } }
-  @media (min-width: 1200px) {
-    header .container {
-      max-width: 1110px; } }
-
-h1, .h1 {
+h1, .h1, footer h2, footer .h2 {
   height: 38px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11968,16 +11914,16 @@ h1, .h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  h1 a, .h1 a {
+  h1 a, .h1 a, footer h2 a, footer .h2 a {
     width: 128px;
     height: 38px;
     display: block;
     text-indent: 101%;
     overflow: hidden;
     white-space: nowrap; }
-  h1 .logo_img1, .h1 .logo_img1 {
+  h1 .logo_img1, .h1 .logo_img1, footer h2 .logo_img1, footer .h2 .logo_img1 {
     background-image: url("https://hexschool.github.io/webLayoutTraining1st/perfume-week6/d’Perfume.png"); }
-  h1 .logo_img2, .h1 .logo_img2 {
+  h1 .logo_img2, .h1 .logo_img2, footer h2 .logo_img2, footer .h2 .logo_img2 {
     background-image: url("https://hexschool.github.io/webLayoutTraining1st/perfume-week6/d’Perfumewhite.png"); }
 
 .form_email {
@@ -11999,9 +11945,12 @@ h1, .h1 {
       height: 870px; } }
 
 .index_product {
+  width: 100%;
   height: 350px;
-  background-size: cover;
-  background-position: center center; }
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center; }
   @media (min-width: 768px) {
     .index_product {
       height: 555px; } }
@@ -12013,7 +11962,8 @@ h1, .h1 {
       height: 1080px; } }
 
 .index_product_i3 {
-  background-position: 15% center; }
+  -o-object-position: 15% center;
+     object-position: 15% center; }
 
 @media (min-width: 768px) {
   .font-size-md-24 {

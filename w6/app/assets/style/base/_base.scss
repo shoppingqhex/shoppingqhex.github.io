@@ -32,6 +32,9 @@ a {
     &.btn:hover{
         color: #fff !important;
     }
+    &.btn-outline-black:hover{
+        color: #000 !important;
+    }
     &.disabled:hover{
         color: unset !important;
         font-weight: 400;
