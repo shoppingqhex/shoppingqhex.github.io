@@ -1,0 +1,74 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', 'Roboto Mono', monospace, sans-serif;
+    color: $dark;
+}
+img{
+    display:block;
+    max-width:100%;
+    height:auto; 
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    display: block;
+    color: unset;
+    text-decoration: none;
+    &:hover{
+        color: unset;
+        text-decoration: none;
+    }
+}
+.a-hover-bg{
+    &:hover{
+        background-color: $border;
+    }
+}
+.a-hover-text-dark{
+    &:hover{
+        color: $dark;
+    }
+}
+.a-hover-text-primary{
+    &:hover{
+        color: $primary;
+    }
+}
+
+p{
+    margin-bottom: 0;
+}
+small, .small{
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.position-r{
+    position: relative;
+}
+
+.profile{
+    img{
+        width: 40px;
+        height: 40px;
+    }
+    h5{
+       font-size:16px;
+       line-height: 19px;
+       margin-bottom: 4px; 
+    }
+    p{
+        font-size:14px;
+        line-height: 17px;
+    }
+}
+
+.cursor-point{
+    cursor: pointer;
+}
+
+

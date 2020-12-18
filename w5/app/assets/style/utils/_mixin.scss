@@ -1,0 +1,13 @@
+
+//993~
+@mixin lg {
+    @media (min-width:992px) {
+        @content;
+    }
+}
+//768~992
+@mixin md {
+    @media (min-width:768px) {
+        @content;
+    }
+}

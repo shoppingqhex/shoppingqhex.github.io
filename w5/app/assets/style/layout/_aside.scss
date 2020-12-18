@@ -1,0 +1,41 @@
+aside {
+    width: 23%;
+    min-height: 100vh;
+    padding: 32px 0;
+
+    // h1 圖片取代文字
+    h1 {
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        a {
+            background-image: url('https://hexschool.github.io/webLayoutTraining1st/week5/logo-ANSWER.svg');
+            background-size: cover;
+            background-position: center center;
+            width: 145px;
+            height: 40px;
+            // display: block;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+
+    .links {
+        a {
+            padding: 0 32px;
+            height: 28px;
+            &.active {
+                color: $primary;
+                border-left: 3px solid $primary;
+            }
+        }
+    }
+    .aside-padding{
+        padding: 0 32px;
+    }
+}
+article{
+    width: 77%;
+}

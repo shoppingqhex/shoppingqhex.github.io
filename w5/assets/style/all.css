@@ -8990,7 +8990,7 @@ small,
 
 aside {
   width: 23%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 32px 0; }
   aside h1 {
     height: 50px;
@@ -9115,7 +9115,7 @@ article {
   border-top: 0;
   padding: 0 12px 12px 12px; }
 
-.adminModal h6 {
+.adminModal h6, .adminModal .h6 {
   font-size: 20px;
   line-height: 24px; }
 

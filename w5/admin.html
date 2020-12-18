@@ -234,43 +234,48 @@
             </div>
             <div class="modal-body adminModal p-4">
                 <form class="form_section">
-                    <div class="form_border pb-4 mb-4 label-block">
+                    <div class="form-group form_border pb-4 mb-4 label-block">
                         <h6>Account</h6>
-                        <label for="username">Name</label>
-                        <input type="text" id="username" name="username" value="" class="mb-3" readonly>
-                        <label for="mail">Email</label>
-                        <input type="text" id="mail" name="mail" value="">
+                        <label for="new_username">Name</label>
+                        <input type="text" id="new_username" name="new_username" value="" class="mb-3" readonly>
+                        <label for="new_mail">Email</label>
+                        <input type="text" id="new_mail" name="new_mail" value="">
                     </div>
-                    <div class="form_border pb-4 mb-4">
+                    <div class="form-group form_border pb-4 mb-4">
                         <h6 class="mb-3">Verification</h6>
                         <p class="d-flex align-items-center font-weight-bold mb-3"><span
                                 class="material-icons text-caution mr-1">report_problem</span>Unverified</p>
-                        <input type="button" id="sendmail" name="sendmail" value="Send Verification Mail"
+                        <input type="button" id="new_sendmail" name="new_sendmail" value="Send Verification Mail"
                             class="btn btn-outline-primary btn-outline-sp font-weight-bold">
                     </div>
-                    <div class="form_border pb-4 mb-4">
+                    <div class="form-group form_border pb-4 mb-4">
                         <h6 class="mb-3">Access Level</h6>
-                        <select name="level" id="level" class="pl-3">
+                        <select name="new_level" id="new_level" class="custom-select pl-3">
                             <option value="admin">-Choose access level-</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="form-group">
                         <h6 class="mb-3">Custom Access</h6>
-                        
-                        <input type="checkbox" name="custom" id="lecture" value="lecture" class="checkbox lh-24">
-                        <label for="lecture" class="cursor-point ml-2 mb-3">Lecture</label><br>
-
-                        <input type="checkbox" name="custom" id="coupon" value="coupon" class="checkbox lh-24">
-                        <label for="coupon" class="cursor-point ml-2 mb-3">Coupon</label><br>
-
-                        <input type="checkbox" name="custom" id="message" value="message" class="checkbox lh-24">
-                        <label for="message" class="cursor-point ml-2 mb-3">Message</label><br>
-
-                        <input type="checkbox" name="custom" id="setting" value="setting" class="checkbox lh-24">
-                        <label for="setting" class="cursor-point ml-2 mb-3">Setting</label><br>
-
-                        <input type="checkbox" name="custom" id="taskMenu" value="taskMenu" class="checkbox lh-24">
-                        <label for="taskMenu" class="cursor-point ml-2 mb-0">Task Menu</label>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="new_custom" id="new_lecture" value="lecture" class="custom-control-input lh-24">
+                            <label for="new_lecture" class="custom-control-label ml-2 mb-3">Lecture</label><br>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="new_custom" id="new_coupon" value="coupon" class="custom-control-input lh-24">
+                            <label for="new_coupon" class="custom-control-label ml-2 mb-3">Coupon</label><br>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="new_custom" id="new_message" value="message" class="custom-control-input lh-24">
+                            <label for="new_message" class="custom-control-label ml-2 mb-3">Message</label><br> 
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="new_custom" id="new_setting" value="setting" class="custom-control-input lh-24">
+                            <label for="new_setting" class="custom-control-label ml-2 mb-3">Setting</label><br>  
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="new_custom" id="new_taskMenu" value="taskMenu" class="custom-control-input lh-24">
+                            <label for="new_taskMenu" class="custom-control-label ml-2 mb-0">Task Menu</label> 
+                        </div>              
                     </div>
                 </form>
             </div>
@@ -282,28 +287,28 @@
     </div>
 </div>
 <!-- adminModal_edit -->
-<div class="modal fade" id="adminModal_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="adminModal_edit" tabindex="-1" role="dialog" aria-labelledby="adminModalLabel_edit"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header p-4">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Admin</h5>
+                <h5 class="modal-title" id="adminModalLabel_edit">Edit Admin</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body adminModal p-4">
                 <form class="form_section">
-                    <div class="form_border pb-4 mb-4">
+                    <div class="form-group form_border pb-4 mb-4">
                         <h6>Account</h6>
-                        <label for="username">Name</label>
-                        <input type="text" id="username" name="username" value="Emir Wicks"
+                        <label for="edit_username">Name</label>
+                        <input type="text" id="edit_username" name="edit_username" value="Emir Wicks"
                             class="bg-secondary border-0 mb-3">
-                        <label for="mail">Email</label>
-                        <input type="text" id="mail" name="mail" value="emir.wicks@mail.com"
+                        <label for="edit_mail">Email</label>
+                        <input type="text" id="edit_mail" name="edit_mail" value="emir.wicks@mail.com"
                             class="bg-secondary border-0">
                     </div>
-                    <div class="form_border pb-4 mb-4">
+                    <div class="form-group form_border pb-4 mb-4">
                         <h6 class="mb-3">Verification</h6>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <p class="d-flex align-items-center font-weight-bold"><span
@@ -313,28 +318,34 @@
                         <input type="button" id="sendmail" name="sendmail" value="Send Verification Mail"
                             class="btn btn-outline-border font-weight-bold rounded-0">
                     </div>
-                    <div class="form_border pb-4 mb-4">
-                        <h6 class="mb-3">Access Level</h6>
-                        <select name="level" id="level" class="pl-3">
+                    <div class="form-group form_border pb-4 mb-4">
+                        <label for="edit_level" class="h6 mb-3">Access Level</label>
+                        <select name="level" id="edit_level" class="custom-select pl-3">
                             <option value="admin">Admin</option>
                         </select>
                     </div>
-                    <div class="form_border pb-4 mb-4">
+                    <div class="form-group form_border pb-4 mb-4">
                         <h6 class="mb-3">Custom Access</h6>
-                        <input type="checkbox" name="custom" id="lecture2" value="lecture" class="checkbox lh-24">
-                        <label for="lecture2" class="cursor-point ml-2 mb-3">Lecture</label><br>
-
-                        <input type="checkbox" name="custom" id="coupon2" value="coupon" class="checkbox lh-24">
-                        <label for="coupon2" class="cursor-point ml-2 mb-3">Coupon</label><br>
-
-                        <input type="checkbox" name="custom" id="message2" value="message" class="checkbox lh-24">
-                        <label for="message2" class="cursor-point ml-2 mb-3">Message</label><br>
-
-                        <input type="checkbox" name="custom" id="setting2" value="setting" class="checkbox lh-24">
-                        <label for="setting2" class="cursor-point ml-2 mb-3">Setting</label><br>
-
-                        <input type="checkbox" name="custom" id="taskMenu2" value="taskMenu" class="checkbox lh-24">
-                        <label for="taskMenu2" class="cursor-point ml-2 mb-0">Task Menu</label>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="edit_custom" id="edit_lecture" value="lecture" class="custom-control-input lh-24">
+                            <label for="edit_lecture" class="custom-control-label ml-2 mb-3">Lecture</label><br>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="edit_custom" id="edit_coupon" value="coupon" class="custom-control-input lh-24">
+                            <label for="edit_coupon" class="custom-control-label ml-2 mb-3">Coupon</label><br>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="edit_custom" id="edit_message" value="message" class="custom-control-input lh-24">
+                            <label for="edit_message" class="custom-control-label ml-2 mb-3">Message</label><br> 
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="edit_custom" id="edit_setting" value="setting" class="custom-control-input lh-24">
+                            <label for="edit_setting" class="custom-control-label ml-2 mb-3">Setting</label><br>  
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="edit_custom" id="edit_taskMenu" value="taskMenu" class="custom-control-input lh-24">
+                            <label for="edit_taskMenu" class="custom-control-label ml-2 mb-0">Task Menu</label> 
+                        </div>              
                     </div>
                     <div>
                         <h6 class="mb-3">Deactivate Account</h6>
