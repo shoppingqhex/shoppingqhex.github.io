@@ -1,0 +1,164 @@
+//border
+.border-2{
+    border-width: 2px !important;
+}
+.border-bot{
+    border-bottom: 1px solid;
+}
+
+.rounded-4px{
+    border-radius: 4px;
+}
+
+// font-family設定
+.text-title{
+    font-family: 'Raleway', sans-serif;
+}
+
+$fontFamily: (
+    'openSans': 'Open Sans',
+    'raleway' : 'Raleway',
+    'roboto' : 'Roboto',
+);
+@each $fontname,$fontvalue in $fontFamily {
+    .text-#{$fontname}{
+        font-family: $fontvalue, sans-serif;
+    }
+}
+// font-weight設定
+$fontWeight: (
+    'reqular': 400,
+    'medium' : 500,
+    "semibold" :600,
+    "bold" :700,
+    "extrabold" :800,
+    "black" :900,
+);
+@each $key,$value in $fontWeight {
+    .font-weight-#{$key} {
+        font-weight: $value;
+    }
+}
+
+//字級大小
+.h0-md{
+    @include md{
+        font-size: 48px;
+    }
+}
+.h2-md{
+    @include md{
+        font-size: 32px;
+    }
+}
+.h4-md{
+    @include md{
+        font-size: 24px;
+    }
+}
+
+//行高
+.lh-1rem{
+    line-height: 1rem;
+}
+
+//對齊
+.vertical-align-bot{
+    vertical-align: bottom;
+}
+.vertical-align-mid{
+    vertical-align: middle;
+}
+.vertical-align-base{
+    vertical-align: baseline;
+}
+
+
+//寬高設定
+
+.h-56p{
+    height: 56px;
+}
+.h-lg-263p{
+    height: 181px;
+    @include md{
+        height: 158px;
+    }
+    @include lg{
+        height: 263px;
+    }
+}
+.h-lg-175p{
+    height: 164px;
+    @include md{
+        height: 185px;
+    }
+    @include lg{
+        height: 175px;
+    }
+}
+
+.w-36percent{
+    width: 36% !important;
+}
+.w-64percent{
+    width: 64% !important;
+}
+
+
+//間距
+.mb-md-24p{
+    margin-bottom: 20px;
+    @include md{
+        margin-bottom: 24px;
+    }
+}
+.mb-48p-lg-72p{
+    margin-bottom: 48px;
+    @include lg{
+        margin-bottom: 72px;
+    }
+}
+.mb-48p-lg-66p{
+    margin-bottom: 48px;
+    @include lg{
+        margin-bottom: 66px;
+    }
+}
+
+//圖層序位
+.z-index-1{
+    position: relative;
+    z-index: 1;
+}
+.z-index-2{
+    position: relative;
+    z-index: 2;
+}
+
+//圖片
+.bg-center{ 
+    background-position: center center;
+    background-size: cover;
+}
+.img-center{ 
+    object-position: center center;
+    object-fit: cover;
+}
+.img-hover{
+    transition: transform 0.5s ease-out;
+    &:hover{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+
+//其他
+
+.overflow-hid{
+    overflow: hidden;
+}
+
+.box-shadow{
+    box-shadow: 1px 1px 8px rgba($gray-610,0.3);
+}

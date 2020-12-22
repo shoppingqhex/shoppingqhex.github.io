@@ -1,0 +1,27 @@
+.login_bg{
+    // padding-top: 98.16%;
+    background-size: 120%;
+    background-position: center 70%;
+
+    position: absolute;
+    top: 0;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    @include lg{
+        background-size: 100%;
+        background-position: center 60%;
+
+        bottom: 0;
+    }
+}
+
+.login_bg-h{
+    @include md{
+        height: 103vh;
+    }
+    @include lg{
+        height: 80vh;
+    }
+}

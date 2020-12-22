@@ -1,0 +1,42 @@
+.swiper-container.banner {
+    width: 100%;
+    .swiper-slide {
+        height: unset !important;
+        text-align: center;
+    
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        h2 {
+            width: 60.5%;
+            @include md {
+                width: 54%;
+            }
+    
+            @include lg {
+                width: 45%;
+            }
+        }
+    }
+    .pt_adjust_swiper{
+        padding-top: 30%;
+        padding-bottom: 30%;
+        @include md {
+            padding-top: 11.5%;
+            padding-bottom: 11.5%;
+        }
+    }
+}
+
+
+.swiper-container.inspiration,
+.swiper-container.topChoice{
+    .swiper-slide { 
+        width: 72% ;
+        @include md{
+            width: 35.15%;
+        }
+    }
+}

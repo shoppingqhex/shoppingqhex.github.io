@@ -1,0 +1,49 @@
+%mask-base{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color:rgba(0,0,0, 0.5);
+}
+
+.img-mask::before{
+    content: "";
+    @extend %mask-base;
+}
+//圓角、漸層背景版本
+.img-mask-rounded::before{
+    content: "";
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.37) 38%,rgba(0,0,0,0.65) 66%); 
+    border-radius: 8px;
+    @extend %mask-base;
+}
+
+.hover-mask{
+    transition: 0.5s;
+    &:hover::after{
+        content: "了解更多";
+        @extend %mask-base;
+        color: #fff;
+        text-align: center;
+        background-color:rgba(0,0,0, 0.3);
+        border-radius: 8px;
+        
+    }
+}
+
+//content文字設定
+.img-mask-lh350p{
+    line-height: 350px;
+    @include md {
+        line-height: 540px;
+    }
+}
+.hover-mask-lh165p{
+    line-height: 165px;
+    @include md {
+        line-height: 255px;
+    }
+}
+

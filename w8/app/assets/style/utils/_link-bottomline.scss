@@ -1,0 +1,23 @@
+.link_bottomline{
+    position: relative;
+
+    &::after{
+        content: '';
+        
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 0;
+        height: 2px;
+        background-color: $primary;
+        opacity: 0;
+
+        transition: 0.8s;
+    }
+    &:hover::after,&.active::after{
+        width: 100%;
+        opacity: 1;
+    }
+    
+}

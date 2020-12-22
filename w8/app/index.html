@@ -1,0 +1,533 @@
+---
+title: 首頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+<!-- Banner Swiper -->
+<section class="swiper-container banner">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide pt_adjust_swiper bg-center img-mask"
+            style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/index-banner.jpg');">
+            <h2 class="text-title text-white h0-md font-weight-extrabold z-index-1">Discover your ideal hotel</h2>
+        </div>
+        <div class="swiper-slide pt_adjust_swiper bg-center img-mask"
+            style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/index-banner.jpg');">
+            <h2 class="text-title text-white h0-md font-weight-extrabold z-index-1">Discover your ideal hotel2</h2>
+        </div>
+        <div class="swiper-slide pt_adjust_swiper bg-center img-mask"
+            style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/index-banner.jpg');">
+            <h2 class="text-title text-white h0-md font-weight-extrabold z-index-1">Discover your ideal hotel3</h2>
+        </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next text-white pr-3"></div>
+    <div class="swiper-button-prev text-white pl-3"></div>
+</section>
+<section class="container mb-lg-3 search-bar">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="dropdown-group d-flex flex-column flex-lg-row justify-content-lg-between bg-light rounded p-4">
+                <!-- Destination -->
+                <div class="dropdown mb-3 mb-lg-0">
+                    <button class="btn btn-white dropdown-toggle text-gray610 text-left rounded-4px w-100 p-3"
+                        type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span class="material-icons vertical-align-bot mr-3">place</span>Destination
+                    </button>
+                    <div class="dropdown-menu border-0 box-shadow rounded-4px w-100 py-0 mt-12p"
+                        aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item d-flex pt-3" href="#">
+                            <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                            <div>
+                                <p class="mb-0">Bangkok</p>
+                                <p class="mb-0 h8 text-gray610">Thailand</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex" href="#">
+                            <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                            <div>
+                                <p class="mb-0">Osaka</p>
+                                <p class="mb-0 h8 text-gray610">Japan</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex" href="#">
+                            <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                            <div>
+                                <p class="mb-0">Roma</p>
+                                <p class="mb-0 h8 text-gray610">Italy</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex" href="#">
+                            <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                            <div>
+                                <p class="mb-0">Paris</p>
+                                <p class="mb-0 h8 text-gray610">France</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex" href="#">
+                            <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                            <div>
+                                <p class="mb-0">Reykjavík</p>
+                                <p class="mb-0 h8 text-gray610">Iceland</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Check-in / Check-out -->
+                <div class="dropdown mb-3 mb-lg-0">
+                    <div class="btn btn-white text-gray610 text-left rounded-4px calendar d-flex w-100 p-3"type="button">
+                        <p class="material-icons vertical-align-bot mr-3 mb-0">date_range</p>
+                        <span></span> 
+                </div>
+                </div>
+                <!-- Guests -->
+                <div class="dropdown mb-3 mb-lg-0">
+                    <button class="btn btn-white dropdown-toggle text-gray610 text-left rounded-4px w-100 p-3"
+                        type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span class="material-icons vertical-align-bot mr-3">person</span>Guests
+                    </button>
+                    <div class="dropdown-menu border-0 box-shadow rounded-4px w-100 py-0 mt-12p"
+                        aria-labelledby="dropdownMenuButton">
+                        <table class="table table-borderless table-hover mb-0">
+                            <tbody>
+                              <tr class="mt-3">
+                                <th scope="row" class="font-weight-reqular">Adult</th>
+                                <td><a href="#" class="material-icons">remove</a></td>
+                                <td>2</td>
+                                <td><a href="#" class="material-icons">add</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row" class="font-weight-reqular">Child</th>
+                                <td><a href="#" class="material-icons">remove</a></td>
+                                <td>0</td>
+                                <td><a href="#" class="material-icons">add</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row" class="font-weight-reqular">Room</th>
+                                <td><a href="#" class="material-icons">remove</a></td>
+                                <td>1</td>
+                                <td><a href="#" class="material-icons">add</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+                <!-- search -->
+                <form class="btn-submit">
+                    <input type="submit" value="Search"
+                        class="btn btn-primary  text-uppercase font-weight-bold w-100 p-3">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container mb-48p-lg-72p">
+    <h3 class="h4 h2-md text-title font-weight-bold mb-4">Top Choices</h3>
+    <nav class="mb-28p">
+        <div class="nav nav-tabs topChoices" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link h5 h4-md font-weight-bold text-gray610 active" id="nav-bali-tab"
+                data-toggle="tab" href="#nav-bali" role="tab" aria-controls="nav-bali"
+                aria-selected="true">Bali<sup>128</sup></a>
+            <a class="nav-item nav-link h5 h4-md font-weight-bold text-gray610" id="nav-okinawa-tab" data-toggle="tab"
+                href="#nav-okinawa" role="tab" aria-controls="nav-okinawa"
+                aria-selected="false">Okinawa<sup>67</sup></a>
+            <a class="nav-item nav-link h5 h4-md font-weight-bold text-gray610" id="nav-taipei-tab" data-toggle="tab"
+                href="#nav-taipei" role="tab" aria-controls="nav-taipei" aria-selected="false">Taipei<sup>53</sup></a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-bali" role="tabpanel" aria-labelledby="nav-bali-tab">
+            <!-- Swiper -->
+            <div class="swiper-container topChoice">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top1.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Hotel Aqua</a>
+                                </h4>
+
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★★</span>
+                                    <span class="h7 text-gray610">5.0</span>
+                                    <span class="h8 text-gray510">・2k reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">TWD 2,480<del class="h8 text-gray510 ml-2">TWD 3,980</del>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top2.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Mr. Kawasaki Inn</a>
+                                </h4>
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★</span>
+                                    <span class="h7 text-gray610">4.0</span>
+                                    <span class="h8 text-gray510">・500 reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">TWD 3,380</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top3.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Weekly Paradise</a>
+                                </h4>
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★</span>
+                                    <span class="h7 text-gray610">4.0</span>
+                                    <span class="h8 text-gray510">・470 reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">TWD 4,780</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top4.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Beast Hotel</a>
+                                </h4>
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★</span>
+                                    <span class="h7 text-gray610">4.0</span>
+                                    <span class="h8 text-gray510">・283 reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">・283 reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev d-none"></div>
+            </div>
+        </div>
+        <div class="tab-pane fade show" id="nav-okinawa" role="tabpanel" aria-labelledby="nav-okinawa-tab">
+            <!-- Swiper -->
+            <div class="swiper-container topChoice">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="./assets/images/01.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Hotel Aqua</a>
+                                </h4>
+
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★★</span>
+                                    <span class="h7 text-gray610">5.0</span>
+                                    <span class="h8 text-gray510">・2k reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">TWD 2,480<del class="h8 text-gray510 ml-2">TWD 3,980</del>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="./assets/images/02.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Mr. Kawasaki Inn</a>
+                                </h4>
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★</span>
+                                    <span class="h7 text-gray610">4.0</span>
+                                    <span class="h8 text-gray510">・500 reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">TWD 3,380</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="./assets/images/03.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Weekly Paradise</a>
+                                </h4>
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★</span>
+                                    <span class="h7 text-gray610">4.0</span>
+                                    <span class="h8 text-gray510">・470 reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">TWD 4,780</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="./assets/images/04.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Beast Hotel</a>
+                                </h4>
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★</span>
+                                    <span class="h7 text-gray610">4.0</span>
+                                    <span class="h8 text-gray510">・283 reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">・283 reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev d-none"></div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-taipei" role="tabpanel" aria-labelledby="nav-taipei-tab">
+            <!-- Swiper -->
+            <div class="swiper-container topChoice">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="./assets/images/05.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Hotel Aqua</a>
+                                </h4>
+
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★★</span>
+                                    <span class="h7 text-gray610">5.0</span>
+                                    <span class="h8 text-gray510">・2k reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">TWD 2,480<del class="h8 text-gray510 ml-2">TWD 3,980</del>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="./assets/images/06.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Mr. Kawasaki Inn</a>
+                                </h4>
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★</span>
+                                    <span class="h7 text-gray610">4.0</span>
+                                    <span class="h8 text-gray510">・500 reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">TWD 3,380</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="./assets/images/07.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Weekly Paradise</a>
+                                </h4>
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★</span>
+                                    <span class="h7 text-gray610">4.0</span>
+                                    <span class="h8 text-gray510">・470 reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">TWD 4,780</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0">
+                            <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
+                                <img src="./assets/images/08.jpg"
+                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    alt="tophotel">
+                            </a>
+                            <div class="card-body p-0">
+                                <h4 class="card-title h6 font-weight-bold mb-2"><a href="#">Beast Hotel</a>
+                                </h4>
+                                <p class="card-text mb-2">
+                                    <span class="h5 vertical-align-base">★★★★</span>
+                                    <span class="h7 text-gray610">4.0</span>
+                                    <span class="h8 text-gray510">・283 reviews</span>
+                                </p>
+                                <p class="h7 text-gray610">・283 reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev d-none"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container mb-48p-lg-72p">
+    <h3 class="h4 h2-md text-title font-weight-bold mb-4">Popular Destinations</h3>
+    <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
+                style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Osaka.jpg');">
+                <div class="z-index-1">
+                    <p class="h8 text-uppercase mb-0">JAPAN</p>
+                    <h4 class="text-title font-weight-bold">Osaka</h4>
+                </div>
+                <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
+                style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Kyoto.jpg');">
+                <div class="z-index-1">
+                    <p class="h8 text-uppercase mb-0">JAPAN</p>
+                    <h4 class="text-title font-weight-bold">Kyoto</h4>
+                </div>
+                <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
+            </div>
+
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
+                style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Reykjavic.jpg');">
+                <div class="z-index-1">
+                    <p class="h8 text-uppercase mb-0">iceland</p>
+                    <h4 class="text-title font-weight-bold">Reykjavík</h4>
+                </div>
+                <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
+            </div>
+
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
+                style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Paris.jpg');">
+                <div class="z-index-1">
+                    <p class="h8 text-uppercase mb-0">France</p>
+                    <h4 class="text-title font-weight-bold">Paris</h4>
+                </div>
+                <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
+            </div>
+
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+            <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
+                style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Roman.jpg');">
+                <div class="z-index-1">
+                    <p class="h8 text-uppercase mb-0">Italy</p>
+                    <h4 class="text-title font-weight-bold">Roma</h4>
+                </div>
+                <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
+            </div>
+
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
+                style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Bangkok.jpg');">
+                <div class="z-index-1">
+                    <p class="h8 text-uppercase mb-0">Thailand</p>
+                    <h4 class="text-title font-weight-bold">Bangkok</h4>
+                </div>
+                <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="container mb-48p-lg-72p">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="h4 h2-md text-title font-weight-bold">Get Inspiration</h3>
+        <div class="btn btn-outline-primary h7 font-weight-bold">see more</div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container inspiration">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card border-0">
+                    <img src="https://hexschool.github.io/webLayoutTraining1st/week8/italy.jpg"
+                        class="card-img-top rounded img-center h-lg-263p mb-md-24p" alt="italy">
+                    <div class="card-body p-0">
+                        <h4 class="card-title text-title font-weight-bold mb-2">The fifth most visited country</h4>
+                        <p class="card-text text-gray610">Italy is the fifth most visited country in the world, with a
+                            total of 52.3 million…</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card border-0">
+                    <img src="https://hexschool.github.io/webLayoutTraining1st/week8/Thailand.jpg"
+                        class="card-img-top rounded img-center h-lg-263p mb-md-24p" alt="Thailand">
+                    <div class="card-body p-0">
+                        <h4 class="card-title text-title font-weight-bold mb-2">Visit Thailand for Bangkok</h4>
+                        <p class="card-text text-gray610">Asian tourists primarily visit Thailand for Bangkok and the
+                            historical, natural, and…</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card border-0">
+                    <img src="https://hexschool.github.io/webLayoutTraining1st/week8/NewZealand.jpg"
+                        class="card-img-top rounded img-center h-lg-263p mb-md-24p" alt="NewZealand">
+                    <div class="card-body p-0">
+                        <h4 class="card-title text-title font-weight-bold mb-2">Lord of the Rings Tour</h4>
+                        <p class="card-text text-gray610">The national cuisine has been described as Pacific Rim,
+                            incorporating the native Māori…</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Subscribe -->
+<section class="bg-light py-4 py-md-92p">
+    <div class="container px-lg-220p">
+        <h3 class="h4 h0-md text-title font-weight-extrabold text-center mb-4">Subscribe for Exclusive Offer</h3>
+        <form class="input-group w-100 h-56p px-md-5 px-lg-6">
+            <input type="email" id="mail"
+                class="form-control border border-primary border-2 rounded-left w-64percent h-100 pl-3"
+                placeholder="Your email address">
+            <input type="submit" value="Subscribe"
+                class="form-control btn btn-primary font-weight-bold text-uppercase w-36percent h-100 px-4">
+        </form>
+    </div>
+</section>

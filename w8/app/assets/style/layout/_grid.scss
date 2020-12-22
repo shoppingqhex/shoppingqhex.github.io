@@ -1,0 +1,60 @@
+//平板、手機時col的padding拿掉，用row的margin做間距
+// .row {
+//     margin-left: 15px;
+//     margin-right: 15px;
+
+//     @include md {
+//         margin-left: 24px;
+//         margin-right: 24px;
+//     }
+
+//     @include lg {
+//         margin-left: -12px;
+//         margin-right: -12px;
+//     }
+// }
+.col-12{
+    padding-left: 0;
+    padding-right: 0;
+    @include lg {
+        padding-left: $grid-gutter-width/2;
+        padding-right: $grid-gutter-width/2;
+    }
+}
+
+//只有平板時col的padding拿掉，用row的margin做間距
+.row-mx-0-md{
+    margin-left: 0;
+    margin-right: 0;
+    @include md {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}
+
+.col-px-0-md{
+    padding-left: 0;
+    padding-right: 0;
+    @include md {
+        padding-left: $grid-gutter-width/2;
+        padding-right: $grid-gutter-width/2;
+    }
+}
+
+.row-mx-0-lg{
+    margin-left: 0;
+    margin-right: 0;
+    @include lg {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}
+
+.col-px-0-lg{
+    padding-left: 0;
+    padding-right: 0;
+    @include lg {
+        padding-left: $grid-gutter-width/2;
+        padding-right: $grid-gutter-width/2;
+    }
+}

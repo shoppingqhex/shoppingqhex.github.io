@@ -1,0 +1,18 @@
+[data-aos] {
+    visibility: hidden;
+}
+
+[data-aos].animate__animated {
+    visibility: visible;
+}
+
+/* :root {
+    --animate-duration: 1800ms;
+    --animation-delay: 2.9s;
+  } */
+
+
+// 個別設定  
+// .test_ani {
+//     animation-delay: 5s;
+// }

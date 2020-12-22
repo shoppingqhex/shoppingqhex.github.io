@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%- title %>
+  </title>
+  <%- include('layout/vendors_css', {page: current}) %>
+</head>
+
+<body>
+  <!-- header -->
+  <%- include('layout/01_navbar', {page: current}) %>
+
+  <%- contents %>
+
+  <!-- footer -->
+  <%- include('layout/04_footer', {page: current}) %>
+
+  <!-- js -->
+  <%- include('layout/vendors_js', {page: current}) %>
+  <!-- <script src="./assets/js/vendors.js"></script> -->
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+---
+title: Login
+layout: ./app/layout4_login.ejs
+engine: ejs
+current: index
+---
+
+<div class="container-fluid d-none d-md-block">
+    <div class="row">
+        <div class="col-lg-7 login_bg"
+            style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/login.jpg');"></div>
+    </div>
+</div>
+<div class="container mt-4">
+    <!-- logo -->
+    <div class="row mb-4 mb-md-5 mb-lg-6">
+        <div class="col">
+            <h1><a href="index.html" class="logo_img1">ALOHA訂房</a></h1>
+        </div>
+    </div>
+    <div class="row pt-lg-6 login_bg-h">
+        <!-- leftside top -->
+        <div class="col-lg-6 d-none d-lg-flex flex-column">
+            <h2 class="text-title h0 font-weight-extrabold mb-3">An ideal hotel makes a wonderful Trip.</h2>
+            <p class="h7 text-gray610">Discover your dream destination and hotel on ALOHA.com</p>
+        </div>
+        <!-- rightside top -->
+        <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-2">
+            <h2 class="text-title font-weight-bold mb-3">Login</h2>
+            <form class="needs-validation text-gray610" novalidate>
+                <div class="form-group">
+                    <label for="mail" class="d-block mb-1">Email</label>
+                    <input type="email" name="mail" id="mail" class="form-control d-block w-100 h-56p" placeholder=""
+                        required>
+                    <div class="invalid-feedback">請確實填寫您的email帳號</div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="d-block mb-1">Passwords</label>
+                    <input type="password" name="password" id="password" class="form-control d-block w-100 h-56p mb-4"
+                        placeholder="" required>
+                    <div class="invalid-feedback">請確實填寫密碼</div>
+                </div>
+                <p class="h8 mb3">By signing in or creating an account, you agree with our<a href="#" class="insidetext"> Terms & Conditions</a> and <a href="#" class="insidetext">Privacy Statement</a> </p>
+                <div class="form-group custom-control custom-checkbox checkbox-lg mb-2x">
+                    <input type="checkbox" name="rememberMe" id="rememberMe" class="custom-control-input mr-1"
+                        value="rememberMe">
+                    <label class="custom-control-label" for="rememberMe">Remember me</label>
+                </div>
+                <button class="btn btn-primary font-weight-bold w-100 py-3 mb-2" type="button" onclick="window.location.href='member.html'">Login</button>
+                <p class="text-center">Don’t have an account yet? <a href="#" class="insidetext font-weight-bold">Sign up</a></p>
+
+            </form>
+
+        </div>
+    </div>
+    <div class="row d-none d-md-block">
+        <div
+            class="col-md-6 offset-md-3 col-lg-5 offset-lg-0 d-flex justify-content-center justify-content-lg-start mt-auto">
+            <span class="h7 text-white bg-gray910 rounded px-3 py-2">
+                <span class="material-icons h6 vertical-align-bot mb-0 mr-2">place</span>
+                <span>Osaka Castel, Japan</span>
+            </span>
+        </div>
+    </div>
+</div>
