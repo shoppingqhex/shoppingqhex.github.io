@@ -1,27 +1,33 @@
-.search-bar{
-    .row{
+.search-bar {
+    .row {
         transform: translateY(-50px);
 
         position: relative;
         z-index: 3;
     }
-    .dropdown{
+
+    .dropdown {
         width: 100%;
-        @include lg{
+
+        @include lg {
             width: 26.7%;
         }
     }
-    .btn-submit{
+
+    .btn-submit {
         width: 100%;
-        @include lg{
+
+        @include lg {
             width: 14.6%;
         }
     }
-    .dropdown-toggle::after{
+
+    .dropdown-toggle::after {
         display: none;
     }
-    td a{
-        &:hover{
+
+    td a {
+        &:hover {
             color: $primary !important;
             text-shadow: none;
         }
@@ -35,9 +41,11 @@
 
     .nav-link {
         padding: 0.5rem 0.5rem;
-        @include md{
+
+        @include md {
             padding: 0.5rem 1rem;
         }
+
         &.active {
             border-width: 0;
             border-bottom: 2px solid $primary;
@@ -52,14 +60,16 @@
     }
 }
 
-.topChoice{
+.topChoice {
     .swiper-button-next {
         padding: 12px 22px;
         border-radius: 50%;
-        background-color:rgba(#F1F0F8, 0.8);
+        background-color: rgba(#F1F0F8, 0.8);
         top: 30%;
-        &:hover{
+
+        &:hover {
             background-color: $primary;
+
             &::after {
                 color: white;
             }

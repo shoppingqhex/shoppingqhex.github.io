@@ -29,12 +29,20 @@
             <span class="navbar-toggler-icon mb-1"></span>
         </button>
         <div class="collapse navbar-collapse collapse-position" id="navbarNav">
-            <ul class="navbar-nav ml-auto pl-3 pl-lg-0">
+            <ul class="navbar-nav ml-auto align-items-center pl-3 pl-lg-0">
                 <li class="nav-item mr-0 mr-md-5">
-                    <a class="nav-link" href="#">
-                        <span class="material-icons">language</span>
-                        <span class="material-icons">arrow_drop_down</span>
-                    </a>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons">language</span>
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">English</a>
+                          <a class="dropdown-item" href="#">繁體中文</a>
+                          <a class="dropdown-item" href="#">簡體中文</a>
+                          <a class="dropdown-item" href="#">日本語</a>
+                        </div>
+                      </div>
                 </li>
                 <li class="nav-item mr-0 mr-md-5">
                     <a class="nav-link text-roboto" href="#">Sign up</a>
@@ -53,86 +61,87 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide pt_adjust_swiper bg-center img-mask"
             style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/index-banner.jpg');">
-            <h2 class="text-title text-white h0-md font-weight-extrabold z-index-1">Discover your ideal hotel</h2>
+            <h2 class="text-title text-white text-xxl-md font-weight-extrabold z-index-1">Discover your ideal hotel</h2>
         </div>
         <div class="swiper-slide pt_adjust_swiper bg-center img-mask"
             style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/index-banner.jpg');">
-            <h2 class="text-title text-white h0-md font-weight-extrabold z-index-1">Discover your ideal hotel2</h2>
+            <h2 class="text-title text-white text-xxl-md font-weight-extrabold z-index-1">Discover your ideal hotel2</h2>
         </div>
         <div class="swiper-slide pt_adjust_swiper bg-center img-mask"
             style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/index-banner.jpg');">
-            <h2 class="text-title text-white h0-md font-weight-extrabold z-index-1">Discover your ideal hotel3</h2>
+            <h2 class="text-title text-white text-xxl-md font-weight-extrabold z-index-1">Discover your ideal hotel3</h2>
         </div>
     </div>
     <!-- Add Arrows -->
     <div class="swiper-button-next text-white pr-3"></div>
     <div class="swiper-button-prev text-white pl-3"></div>
 </section>
+<!-- search-bar -->
 <section class="container mb-lg-3 search-bar">
-    <div class="row">
-        <div class="col-md-10 offset-md-1">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
             <div class="dropdown-group d-flex flex-column flex-lg-row justify-content-lg-between bg-light rounded p-4">
                 <!-- Destination -->
                 <div class="dropdown mb-3 mb-lg-0">
-                    <button class="btn btn-white dropdown-toggle text-gray610 text-left rounded-4px w-100 p-3"
+                    <button class="btn btn-white dropdown-toggle text-gray610 text-left w-100 p-3"
                         type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <span class="material-icons vertical-align-bot mr-3">place</span>Destination
                     </button>
-                    <div class="dropdown-menu border-0 box-shadow rounded-4px w-100 py-0 mt-12p"
+                    <div class="dropdown-menu border-0 box-shadow w-100 py-0 mt-12p"
                         aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item d-flex pt-3" href="#">
                             <span class="h4 lh-1rem mr-1 mt-1">★</span>
                             <div>
                                 <p class="mb-0">Bangkok</p>
-                                <p class="mb-0 h8 text-gray610">Thailand</p>
+                                <p class="mb-0 text-xs text-gray610">Thailand</p>
                             </div>
                         </a>
                         <a class="dropdown-item d-flex" href="#">
                             <span class="h4 lh-1rem mr-1 mt-1">★</span>
                             <div>
                                 <p class="mb-0">Osaka</p>
-                                <p class="mb-0 h8 text-gray610">Japan</p>
+                                <p class="mb-0 text-xs text-gray610">Japan</p>
                             </div>
                         </a>
                         <a class="dropdown-item d-flex" href="#">
                             <span class="h4 lh-1rem mr-1 mt-1">★</span>
                             <div>
                                 <p class="mb-0">Roma</p>
-                                <p class="mb-0 h8 text-gray610">Italy</p>
+                                <p class="mb-0 text-xs text-gray610">Italy</p>
                             </div>
                         </a>
                         <a class="dropdown-item d-flex" href="#">
                             <span class="h4 lh-1rem mr-1 mt-1">★</span>
                             <div>
                                 <p class="mb-0">Paris</p>
-                                <p class="mb-0 h8 text-gray610">France</p>
+                                <p class="mb-0 text-xs text-gray610">France</p>
                             </div>
                         </a>
                         <a class="dropdown-item d-flex" href="#">
                             <span class="h4 lh-1rem mr-1 mt-1">★</span>
                             <div>
                                 <p class="mb-0">Reykjavík</p>
-                                <p class="mb-0 h8 text-gray610">Iceland</p>
+                                <p class="mb-0 text-xs text-gray610">Iceland</p>
                             </div>
                         </a>
                     </div>
                 </div>
                 <!-- Check-in / Check-out -->
                 <div class="dropdown mb-3 mb-lg-0">
-                    <div class="btn btn-white text-gray610 text-left rounded-4px calendar d-flex w-100 p-3"type="button">
+                    <div class="btn btn-white text-gray610 text-left calendar d-flex w-100 p-3"type="button">
                         <p class="material-icons vertical-align-bot mr-3 mb-0">date_range</p>
                         <span></span> 
                 </div>
                 </div>
                 <!-- Guests -->
                 <div class="dropdown mb-3 mb-lg-0">
-                    <button class="btn btn-white dropdown-toggle text-gray610 text-left rounded-4px w-100 p-3"
+                    <button class="btn btn-white dropdown-toggle text-gray610 text-left w-100 p-3"
                         type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <span class="material-icons vertical-align-bot mr-3">person</span>Guests
                     </button>
-                    <div class="dropdown-menu border-0 box-shadow rounded-4px w-100 py-0 mt-12p"
+                    <div class="dropdown-menu border-0 box-shadow w-100 py-0 mt-12p"
                         aria-labelledby="dropdownMenuButton">
                         <table class="table table-borderless table-hover mb-0">
                             <tbody>
@@ -167,6 +176,7 @@
         </div>
     </div>
 </section>
+<!-- Top Choices -->
 <section class="container mb-48p-lg-72p">
     <h3 class="h4 h2-md text-title font-weight-bold mb-4">Top Choices</h3>
     <nav class="mb-28p">
@@ -187,7 +197,7 @@
             <div class="swiper-container topChoice">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top1.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -199,16 +209,16 @@
 
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★★</span>
-                                    <span class="h7 text-gray610">5.0</span>
-                                    <span class="h8 text-gray510">・2k reviews</span>
+                                    <span class="text-sm text-gray610">5.0</span>
+                                    <span class="text-xs text-gray510">・2k reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">TWD 2,480<del class="h8 text-gray510 ml-2">TWD 3,980</del>
+                                <p class="text-sm text-gray610">TWD 2,480<del class="text-xs text-gray510 ml-2">TWD 3,980</del>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top2.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -219,15 +229,15 @@
                                 </h4>
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★</span>
-                                    <span class="h7 text-gray610">4.0</span>
-                                    <span class="h8 text-gray510">・500 reviews</span>
+                                    <span class="text-sm text-gray610">4.0</span>
+                                    <span class="text-xs text-gray510">・500 reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">TWD 3,380</p>
+                                <p class="text-sm text-gray610">TWD 3,380</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top3.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -238,15 +248,15 @@
                                 </h4>
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★</span>
-                                    <span class="h7 text-gray610">4.0</span>
-                                    <span class="h8 text-gray510">・470 reviews</span>
+                                    <span class="text-sm text-gray610">4.0</span>
+                                    <span class="text-xs text-gray510">・470 reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">TWD 4,780</p>
+                                <p class="text-sm text-gray610">TWD 4,780</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top4.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -257,10 +267,10 @@
                                 </h4>
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★</span>
-                                    <span class="h7 text-gray610">4.0</span>
-                                    <span class="h8 text-gray510">・283 reviews</span>
+                                    <span class="text-sm text-gray610">4.0</span>
+                                    <span class="text-xs text-gray510">・283 reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">・283 reviews</p>
+                                <p class="text-sm text-gray610">・283 reviews</p>
                             </div>
                         </div>
                     </div>
@@ -275,7 +285,7 @@
             <div class="swiper-container topChoice">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/01.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -287,16 +297,16 @@
 
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★★</span>
-                                    <span class="h7 text-gray610">5.0</span>
-                                    <span class="h8 text-gray510">・2k reviews</span>
+                                    <span class="text-sm text-gray610">5.0</span>
+                                    <span class="text-xs text-gray510">・2k reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">TWD 2,480<del class="h8 text-gray510 ml-2">TWD 3,980</del>
+                                <p class="text-sm text-gray610">TWD 2,480<del class="text-xs text-gray510 ml-2">TWD 3,980</del>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/02.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -307,15 +317,15 @@
                                 </h4>
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★</span>
-                                    <span class="h7 text-gray610">4.0</span>
-                                    <span class="h8 text-gray510">・500 reviews</span>
+                                    <span class="text-sm text-gray610">4.0</span>
+                                    <span class="text-xs text-gray510">・500 reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">TWD 3,380</p>
+                                <p class="text-sm text-gray610">TWD 3,380</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/03.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -326,15 +336,15 @@
                                 </h4>
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★</span>
-                                    <span class="h7 text-gray610">4.0</span>
-                                    <span class="h8 text-gray510">・470 reviews</span>
+                                    <span class="text-sm text-gray610">4.0</span>
+                                    <span class="text-xs text-gray510">・470 reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">TWD 4,780</p>
+                                <p class="text-sm text-gray610">TWD 4,780</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/04.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -345,10 +355,10 @@
                                 </h4>
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★</span>
-                                    <span class="h7 text-gray610">4.0</span>
-                                    <span class="h8 text-gray510">・283 reviews</span>
+                                    <span class="text-sm text-gray610">4.0</span>
+                                    <span class="text-xs text-gray510">・283 reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">・283 reviews</p>
+                                <p class="text-sm text-gray610">・283 reviews</p>
                             </div>
                         </div>
                     </div>
@@ -363,7 +373,7 @@
             <div class="swiper-container topChoice">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/05.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -375,16 +385,16 @@
 
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★★</span>
-                                    <span class="h7 text-gray610">5.0</span>
-                                    <span class="h8 text-gray510">・2k reviews</span>
+                                    <span class="text-sm text-gray610">5.0</span>
+                                    <span class="text-xs text-gray510">・2k reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">TWD 2,480<del class="h8 text-gray510 ml-2">TWD 3,980</del>
+                                <p class="text-sm text-gray610">TWD 2,480<del class="text-xs text-gray510 ml-2">TWD 3,980</del>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/06.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -395,15 +405,15 @@
                                 </h4>
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★</span>
-                                    <span class="h7 text-gray610">4.0</span>
-                                    <span class="h8 text-gray510">・500 reviews</span>
+                                    <span class="text-sm text-gray610">4.0</span>
+                                    <span class="text-xs text-gray510">・500 reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">TWD 3,380</p>
+                                <p class="text-sm text-gray610">TWD 3,380</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/07.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -414,15 +424,15 @@
                                 </h4>
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★</span>
-                                    <span class="h7 text-gray610">4.0</span>
-                                    <span class="h8 text-gray510">・470 reviews</span>
+                                    <span class="text-sm text-gray610">4.0</span>
+                                    <span class="text-xs text-gray510">・470 reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">TWD 4,780</p>
+                                <p class="text-sm text-gray610">TWD 4,780</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card border-0">
+                        <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/08.jpg"
                                     class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
@@ -433,10 +443,10 @@
                                 </h4>
                                 <p class="card-text mb-2">
                                     <span class="h5 vertical-align-base">★★★★</span>
-                                    <span class="h7 text-gray610">4.0</span>
-                                    <span class="h8 text-gray510">・283 reviews</span>
+                                    <span class="text-sm text-gray610">4.0</span>
+                                    <span class="text-xs text-gray510">・283 reviews</span>
                                 </p>
-                                <p class="h7 text-gray610">・283 reviews</p>
+                                <p class="text-sm text-gray610">・283 reviews</p>
                             </div>
                         </div>
                     </div>
@@ -448,6 +458,7 @@
         </div>
     </div>
 </section>
+<!-- Popular Destinations -->
 <section class="container mb-48p-lg-72p">
     <h3 class="h4 h2-md text-title font-weight-bold mb-4">Popular Destinations</h3>
     <div class="row">
@@ -455,7 +466,7 @@
             <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
                 style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Osaka.jpg');">
                 <div class="z-index-1">
-                    <p class="h8 text-uppercase mb-0">JAPAN</p>
+                    <p class="text-xs text-uppercase mb-0">JAPAN</p>
                     <h4 class="text-title font-weight-bold">Osaka</h4>
                 </div>
                 <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
@@ -465,7 +476,7 @@
             <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
                 style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Kyoto.jpg');">
                 <div class="z-index-1">
-                    <p class="h8 text-uppercase mb-0">JAPAN</p>
+                    <p class="text-xs text-uppercase mb-0">JAPAN</p>
                     <h4 class="text-title font-weight-bold">Kyoto</h4>
                 </div>
                 <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
@@ -476,7 +487,7 @@
             <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
                 style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Reykjavic.jpg');">
                 <div class="z-index-1">
-                    <p class="h8 text-uppercase mb-0">iceland</p>
+                    <p class="text-xs text-uppercase mb-0">iceland</p>
                     <h4 class="text-title font-weight-bold">Reykjavík</h4>
                 </div>
                 <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
@@ -487,7 +498,7 @@
             <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
                 style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Paris.jpg');">
                 <div class="z-index-1">
-                    <p class="h8 text-uppercase mb-0">France</p>
+                    <p class="text-xs text-uppercase mb-0">France</p>
                     <h4 class="text-title font-weight-bold">Paris</h4>
                 </div>
                 <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
@@ -498,7 +509,7 @@
             <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
                 style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Roman.jpg');">
                 <div class="z-index-1">
-                    <p class="h8 text-uppercase mb-0">Italy</p>
+                    <p class="text-xs text-uppercase mb-0">Italy</p>
                     <h4 class="text-title font-weight-bold">Roma</h4>
                 </div>
                 <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
@@ -509,7 +520,7 @@
             <div class="text-white rounded bg-center position-r img-mask-rounded d-flex align-items-center justify-content-between px-4 py-3"
                 style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Bangkok.jpg');">
                 <div class="z-index-1">
-                    <p class="h8 text-uppercase mb-0">Thailand</p>
+                    <p class="text-xs text-uppercase mb-0">Thailand</p>
                     <h4 class="text-title font-weight-bold">Bangkok</h4>
                 </div>
                 <a href="#" class="dark z-index-1"><span class="material-icons">expand_more</span></a>
@@ -518,16 +529,17 @@
         </div>
     </div>
 </section>
+<!-- Get Inspiration -->
 <section class="container mb-48p-lg-72p">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h3 class="h4 h2-md text-title font-weight-bold">Get Inspiration</h3>
-        <div class="btn btn-outline-primary h7 font-weight-bold">see more</div>
+        <div class="btn btn-outline-primary text-sm font-weight-bold">see more</div>
     </div>
     <!-- Swiper -->
     <div class="swiper-container inspiration">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="card border-0">
+                <div class="card">
                     <img src="https://hexschool.github.io/webLayoutTraining1st/week8/italy.jpg"
                         class="card-img-top rounded img-center h-lg-263p mb-md-24p" alt="italy">
                     <div class="card-body p-0">
@@ -538,7 +550,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="card border-0">
+                <div class="card">
                     <img src="https://hexschool.github.io/webLayoutTraining1st/week8/Thailand.jpg"
                         class="card-img-top rounded img-center h-lg-263p mb-md-24p" alt="Thailand">
                     <div class="card-body p-0">
@@ -549,7 +561,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="card border-0">
+                <div class="card">
                     <img src="https://hexschool.github.io/webLayoutTraining1st/week8/NewZealand.jpg"
                         class="card-img-top rounded img-center h-lg-263p mb-md-24p" alt="NewZealand">
                     <div class="card-body p-0">
@@ -565,7 +577,7 @@
 <!-- Subscribe -->
 <section class="bg-light py-4 py-md-92p">
     <div class="container px-lg-220p">
-        <h3 class="h4 h0-md text-title font-weight-extrabold text-center mb-4">Subscribe for Exclusive Offer</h3>
+        <h3 class="h4 text-xxl-md text-title font-weight-extrabold text-center mb-4">Subscribe for Exclusive Offer</h3>
         <form class="input-group w-100 h-56p px-md-5 px-lg-6">
             <input type="email" id="mail"
                 class="form-control border border-primary border-2 rounded-left w-64percent h-100 pl-3"
@@ -577,31 +589,42 @@
 </section>
 
   <!-- footer -->
-  <footer class="h7 container text-gray610 py-4">
+  <footer class="text-sm container text-gray610 py-4">
   <div class="row align-items-baseline">
     <div class="col-12 col-md-5 col-lg-3 order-1 order-md-0 d-flex justify-content-center justify-content-md-start">
       <p class="footer_copyright mb-0">© 2020 ALOHA, Inc. All rights reserved.</p>
     </div>
-    <ul class="col-12 col-md-5 col-lg-3 offset-md-2 offset-lg-0 d-flex justify-content-center justify-content-md-end">
+    <ul class="col-12 col-md-5 col-lg-4 offset-md-2 offset-lg-0 d-flex justify-content-center justify-content-md-end mb-0">
       <li class="mr-4"><a href="#">FAQs</a></li>
       <li class="mr-4"><a href="#">Terms of use</a></li>
       <li><a href="#">Privacy policy</a></li>
     </ul>
-    <div class="col-lg-3 offset-lg-3 d-none d-lg-flex justify-content-end">
-      <a href="#" class="mr-4">
-        <span class="material-icons vertical-align-bot">language</span>
-        <span>English</span>
-        <span class="material-icons vertical-align-bot">arrow_drop_down</span>
-      </a>
-      <a href="#">
-        <span class="material-icons vertical-align-bot">attach_money</span>
+    <div class="col-lg-3 offset-lg-2 d-none d-lg-flex justify-content-end">
+      <div class="mr-4 d-flex align-items-center">
+        <span class="material-icons">language</span>
+        <form>
+          <div class="form-group mb-0">
+            <select class="form-control mb-0">
+              <option selected>English</option>
+              <option>繁體中文</option>
+              <option>簡體中文</option>
+              <option>日本語</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <a href="#" class="d-flex align-items-center">
+        <span class="material-icons">attach_money</span>
         <span>TWD</span>
-        <span class="material-icons vertical-align-bot">arrow_drop_down</span>
+        <span class="material-icons h6 font-weight-bold">keyboard_arrow_down</span>
       </a>
     </div>
   </div>
 </footer>
 
+  <a href="#" title="返回頁首">
+    <span class="material-icons goTop d-none hvr-wobble-vertical">keyboard_arrow_up</span>
+</a>
   <!-- js -->
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->

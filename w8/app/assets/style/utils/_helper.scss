@@ -6,10 +6,6 @@
     border-bottom: 1px solid;
 }
 
-.rounded-4px{
-    border-radius: 4px;
-}
-
 // font-family設定
 .text-title{
     font-family: 'Raleway', sans-serif;
@@ -41,7 +37,18 @@ $fontWeight: (
 }
 
 //字級大小
-.h0-md{
+.text-xxl{
+    font-size: 48px;
+}
+.text-sm{
+    font-size: 14px;
+}
+.text-xs{
+    font-size: 12px;
+}
+
+
+.text-xxl-md{
     @include md{
         font-size: 48px;
     }
