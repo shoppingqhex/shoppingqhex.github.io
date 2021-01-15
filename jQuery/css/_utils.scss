@@ -1,0 +1,55 @@
+//display
+.d-flex {
+    display: flex;
+}
+.d-none{
+    display: none;
+}
+
+
+//aspect
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 50%;
+}
+
+//spacing
+.mr-16 {
+    margin-right: 16px;
+}
+.mb-16{
+    margin-bottom: 16px;
+}
+.mb-24{
+    margin-bottom: 24px;
+}
+.mb-0{
+    margin-bottom: 0;
+}
+
+//heading
+h3{
+    font-size: 24px;
+    font-weight: bold;
+}
+.text-xs{
+    font-size: 14px;
+}
+.text-white{
+    color: #fff;
+}
+.text-center{
+    text-align: center;
+}
+.text-emphasize{
+    color: darken($primary, 10%)
+}
+.font-bold{
+    font-weight: bold;
+}
+//border
+.rounded{
+    border-radius: 4px;
+}

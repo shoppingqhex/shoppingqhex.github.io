@@ -1,0 +1,47 @@
+$primary:  #00CC99;
+
+*{
+    box-sizing: border-box;
+}
+// html{
+//     scroll-behavior: smooth;
+// }
+body{
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    &:hover{
+        font-weight: bold;
+    }
+}
+
+table{
+    border-top: 1px solid #ccc;
+}
+tr{
+    border-bottom: 1px solid #ccc;
+}
+th{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    background-color: #F7F7F7;
+}
+th,td{
+    width: 400px;
+    padding: 8px 16px;
+}
+
+label{
+    display: block;
+}
+input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+
+.container {
+    margin: 0 25px;
+}

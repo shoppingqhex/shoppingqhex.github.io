@@ -1,0 +1,480 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+table {
+  border-top: 1px solid #ccc;
+}
+
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  background-color: #F7F7F7;
+}
+
+th, td {
+  width: 400px;
+  padding: 8px 16px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+.container {
+  margin: 0 25px;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text-xs {
+  font-size: 14px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-emphasize {
+  color: #009973;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.rounded {
+  border-radius: 4px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  background-size: cover;
+  height: 768px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:root {
+  --swiper-theme-color: #00CC99;
+}
+
+.topmenu {
+  background-color: #F6F6F6;
+  padding: 8px 0;
+}
+
+.topmenu .topmenu_content {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.topmenu .topmenu_content .fb {
+  color: #4460A0;
+  border-right: 1px solid #ccc;
+  padding-right: 8px;
+  margin-right: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topmenu .topmenu_content .fb:hover p {
+  color: #324675;
+}
+
+.topmenu .topmenu_content .twitter {
+  color: #00AAEC;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topmenu .topmenu_content .twitter:hover p {
+  color: #007eaf;
+}
+
+.topmenu .topmenu_content img {
+  margin-right: 4px;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner .navbar {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.banner .navbar .navbar_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner .navbar .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.banner .navbar .links > li {
+  line-height: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.banner .navbar .links > li > a {
+  color: #00CC99;
+}
+
+.banner .navbar .links > li > a::after {
+  content: "";
+  width: 0px;
+  height: 4px;
+  background-color: #00CC99;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.banner .navbar .links > li > a:hover::after, .banner .navbar .links > li > a.active::after {
+  content: "";
+  width: 100%;
+}
+
+.banner .navbar .links .dropdown {
+  padding: 0 8px;
+}
+
+.banner .navbar .links .dropdown_open > li {
+  background-color: #00CC99;
+  padding: 0 8px;
+}
+
+.banner .navbar .links .dropdown_open > li:hover {
+  background-color: #009973;
+}
+
+.banner .navbar .links .dropdown_open > li > a {
+  color: #fff;
+}
+
+.banner .banner_title {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+}
+
+.banner .banner_title h2 {
+  color: #fff;
+  font-size: 54px;
+}
+
+.intro {
+  padding: 72px 0;
+}
+
+.intro .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33.3333%;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0px 5px 8px gray;
+          box-shadow: 0px 5px 8px gray;
+  padding: 32px;
+  margin-right: 24px;
+}
+
+.intro .box:last-child {
+  margin-right: 0;
+}
+
+.intro .box img {
+  height: 139px;
+  margin-bottom: 24px;
+}
+
+.intro .box h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.intro .box p {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.intro .box ul {
+  list-style: disc;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  padding-left: 20px;
+}
+
+.compare {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+
+.formdata {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00654b), to(#009771));
+  background: linear-gradient(180deg, #00654b, #009771);
+  padding: 60px 0;
+}
+
+.formdata .formbox {
+  background-color: #fff;
+  background-image: url("https://images.unsplash.com/uploads/141103282695035fa1380/95cdfeef");
+  background-size: cover;
+  margin-right: 32px;
+}
+
+.formdata .btn_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.formdata .btn {
+  background-color: #00CC99;
+  border: 0;
+  cursor: pointer;
+}
+
+.formdata .btn:hover {
+  background-color: #00b386;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 0;
+}
+
+footer li a {
+  color: #E12D80;
+}
+
+footer li a:hover {
+  color: #b71a62;
+}
+
+.goTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.3);
+  color: #00CC99;
+  -webkit-box-shadow: 1px 1px 10px #ccc;
+          box-shadow: 1px 1px 10px #ccc;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 10;
+}
+
+.goTop:hover {
+  background-color: #00CC99;
+  color: #fff;
+}
+
+.logo a {
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.logo .banner_logo {
+  width: 224px;
+  height: 50px;
+  background-image: url("../img/logo.png");
+}
+
+.logo .footer_logo {
+  width: 171px;
+  height: 36px;
+  background-image: url("../img/footerLogo.png");
+}
+/*# sourceMappingURL=all.css.map */
