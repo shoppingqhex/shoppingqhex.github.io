@@ -1,3 +1,9 @@
+$dark: #15795B;
+$primary: #188B68;
+$secondary:#78CE8B;
+$light: #C6DABF;
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -58,6 +64,34 @@ h1{
     background-color: #00251A;
 }
 
+.textbar{
+    width: 800px;
+    height: 70px;
+    margin: 30px auto;
+    cursor: pointer;
+    position: relative;
+    p{
+        color: #fff;
+        font-weight: bold;
+        position: absolute;
+    }
+    .text01{
+        top: 50%;
+        left: 32%;
+    }
+    .text02{
+        top: 40%;
+        left: 32%;
+    }
+    .text03{
+        color: $dark;
+        top: 40%;
+        left: 40%;
+    }
+}
+
+
+
 .tasklist{
     margin: 30px auto;
 
@@ -85,3 +119,6 @@ h1{
 
 }
 
+.d-none{
+    display: none;
+}

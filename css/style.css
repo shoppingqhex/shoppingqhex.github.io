@@ -61,6 +61,36 @@ h1 {
   background-color: #00251A;
 }
 
+.textbar {
+  width: 800px;
+  height: 70px;
+  margin: 30px auto;
+  cursor: pointer;
+  position: relative;
+}
+
+.textbar p {
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+}
+
+.textbar .text01 {
+  top: 50%;
+  left: 32%;
+}
+
+.textbar .text02 {
+  top: 40%;
+  left: 32%;
+}
+
+.textbar .text03 {
+  color: #15795B;
+  top: 40%;
+  left: 40%;
+}
+
 .tasklist {
   margin: 30px auto;
   width: 800px;
@@ -89,5 +119,9 @@ h1 {
 .tasklist a:hover, .tasklist a:focus {
   color: #00251A;
   font-weight: bold;
+}
+
+.d-none {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
