@@ -40,3 +40,27 @@
         }
     }
 }
+
+//topchoice 按鈕樣式
+.topChoice {
+    .swiper-button-next {
+        padding: 12px 22px;
+        border-radius: 50%;
+        background-color: rgba(#F1F0F8, 0.8);
+        top: 30%;
+
+        &:hover {
+            background-color: $primary;
+
+            &::after {
+                color: white;
+            }
+        }
+
+        &::after {
+            color: black;
+            font-size: 10px;
+            font-weight: bold;
+        }
+    }
+}

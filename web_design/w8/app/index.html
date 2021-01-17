@@ -26,7 +26,7 @@ current: index
 </section>
 <!-- search-bar -->
 <section class="container mb-lg-3 search-bar">
-    <div class="row justify-content-center">
+    <div class="row position-injust justify-content-center">
         <div class="col-md-10">
             <div class="dropdown-group d-flex flex-column flex-lg-row justify-content-lg-between bg-light rounded p-4">
                 <!-- Destination -->
@@ -79,8 +79,8 @@ current: index
                 <div class="dropdown mb-3 mb-lg-0">
                     <div class="btn btn-white text-gray610 text-left calendar d-flex w-100 p-3"type="button">
                         <p class="material-icons vertical-align-bot mr-3 mb-0">date_range</p>
-                        <span></span> 
-                </div>
+                        <span>Check-in / Check-out</span> 
+                    </div>
                 </div>
                 <!-- Guests -->
                 <div class="dropdown mb-3 mb-lg-0">
@@ -117,7 +117,7 @@ current: index
                 </div>
                 <!-- search -->
                 <form class="btn-submit">
-                    <input type="submit" value="Search"
+                    <input type="button" onclick="window.location.href='result.html'" value="Search"
                         class="btn btn-primary  text-uppercase font-weight-bold w-100 p-3">
                 </form>
             </div>
@@ -127,6 +127,7 @@ current: index
 <!-- Top Choices -->
 <section class="container mb-48p-lg-72p">
     <h3 class="h4 h2-md text-title font-weight-bold mb-4">Top Choices</h3>
+    <!-- 樣式在bootstrap/nav -->
     <nav class="mb-28p">
         <div class="nav nav-tabs topChoices" id="nav-tab" role="tablist">
             <a class="nav-item nav-link h5 h4-md font-weight-bold text-gray610 active" id="nav-bali-tab"
@@ -148,7 +149,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top1.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -169,7 +170,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top2.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -188,7 +189,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top3.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -207,7 +208,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="https://hexschool.github.io/webLayoutTraining1st/week8/top4.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -236,7 +237,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/01.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -257,7 +258,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/02.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -276,7 +277,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/03.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -295,7 +296,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/04.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -324,7 +325,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/05.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -345,7 +346,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/06.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -364,7 +365,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/07.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -383,7 +384,7 @@ current: index
                         <div class="card">
                             <a href="#" class="position-r rounded overflow-hid mb-2" title="了解更多">
                                 <img src="./assets/images/08.jpg"
-                                    class="card-img-top img-center img-hover hover-mask rounded h-lg-175p"
+                                    class="card-img-top img-center img-hover rounded index_top_card-img-h"
                                     alt="tophotel">
                             </a>
                             <div class="card-body p-0">
@@ -489,7 +490,7 @@ current: index
             <div class="swiper-slide">
                 <div class="card">
                     <img src="https://hexschool.github.io/webLayoutTraining1st/week8/italy.jpg"
-                        class="card-img-top rounded img-center h-lg-263p mb-md-24p" alt="italy">
+                        class="card-img-top rounded img-center index_inspiration_card-img-h mb-md-24p" alt="italy">
                     <div class="card-body p-0">
                         <h4 class="card-title text-title font-weight-bold mb-2">The fifth most visited country</h4>
                         <p class="card-text text-gray610">Italy is the fifth most visited country in the world, with a
@@ -500,7 +501,7 @@ current: index
             <div class="swiper-slide">
                 <div class="card">
                     <img src="https://hexschool.github.io/webLayoutTraining1st/week8/Thailand.jpg"
-                        class="card-img-top rounded img-center h-lg-263p mb-md-24p" alt="Thailand">
+                        class="card-img-top rounded img-center index_inspiration_card-img-h mb-md-24p" alt="Thailand">
                     <div class="card-body p-0">
                         <h4 class="card-title text-title font-weight-bold mb-2">Visit Thailand for Bangkok</h4>
                         <p class="card-text text-gray610">Asian tourists primarily visit Thailand for Bangkok and the
@@ -511,7 +512,7 @@ current: index
             <div class="swiper-slide">
                 <div class="card">
                     <img src="https://hexschool.github.io/webLayoutTraining1st/week8/NewZealand.jpg"
-                        class="card-img-top rounded img-center h-lg-263p mb-md-24p" alt="NewZealand">
+                        class="card-img-top rounded img-center index_inspiration_card-img-h mb-md-24p" alt="NewZealand">
                     <div class="card-body p-0">
                         <h4 class="card-title text-title font-weight-bold mb-2">Lord of the Rings Tour</h4>
                         <p class="card-text text-gray610">The national cuisine has been described as Pacific Rim,

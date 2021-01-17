@@ -28,6 +28,32 @@
   }
 }
 
+
+//topChoices的.nav>.nav-link樣式
+.nav.topChoices {
+  display: inline-flex;
+  border-bottom: 2px solid #F1F0F8;
+
+  .nav-link {
+      padding: 0.5rem 0.5rem;
+
+      @media (min-width:768px) {
+        padding: 0.5rem 1rem;
+      }
+      
+      &.active {
+          border-width: 0;
+          border-bottom: 2px solid $primary;
+          color: $primary !important;
+      }
+      &:hover {
+
+          border-bottom: 2px solid lighten($primary, 15%);
+          color: lighten($primary, 15%) !important;
+      }
+  }
+}
+
 //
 // Tabs
 //

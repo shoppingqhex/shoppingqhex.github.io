@@ -30,6 +30,17 @@
   }
 }
 
+.page-link_result{
+  background-color: unset;
+  border: none;
+  color: $gray-920;
+  font-weight: bold;
+  &:hover,&.active{
+    background-color: $pagination-bg;
+    color: $gray-920 !important;
+  }
+}
+
 .page-item {
   &:first-child {
     .page-link {

@@ -1,0 +1,17 @@
+.avatar-sm{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid $primary;
+}
+
+.avatar-lg{
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    
+}
+
+.avatar-imgurl{
+    background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/profile.jpg');
+}

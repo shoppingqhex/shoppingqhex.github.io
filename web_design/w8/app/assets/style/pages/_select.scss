@@ -1,0 +1,25 @@
+.selectRoomModal{
+    .modal-dialog{
+        max-width: unset;
+        margin: 0;
+    }
+    .modal-content{
+        background-color: rgba(0,0,0,0.8);
+        border-radius: 8px 8px 0 0;
+    }
+    .modal-body{
+        padding: 24px 16px 16px 16px;
+    }
+    .btns{
+        width: 100%;
+        @include md{
+            width: auto;
+        }
+        .btn{
+            padding: 1rem 2rem;
+            width: 50%;
+        }
+    }
+    
+    
+}

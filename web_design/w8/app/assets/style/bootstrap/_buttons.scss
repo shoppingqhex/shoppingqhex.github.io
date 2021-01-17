@@ -66,6 +66,12 @@ fieldset:disabled a.btn {
   .btn-#{$color} {
     @include button-variant($value, $value);
   }
+  .btn-md-#{$color} {
+    @media (min-width:768px) {
+      @include button-variant($value, $value);
+    }
+    
+  }
 }
 
 @each $color, $value in $theme-colors {

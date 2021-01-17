@@ -1,15 +1,26 @@
+.AR_adjust_rachada1{
+    padding-top: 68.61%;
+    @include md{
+        padding-top: 68.72%;
+    }
+    @include lg{
+        padding-top: 68.35%;
+    }
+}
 
+.AR_adjust_rachada2{
+    @include md{
+        padding-top: 44.59%;
+    }
+    @include lg{
+        padding-top: 45.61%;
+    }
+}
 
-// .pt_adjust_swiper{
-//     padding-top: 43.75%;
-//     padding-bottom: 43.75%;
-//     @include md{
-//         padding-top: 20.835%;
-//         padding-bottom: 20.835%;
-//     }
-//     @include lg{
-//         padding-top: 12.5%;
-//         padding-bottom: 12.5%;
-//     }
-// }
+.AR_adjust_card_room{
+    padding-top: 100%;
+    @include lg{
+        padding-top: 68.63%;
+    }
+}
 

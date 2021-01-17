@@ -1,0 +1,29 @@
+.detail_album{
+    height: 247px;
+    @include md{
+        height: 268px;
+    }
+    @include lg{
+        height: 434px;
+    }
+}
+
+.detail_album_group_left{
+    width: 45.2%;
+    @include lg{
+        width: 46.4%;
+    }
+}
+
+.detail_album_group_right{
+    width: 54.8%;
+    @include lg{
+        width: 53.6%;
+    }
+    a{
+        font-size: 13px;
+        @include lg{
+            font-size: 16px;
+        }
+    }
+}

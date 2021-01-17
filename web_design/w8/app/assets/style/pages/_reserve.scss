@@ -1,0 +1,28 @@
+.position-reserve{
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    @include md{
+        position: relative;
+    }
+
+    a:hover{
+        background-color: $light !important;
+        font-weight: unset;
+        text-shadow: unset;
+    }
+}
+
+.reserve_bot-pb{
+    padding-bottom: 48px;
+    @include md{
+        padding-bottom: 387px;
+    }
+    @include lg{
+        padding-bottom: 163px;
+    }
+}
+
+
+

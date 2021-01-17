@@ -15,9 +15,11 @@
 <body>
   <!-- header -->
   <%- include('layout/01_navbar', {page: current}) %>
-
+  <%- include('layout/02_searchBar', {page: current}) %>
+  
   <%- contents %>
 
+  <%- include('layout/03_subscribe', {page: current}) %>
   <!-- footer -->
   <%- include('layout/04_footer', {page: current}) %>
   <%- include('layout/gotop', {page: current}) %>

@@ -1,0 +1,123 @@
+<!-- search-bar -->
+<section class="mb-lg-3 search-bar bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="dropdown-group d-flex  justify-content-md-between rounded py-3 py-md-4">
+                    <!-- Destination -->
+                    <div class="dropdown">
+                        <button class="btn btn-md-white dropdown-toggle text-gray610 text-left d-flex align-items-center w-100 px-2 px-lg-3 py-2"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="material-icons vertical-align-bot d-none d-md-block mr-3">place</span>
+                            <div class="w-100">
+                                <p class="text-xs text-gray920 font-weight-bold d-none d-md-block">Destination</p>
+                                <p class="text-xs text-md-sm text-md-left">Bangkok<span class="d-none d-md-inline">, Thailand</span></p>
+                                
+                            </div>
+                        </button>
+                        <div class="dropdown-menu border-0 box-shadow w-100 py-0 mt-12p"
+                            aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item d-flex pt-3" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Bangkok</p>
+                                    <p class="mb-0 text-xs text-gray610">Thailand</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Osaka</p>
+                                    <p class="mb-0 text-xs text-gray610">Japan</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Roma</p>
+                                    <p class="mb-0 text-xs text-gray610">Italy</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Paris</p>
+                                    <p class="mb-0 text-xs text-gray610">France</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Reykjavík</p>
+                                    <p class="mb-0 text-xs text-gray610">Iceland</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Check-in / Check-out -->
+                    <div class="dropdown">
+                        <div class="btn btn-md-white text-gray610 text-left calendar d-flex align-items-center w-100  px-2 px-lg-3 py-2"type="button">
+                            <span class="material-icons d-none d-md-block mr-3 mb-0">date_range</span>
+                            <div class="checkIn d-none d-lg-block">
+                                <p class="text-xs text-gray920 font-weight-bold">Check-in</p>
+                                <p class="inDate text-sm"></p>
+                            </div>
+                            <div class="checkOut border-left  d-none d-lg-block pl-3">
+                                <p class="text-xs text-gray920 font-weight-bold">Check-out</p>
+                                <p class="outDate text-sm"></p>
+                            </div>
+                            <div class="d-lg-none">
+                                <p class="text-xs text-gray920 font-weight-bold d-none d-md-block">Check-in / out</p>
+                                <p class="text-xs text-md-sm">17 June - 19 June</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Guests -->
+                    <div class="dropdown">
+                        <button class="btn btn-md-white dropdown-toggle text-gray610 text-left d-flex align-items-center w-100  px-2 px-lg-3 py-2"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="material-icons vertical-align-bot d-none d-md-block mr-3">person</span>
+                            <div>
+                                <p class="text-xs text-gray920 font-weight-bold d-none d-md-block">Guests</p>
+                                <p class="text-xs text-md-sm">2 adults・1 room</p>
+                            </div>
+                            
+                        </button>
+                        <div class="dropdown-menu border-0 box-shadow w-100 py-0 mt-12p"
+                            aria-labelledby="dropdownMenuButton">
+                            <table class="table table-borderless table-hover mb-0">
+                                <tbody>
+                                  <tr class="mt-3">
+                                    <th scope="row" class="font-weight-reqular">Adult</th>
+                                    <td><a href="#" class="material-icons">remove</a></td>
+                                    <td>2</td>
+                                    <td><a href="#" class="material-icons">add</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row" class="font-weight-reqular">Child</th>
+                                    <td><a href="#" class="material-icons">remove</a></td>
+                                    <td>0</td>
+                                    <td><a href="#" class="material-icons">add</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row" class="font-weight-reqular">Room</th>
+                                    <td><a href="#" class="material-icons">remove</a></td>
+                                    <td>1</td>
+                                    <td><a href="#" class="material-icons">add</a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                    <!-- search -->
+                    <form class="btn-submit d-none d-md-block">
+                        <input type="button" onclick="window.location.href='result.html'" value="Search"
+                            class="btn btn-primary  text-uppercase font-weight-bold w-100 p-3">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

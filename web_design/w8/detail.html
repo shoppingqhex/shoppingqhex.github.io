@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Detail
+  </title>
+  <!-- googlefont -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500;700;900&display=swap"
+  rel="stylesheet">
+<!-- icon -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- dataRange -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<!-- lightbox2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" rel="stylesheet" />
+<!-- Font awesome -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <link rel="stylesheet" href="assets/style/all.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light container align-items-baseline py-3 py-md-4">
+        <h1 class="navbar-brand order-1 order-md-0"><a href="index.html" class="logo_img1">ALOHA訂房</a></h1>
+        <button class="navbar-toggler border-0 pl-0" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mb-1"></span>
+        </button>
+        <div class="collapse navbar-collapse collapse-position" id="navbarNav">
+            <ul class="navbar-nav ml-auto align-items-center pl-3 pl-lg-0">
+                <li class="nav-item mr-0 mr-md-5">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons h5">language</span>
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">English</a>
+                          <a class="dropdown-item" href="#">繁體中文</a>
+                          <a class="dropdown-item" href="#">簡體中文</a>
+                          <a class="dropdown-item" href="#">日本語</a>
+                        </div>
+                      </div>
+                </li>
+                <li class="nav-item mr-0 mr-md-5">
+                    <a class="nav-link text-roboto" href="#">Sign up</a>
+                </li>
+                <li class="nav-item d-none d-md-block text-roboto">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+        <a href="login.html" class="d-md-none order-2 order-md-0 text-roboto">Login</a>
+    </nav>
+</header>
+  <!-- search-bar -->
+<section class="mb-lg-3 search-bar bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="dropdown-group d-flex  justify-content-md-between rounded py-3 py-md-4">
+                    <!-- Destination -->
+                    <div class="dropdown">
+                        <button class="btn btn-md-white dropdown-toggle text-gray610 text-left d-flex align-items-center w-100 px-2 px-lg-3 py-2"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="material-icons vertical-align-bot d-none d-md-block mr-3">place</span>
+                            <div class="w-100">
+                                <p class="text-xs text-gray920 font-weight-bold d-none d-md-block">Destination</p>
+                                <p class="text-xs text-md-sm text-md-left">Bangkok<span class="d-none d-md-inline">, Thailand</span></p>
+                                
+                            </div>
+                        </button>
+                        <div class="dropdown-menu border-0 box-shadow w-100 py-0 mt-12p"
+                            aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item d-flex pt-3" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Bangkok</p>
+                                    <p class="mb-0 text-xs text-gray610">Thailand</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Osaka</p>
+                                    <p class="mb-0 text-xs text-gray610">Japan</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Roma</p>
+                                    <p class="mb-0 text-xs text-gray610">Italy</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Paris</p>
+                                    <p class="mb-0 text-xs text-gray610">France</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="h4 lh-1rem mr-1 mt-1">★</span>
+                                <div>
+                                    <p class="mb-0">Reykjavík</p>
+                                    <p class="mb-0 text-xs text-gray610">Iceland</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Check-in / Check-out -->
+                    <div class="dropdown">
+                        <div class="btn btn-md-white text-gray610 text-left calendar d-flex align-items-center w-100  px-2 px-lg-3 py-2"type="button">
+                            <span class="material-icons d-none d-md-block mr-3 mb-0">date_range</span>
+                            <div class="checkIn d-none d-lg-block">
+                                <p class="text-xs text-gray920 font-weight-bold">Check-in</p>
+                                <p class="inDate text-sm"></p>
+                            </div>
+                            <div class="checkOut border-left  d-none d-lg-block pl-3">
+                                <p class="text-xs text-gray920 font-weight-bold">Check-out</p>
+                                <p class="outDate text-sm"></p>
+                            </div>
+                            <div class="d-lg-none">
+                                <p class="text-xs text-gray920 font-weight-bold d-none d-md-block">Check-in / out</p>
+                                <p class="text-xs text-md-sm">17 June - 19 June</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Guests -->
+                    <div class="dropdown">
+                        <button class="btn btn-md-white dropdown-toggle text-gray610 text-left d-flex align-items-center w-100  px-2 px-lg-3 py-2"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="material-icons vertical-align-bot d-none d-md-block mr-3">person</span>
+                            <div>
+                                <p class="text-xs text-gray920 font-weight-bold d-none d-md-block">Guests</p>
+                                <p class="text-xs text-md-sm">2 adults・1 room</p>
+                            </div>
+                            
+                        </button>
+                        <div class="dropdown-menu border-0 box-shadow w-100 py-0 mt-12p"
+                            aria-labelledby="dropdownMenuButton">
+                            <table class="table table-borderless table-hover mb-0">
+                                <tbody>
+                                  <tr class="mt-3">
+                                    <th scope="row" class="font-weight-reqular">Adult</th>
+                                    <td><a href="#" class="material-icons">remove</a></td>
+                                    <td>2</td>
+                                    <td><a href="#" class="material-icons">add</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row" class="font-weight-reqular">Child</th>
+                                    <td><a href="#" class="material-icons">remove</a></td>
+                                    <td>0</td>
+                                    <td><a href="#" class="material-icons">add</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row" class="font-weight-reqular">Room</th>
+                                    <td><a href="#" class="material-icons">remove</a></td>
+                                    <td>1</td>
+                                    <td><a href="#" class="material-icons">add</a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                    <!-- search -->
+                    <form class="btn-submit d-none d-md-block">
+                        <input type="button" onclick="window.location.href='result.html'" value="Search"
+                            class="btn btn-primary  text-uppercase font-weight-bold w-100 p-3">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  <div class="container pt-md-3 pb-5 py-lg-4 mb-lg-5">
+    <div class="form-row detail_album mb-3 mb-md-4">
+        <div class="col-md-7">
+            <a href="https://hexschool.github.io/webLayoutTraining1st/week8/Rachada1.jpg" data-lightbox="image-1"
+                data-title="Rachada1" class="bg-center rounded hover-mask position-r h-100"
+                style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Rachada1.jpg');">
+            </a>
+        </div>
+        <div class="col-md-5 d-none d-md-flex flex-column justify-content-between">
+            <a href="https://hexschool.github.io/webLayoutTraining1st/week8/Rachada2.jpg" data-lightbox="image-1"
+                data-title="Rachada2" class="bg-center rounded hover-mask position-r h-50 mb-2"
+                style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Rachada2.jpg');">
+            </a>
+            <div class="d-flex h-50">
+                <a href="https://hexschool.github.io/webLayoutTraining1st/week8/Rachada3.jpg" data-lightbox="image-1"
+                    data-title="Rachada3"
+                    class="bg-center rounded hover-mask position-r h-100 detail_album_group_left mr-2"
+                    style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Rachada3.jpg');">
+                </a>
+                <div class="d-flex flex-column justify-content-between h-100 detail_album_group_right">
+                    <a href="https://hexschool.github.io/webLayoutTraining1st/week8/Rachada4.jpg"
+                        data-lightbox="image-1" data-title="Rachada4"
+                        class="bg-center rounded hover-mask position-r h-100 mb-2"
+                        style="background-image: url('https://hexschool.github.io/webLayoutTraining1st/week8/Rachada4.jpg');">
+                    </a>
+                    <a href="#" class="btn btn-gray910" role="button" aria-pressed="true">See All 10 photos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-5 pb-lg-4">
+        <div class="col-md-9 col-lg-7">
+            <div class="row">
+                <div class="col-10 d-flex flex-wrap align-items-center">
+                    <h2 class="text-title font-weight-bold text-gray920 mr-md-3">Rachada Hotel</h2>
+                    <span class="h4 vertical-align-base mr-1">★★★★</span>
+                    <a href="#" class="text-sm text-gray610" title="看評價">4.0 (283)</a>
+                </div>
+            </div>
+            <p class="text-sm text-md-sm text-primary mb-3 mb-md-4">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400
+                Bangkok, Thailand</p>
+            <p class="text-sm text-gray610">The Rachada Hotel is an establishment that provides paid lodging on a
+                short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large
+                suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities,
+                upholstered chairs, a flat screen television, and en-suite bathrooms.</p>
+        </div>
+    </div>
+    <div class="row mb-3 mb-md-5">
+        <div class="col-md-11 col-lg-7">
+            <h4 class="text-title font-weight-bold text-gray920 mb-0 mb-md-2x">Select your room</h4>
+            <div class="d-none d-md-flex align-items-center">
+                <p class="text-sm text-gray610 bg-light rounded px-3 py-2 mr-2">Bangkok, Thailand</p>
+                <p class="text-sm text-gray610 bg-light rounded px-3 py-2 mr-2">17 June - 19 June・2 nights</p>
+                <p class="text-sm text-gray610 bg-light rounded px-3 py-2 mr-3">2 adults・1 room</p>
+                <a href="#" class="text-primary font-weight-bold">EDIT DETAIL</a>
+            </div>
+        </div>
+    </div>
+    <div class="row d-none d-md-flex text-sm h6-lg font-weight-bold border-bot border-light pb-2 mb-4">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-8">Room Type</div>
+                <div class="col-4 text-center">Sleeps</div>
+            </div>
+        </div>
+        <div class="col-md-2 text-center">Price</div>
+        <div class="col-md-2 text-center">Rooms</div>
+    </div>
+    <!-- #card1 -->
+    <section class="border-md-bot border-light pb-md-3 pb-lg-20p mb-2 mb-md-20p mb-lg-4">
+        <div class="card border-md-0 border-radius-4px mb-3">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-6 col-md-4">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/week8/roomA.jpg"
+                                    class="card-img img-center card-img-border-radius detail_card-img-h" alt="...">
+                        </div>
+                        <div class="col-6 col-md-8">
+                            <div class="row no-gutters">
+                                <div class="col-md-7">
+                                    <div class="card-body text-gray610 p-2 pl-3">
+                                        <h5 class="card-title text-gray920 font-weight-bold mb-1">Deluxe Double Room A</h5>
+                                        <p class="card-text text-xs mb-2 mb-md-3">1 bed (Queen size)</p>
+                                        <div class="d-flex flex-lg-column flex-wrap text-sm h-lg-100p">
+                                            <p class="d-flex align-items-center w-lg-50">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">wifi</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Wi-Fi</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">tv</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Television</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">restaurant</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Breakfast</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">ac_unit</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Air conditioner</span>
+                                            </p>
+                                            <p class="d-none align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">kitchen</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Refrigerator</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">room_service</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Room service</span>
+                                            </p>
+                                            <p class="d-none align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">local_bar</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Mini bar</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-lg-0">smoke_free</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Smoke free</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex justify-content-md-center align-items-center h-100 px-2">
+                                        <span class="material-icons">person</span>
+                                        <span class="material-icons">person</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="card-body bg-light bg-md-transparent p-2">
+                        <div class="row text-gray610 align-items-center">
+                            <div class="col-6 order-md-1">
+                                <ul class="card-body d-flex justify-content-between mb-0">
+                                    <li><a href="#" class="material-icons text-black">remove</a></li>
+                                    <li>0</li>
+                                    <li><a href="#" class="material-icons text-black">add</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex flex-column align-items-center">
+                                    <p class="text-sm"><del>TWD 1,600</del></p>
+                                    <p class="font-weight-bold text-black">TWD <span class="text-primary">1,490</span></p>
+                                    <p class="d-none d-md-block text-xs">per night</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #card2 -->
+    <section class="border-md-bot border-light pb-md-3 pb-lg-20p mb-2 mb-md-20p mb-lg-4">
+        <div class="card border-md-0 border-radius-4px mb-3">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row no-gutters">
+                        <div class="col-6 col-md-4">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/week8/roomB.jpg"
+                                    class="card-img img-center card-img-border-radius detail_card-img-h" alt="roomB">
+                        </div>
+                        <div class="col-6 col-md-8">
+                            <div class="row no-gutters">
+                                <div class="col-md-7">
+                                    <div class="card-body text-gray610 p-2 pl-3">
+                                        <h5 class="card-title text-gray920 font-weight-bold mb-1">Deluxe Double Room B</h5>
+                                        <p class="card-text text-xs mb-2 mb-md-3">1 bed (Queen size)</p>
+                                        <div class="d-flex flex-lg-column flex-wrap text-sm h-lg-100p">
+                                            <p class="d-flex align-items-center w-lg-50">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">wifi</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Wi-Fi</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">tv</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Television</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">restaurant</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Breakfast</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">ac_unit</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Air conditioner</span>
+                                            </p>
+                                            <p class="d-none align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">kitchen</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Refrigerator</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">room_service</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Room service</span>
+                                            </p>
+                                            <p class="d-none align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">local_bar</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Mini bar</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-lg-0">smoke_free</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Smoke free</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex justify-content-md-center align-items-center h-100 px-2">
+                                        <span class="material-icons">person</span>
+                                        <span class="material-icons">person</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="card-body bg-light bg-md-transparent p-2">
+                        <div class="row text-gray610 align-items-center">
+                            <div class="col-6 order-md-1">
+                                <ul class="card-body d-flex justify-content-between mb-0">
+                                    <li><a href="#" class="material-icons text-black">remove</a></li>
+                                    <li>0</li>
+                                    <li><a href="#" class="material-icons text-black">add</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex flex-column align-items-center">
+                                    <p class="d-none text-sm"><del>TWD 1,600</del></p>
+                                    <p class="font-weight-bold text-black">TWD <span>1,600</span></p>
+                                    <p class="d-none d-md-block text-xs">per night</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #card3 -->
+    <section data-toggle="modal" data-target="#selectRoomModal">
+        <div class="card border-md-0 border-radius-4px hover-mask-md-8px cursor-pointer mb-3">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row no-gutters">
+                        <div class="col-6 col-md-4">
+                            <img src="https://hexschool.github.io/webLayoutTraining1st/week8/Rachada1.jpg"
+                                    class="card-img img-center card-img-border-radius detail_card-img-h" alt="RoomC">
+                        </div>
+                        <div class="col-6 col-md-8">
+                            <div class="row no-gutters">
+                                <div class="col-md-7">
+                                    <div class="card-body text-gray610 p-2 pl-3">
+                                        <h5 class="card-title text-gray920 font-weight-bold mb-0">Deluxe Double Room C</h5>
+                                        <p class="card-text text-xs mb-2 mb-md-3">1 bed (Queen size)</p>
+                                        <div class="d-flex flex-lg-column flex-wrap text-sm h-lg-100p">
+                                            <p class="d-flex align-items-center w-lg-50">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">wifi</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Wi-Fi</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">tv</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Television</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">restaurant</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Breakfast</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">ac_unit</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Air conditioner</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">kitchen</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Refrigerator</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md  mr-lg-0">room_service</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Room service</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-2 mr-lg-0">local_bar</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Mini bar</span>
+                                            </p>
+                                            <p class="d-flex align-items-center w-lg-50 order-lg-1">
+                                                <span class="material-icons text-md mr-lg-0">smoke_free</span>
+                                                <span class="d-none d-lg-block text-capitalize ml-1">Smoke free</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex justify-content-md-center align-items-center h-100 px-2">
+                                        <span class="material-icons">person</span>
+                                        <span class="material-icons">person</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="card-body bg-light bg-md-transparent p-2">
+                        <div class="row text-gray610 align-items-center">
+                            <div class="col-6 order-md-1">
+                                <ul class="card-body d-flex justify-content-between mb-0">
+                                    <li><a href="#" class="material-icons text-black">remove</a></li>
+                                    <li>0</li>
+                                    <li><a href="#" class="material-icons text-black">add</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex flex-column align-items-center">
+                                    <p class="d-none text-sm"><del>TWD 1,600</del></p>
+                                    <p class="font-weight-bold text-black">TWD <span>1,980</span></p>
+                                    <p class="d-none d-md-block text-xs">per night</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Modal -->
+<div class="modal fade selectRoomModal pr-0" id="selectRoomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered w-100" role="document">
+      <div class="modal-content">
+        <div class="modal-body container d-flex flex-column align-items-end flex-md-row justify-content-md-between">
+          <div class="text-white d-flex flex-column align-items-end align-items-md-start mb-4 mb-md-0">
+              <p class="text-xs">1 room・2 night</p>
+              <p class="h4 text-title font-weight-bold">TWD 3,960</p>
+          </div>
+          <div class="d-flex btns">
+            <button type="button" class="btn btn-outline-white text-uppercase font-weight-bold h-100 mr-2" data-dismiss="modal">Cancel</button>
+            <a type="button" class="btn btn-primary text-uppercase font-weight-bold h-100" href="reserve.html">Reserve</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="bg-light py-4 py-md-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-5 mb-3 mb-md-0">
+                <h3 class="h4 h2-lg text-title font-weight-bold">Subscribe for Exclusive Offer</h3>
+            </div>
+            <div class="col-md-8 col-lg-7">
+                <form class="input-group w-100 h-56p">
+                    <input type="email" id="mail"
+                        class="form-control border border-primary border-2 rounded-left w-64percent h-100 pl-3"
+                        placeholder="Your email address">
+                    <input type="submit" value="Subscribe"
+                        class="form-control btn btn-primary font-weight-bold text-uppercase w-36percent h-100 px-4">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- footer -->
+  <footer class="text-sm container text-gray610 py-4">
+  <div class="row align-items-baseline">
+    <div class="col-12 col-md-5 col-lg-3 order-1 order-md-0 d-flex justify-content-center justify-content-md-start">
+      <p class="footer_copyright mb-0">© 2020 ALOHA, Inc. All rights reserved.</p>
+    </div>
+    <ul class="col-12 col-md-5 col-lg-4 offset-md-2 offset-lg-0 d-flex justify-content-center justify-content-md-end mb-0">
+      <li class="mr-4"><a href="#">FAQs</a></li>
+      <li class="mr-4"><a href="#">Terms of use</a></li>
+      <li><a href="#">Privacy policy</a></li>
+    </ul>
+    <div class="col-lg-3 offset-lg-2 d-none d-lg-flex justify-content-end">
+      <div class="mr-4 d-flex align-items-center">
+        <span class="material-icons">language</span>
+        <form>
+          <div class="form-group mb-0">
+            <select class="form-control mb-0">
+              <option selected>English</option>
+              <option>繁體中文</option>
+              <option>簡體中文</option>
+              <option>日本語</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <a href="#" class="d-flex align-items-center">
+        <span class="material-icons">attach_money</span>
+        <span>TWD</span>
+        <span class="material-icons h6 font-weight-bold">keyboard_arrow_down</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <a href="#" title="返回頁首">
+    <span class="material-icons goTop d-none hvr-wobble-vertical">keyboard_arrow_up</span>
+</a>
+  <!-- js -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- daterangepicker -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<!-- lightbox2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <!-- <script src="./assets/js/vendors.js"></script> -->
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
 
-    background-color:rgba(0,0,0, 0.5);
+    background-color:rgba($primary, 0.1);
 }
 
 .img-mask::before{
@@ -23,13 +23,20 @@
 .hover-mask{
     transition: 0.5s;
     &:hover::after{
-        content: "了解更多";
+        content: "";
         @extend %mask-base;
-        color: #fff;
-        text-align: center;
-        background-color:rgba(0,0,0, 0.3);
-        border-radius: 8px;
-        
+        border-radius: 4px;
+    }
+}
+.hover-mask-md-8px{
+    transition: 0.5s;
+    &:hover::after{
+        content: "";
+        @extend %mask-base;
+        border-radius: 4px;
+        @include md{
+            border-radius: 8px;
+        }
     }
 }
 

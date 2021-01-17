@@ -42,6 +42,13 @@
   }
 }
 
+.result_card{
+  border-radius: 0 !important;
+  @media (min-width:768px) {
+    border-radius: $card-border-radius !important;
+  }
+}
+
 .card-body {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
@@ -147,6 +154,60 @@
 .card-img-bottom {
   @include border-bottom-radius($card-inner-border-radius);
 }
+
+.card-img-border-radius{
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  @media (min-width:768px) {
+    border-top-left-radius: $card-border-radius;
+    border-bottom-left-radius: $card-border-radius;
+  }
+}
+
+//card-img-height
+.index_top_card-img-h{
+  height: 164px;
+  @include md{
+      height: 185px;
+  }
+  @include lg{
+      height: 175px;
+  }
+}
+
+
+.index_inspiration_card-img-h{
+  height: 181px;
+  @include md{
+      height: 158px;
+  }
+  @include lg{
+      height: 263px;
+  }
+}
+
+.detail_card-img-h{
+  min-height: 150px;
+  max-height: 160px;
+  @include lg{
+      min-height: 175px;
+      max-height: 180px;
+  }
+}
+
+
+.member_card-img-h{
+  height: 226px;
+  @include md{
+      height: 186px;
+  }
+  @include lg{
+      height: 175px;
+  }
+}
+
 
 
 // Card deck

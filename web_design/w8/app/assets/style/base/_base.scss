@@ -24,9 +24,8 @@ a {
     color: unset;
     text-decoration: none;
 
-    &:hover {
+    &:hover,&.active {
         color: darken($primary, 10%) !important;
-        font-weight: 700;
         text-shadow: 0px 0px 5px rgba(lighten($primary, 15%), 0.5);
         text-decoration: none;
     }
@@ -45,6 +44,17 @@ a.insidetext{
     display: inline;
     color: $primary;
 }
+.table th, .table td{
+    padding: 0.75rem;
+    @include md{
+        padding: 0.5rem;
+    }
+    @include lg{
+        padding: 0.75rem;
+    }
+}
+
+
 
 input{
     border: 1px solid $gray-400;

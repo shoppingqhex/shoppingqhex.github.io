@@ -5,6 +5,48 @@
 .border-bot{
     border-bottom: 1px solid;
 }
+.border-md-bot{
+    @include md{
+        border-bottom: 1px solid;
+    }
+}
+.border-left{
+    border-left: 1px solid;
+}
+.border-md-0{
+    border-width: 1px;
+    @include md{
+        border-width: 0;
+    }
+}
+.border-radius-4px{
+    border-radius: 0.25rem;
+    @include md{
+        border-radius: $card-border-radius;
+    }
+}
+.border-radius-md-8px{
+    border-radius: 0;
+    @include md{
+        border-radius: $card-border-radius;
+    }
+}
+.rounded-8px{
+    border-radius: 8px;
+}
+
+.rounded-top-8px{
+    border-radius: 8px 8px 0 0;
+}
+.rounded-left-md-8px{
+    @include md{
+        border-radius: 8px 0 0 8px !important;
+    }
+}
+.rounded-bot-8px{
+    border-radius: 0 0 8px 8px;
+}
+
 
 // font-family設定
 .text-title{
@@ -40,6 +82,9 @@ $fontWeight: (
 .text-xxl{
     font-size: 48px;
 }
+.text-md{
+    font-size: 18px;
+}
 .text-sm{
     font-size: 14px;
 }
@@ -47,6 +92,17 @@ $fontWeight: (
     font-size: 12px;
 }
 
+.text-md-sm{
+    @include md{
+        font-size: 14px;
+    }
+}
+.text-lg-normal{
+    font-size: 12px;
+    @include lg{
+        font-size: 16px;
+    }
+}
 
 .text-xxl-md{
     @include md{
@@ -58,9 +114,24 @@ $fontWeight: (
         font-size: 32px;
     }
 }
+.h2-lg{
+    @include lg{
+        font-size: 32px;
+    }
+}
 .h4-md{
     @include md{
         font-size: 24px;
+    }
+}
+.h4-lg{
+    @include lg{
+        font-size: 24px;
+    }
+}
+.h6-lg{
+    @include lg{
+        font-size: 16px;
     }
 }
 
@@ -68,8 +139,12 @@ $fontWeight: (
 .lh-1rem{
     line-height: 1rem;
 }
+.lh-symbol{
+    line-height: 1.25rem;
+}
 
 //對齊
+
 .vertical-align-bot{
     vertical-align: bottom;
 }
@@ -80,36 +155,48 @@ $fontWeight: (
     vertical-align: baseline;
 }
 
+.text-md-left{
+    text-align: center;
+    @include md{
+        text-align: left;
+    }
+}
+
 
 //寬高設定
+.w-lg-50{
+    @include lg{
+        width: 50%;
+    }
+}
+.h-42p{
+    height: 42px;
+}
 
 .h-56p{
     height: 56px;
 }
-.h-lg-263p{
-    height: 181px;
-    @include md{
-        height: 158px;
-    }
+.h136{
+    height: 136px;
+}
+.h-lg-100p{
     @include lg{
-        height: 263px;
+        height: 100px;
     }
 }
-.h-lg-175p{
-    height: 164px;
-    @include md{
-        height: 185px;
-    }
-    @include lg{
-        height: 175px;
-    }
-}
+
 
 .w-36percent{
     width: 36% !important;
 }
 .w-64percent{
     width: 64% !important;
+}
+
+.w-md-auto{
+    @include md{
+        width: auto !important;
+    }
 }
 
 
@@ -152,6 +239,10 @@ $fontWeight: (
     object-position: center center;
     object-fit: cover;
 }
+.img-contain{ 
+    object-position: center center;
+    object-fit: contain;
+}
 .img-hover{
     transition: transform 0.5s ease-out;
     &:hover{
@@ -169,3 +260,45 @@ $fontWeight: (
 .box-shadow{
     box-shadow: 1px 1px 8px rgba($gray-610,0.3);
 }
+
+
+.bg-md-transparent{
+    @include md{
+        background-color: transparent !important;
+    }
+}
+.bg-md-white{
+    @include md{
+        background-color: #fff !important;
+    }
+}
+
+
+.visibility_hid{
+    visibility: hidden;
+}
+.d-hide{
+    display: none ;
+}
+
+
+.transform_rotate180{
+    transform: rotate(180deg);
+}
+.transition{
+    transition: all 0.8s;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.px-0-md-15{
+    padding-left: 0;
+    padding-right: 0;
+    @include md{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+

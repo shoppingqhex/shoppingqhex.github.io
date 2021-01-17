@@ -1,0 +1,54 @@
+.search-bar {
+    .position-injust {
+        transform: translateY(-50px);
+
+        position: relative;
+        z-index: 3;
+    }
+
+    .dropdown {
+        width: 100%;
+
+        @include md {
+            width: 26.09%;
+        }
+        @include lg {
+            width: 26.7%;
+        }
+    }
+
+    .btn-submit {
+        width: 100%;
+
+        @include md {
+            width: 18.26%;
+        }
+
+        @include lg {
+            width: 14.6%;
+        }
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    td a {
+        &:hover {
+            color: $primary !important;
+            text-shadow: none;
+        }
+    }
+}
+
+.calendar{
+    .material-icons{
+        width: 10%;
+    }
+    .checkIn{
+        width: 40%;
+    }
+    .checkOut{
+        width: 50%;
+    }
+}

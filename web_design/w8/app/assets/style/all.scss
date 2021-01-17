@@ -13,13 +13,19 @@
 @import 'components/goTop';
 @import 'components/swiperNavigation';
 @import 'components/dateRange';
+@import 'components/searchbar';
+@import 'components/avatar';
 
 //layout
 @import 'layout/navbar';
 @import 'layout/footer';
 //pages
-@import 'pages/index';
 @import 'pages/login';
+@import 'pages/result';
+@import 'pages/detail';
+@import 'pages/select';
+@import 'pages/reserve';
+@import 'pages/member';
 //vendors
 @import 'vendors/hover-min';
 @import 'vendors/aos-min';

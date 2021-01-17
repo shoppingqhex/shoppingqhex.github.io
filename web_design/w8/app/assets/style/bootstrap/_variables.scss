@@ -94,6 +94,8 @@ $theme-colors: map-merge(
     "gray510":    $gray-510,
     "gray610":    $gray-610,
     "gray910":    $gray-910,
+    "gray920":    $gray-920,
+    "black":      $black,
   ),
   $theme-colors
 );
@@ -155,10 +157,14 @@ $spacers: map-merge(
     5: ($spacer * 3),
     6: ($spacer * 4),
     2x: ($spacer * 2),
+    10p: 10px,
     12p: 12px,
+    15p: 15px,
+    20p: 20px,
     28p: 28px,
     40p: 40px,
     70p: 70px,
+    72p: 72px,
     92p: 92px,
     220p : 220px,
   ),

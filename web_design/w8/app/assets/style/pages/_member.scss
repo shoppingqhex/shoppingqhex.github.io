@@ -1,0 +1,39 @@
+.member_bot-pb{
+    padding-bottom: 48px;
+    @include md{
+        padding-bottom: 78px;
+    }
+    @include lg{
+        padding-bottom: 134px;
+    }
+}
+
+.member_profile-wl{
+    width: 100%;
+    @include md{
+        width: 41.5%;
+    }
+    @include lg{
+        width: 100%;
+    }
+}
+
+.member_profile-wr{
+    width: 100%;
+    @include md{
+        width: 50%;
+    }
+    @include lg{
+        width: 100%;
+    }
+}
+
+.border-member-bot{
+    border-bottom: 1px solid;
+    @include md{
+        border-bottom: 0;
+    }
+    @include lg{
+        border-bottom: 1px solid;
+    }
+}

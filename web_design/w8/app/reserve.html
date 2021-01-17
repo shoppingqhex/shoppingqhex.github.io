@@ -1,0 +1,89 @@
+---
+title: 預約房間
+layout: ./app/layout3_reserve.ejs
+engine: ejs
+current: index
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="row border-bot border-light reserve_bot-pb">
+                <div class="col-md-6 order-1 order-md-0">
+                    <h2 class="text-title font-weight-bold mb-4">Reservation details</h2>
+                    <form class="needs-validation text-gray610" novalidate>
+                        <div class="form-group">
+                            <label for="mail" class="d-block mb-1">Name</label>
+                            <input type="email" name="mail" id="mail" class="form-control d-block w-100 h-56p"
+                                placeholder="" required>
+                            <div class="invalid-feedback">請確實填寫您的姓名</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mail" class="d-block mb-1">Email</label>
+                            <input type="email" name="mail" id="mail" class="form-control d-block w-100 h-56p"
+                                placeholder="" required>
+                            <div class="invalid-feedback">請確實填寫您的email帳號</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="d-block mb-1">Phone (optional)</label>
+                            <input type="password" name="password" id="password"
+                                class="form-control d-block w-100 h-56p mb-4" placeholder="">
+                        </div>
+                        <button class="btn btn-primary text-uppercase font-weight-bold w-100 py-3 px-2x mb-2"
+                            type="button" onclick="window.location.href='reserve_success.html'">Reserve</button>
+                        <a href="#" class="text-primary text-sm text-center">Reserve now, pay at stay</a>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="position-reserve">
+                        <a class="bg-light d-md-none reserve_toggle px-3" data-toggle="collapse" href="#multiCollapseReserve"
+                            role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                            <div class="d-flex justify-content-between border-bot border-white py-20p">
+                                <div class="d-flex reserve_toggle_title">
+                                    <p class="mr-2">Total</p>
+                                    <p class="font-weight-bold">TWD 4,633</p>
+                                </div>
+                                <div class="text-primary font-weight-bold d-flex">
+                                    <p class="text-uppercase">Detail</p>
+                                    <span class="material-icons reserve_toggle_icon transition">keyboard_arrow_down</span>
+                                </div>
+                            </div>
+                            
+                        </a>
+                        <div class="bg-light border-radius-md-8px p-4 collapse multi-collapse d-md-block" id="multiCollapseReserve">
+                            <div class="border-bot border-white pb-4">
+                                <h6 class="font-weight-bold mb-3">Booking details</h6>
+                                <p class="text-xs text-gray610 mb-2">17 June 2020 - 19 June 2020・2 nights</p>
+                                <p class="text-xs text-gray610 mb-2">2 adults・1 room</p>
+                                <p class="text-xs text-gray610">Rachada Hotel</p>
+                            </div>
+                            <div class="border-bot border-white py-4 mb-4">
+                                <h6 class="font-weight-bold mb-3">Price summary</h6>
+                                <table class="w-100">
+                                    <tr>
+                                        <td class="text-xs text-gray610 pb-2">Deluxe Suite with Pool</td>
+                                        <td class="text-xs text-gray610 text-right">TWD 3,960</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-xs text-gray610 pb-2">VAT (7%)</td>
+                                        <td class="text-xs text-gray610 text-right">TWD 277</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-xs text-gray610">Property service charge</td>
+                                        <td class="text-xs text-gray610 text-right">TWD 396</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p>Total</p>
+                                <p class="font-weight-bold">TWD 4,633</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

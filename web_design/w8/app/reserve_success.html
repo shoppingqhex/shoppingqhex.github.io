@@ -1,0 +1,57 @@
+---
+title: 預約成功
+layout: ./app/layout3_reserve.ejs
+engine: ejs
+current: index
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <h2 class="text-title font-weight-bold border-bot border-light pb-4  pb-md-2x mb-4">Reservation received!</h2>
+            <table class="w-100 border-bot border-light mb-4">
+                <tr class="row mb-3">
+                    <th class="col-3">Guest</th>
+                    <td class="col-9">David Lin</td>
+                </tr>
+                <tr class="row mb-3">
+                    <th class="col-3">Email</th>
+                    <td class="col-9 d-flex flex-column flex-md-row align-items-md-center">
+                       <p class="mr-3">david0520@mail.com.tw</p>
+                       <a href="#" class="text-xs text-primary">Confirmation email sent to this address</a>
+                    </td>
+                </tr>
+                <tr class="row mb-4">
+                    <th class="col-3">phone</th>
+                    <td class="col-9">+886 9 32 456 789</td>
+                </tr>
+            </table>
+            <table class="w-100 border-bot border-light mb-4">
+                <tr class="row mb-4">
+                    <th class="col-3">Room</th>
+                    <td class="col-9">Deluxe Suite with Pool / 2 nights</td>
+                </tr>
+            </table>
+            <table class="w-100 border-bot border-light mb-4">
+                <tr class="row mb-3">
+                    <th class="col-3 pr-0">check-in</th>
+                    <td class="col-9">Wednesday, 17 June 2020</td>
+                </tr>
+                <tr class="row no-gutters mb-4">
+                    <th class="col-3">check-out</th>
+                    <td class="col-9 pl-2">Friday, 19 June 2020</td>
+                </tr>
+            </table>
+            <div class="row no-gutters reserve_bot-pb border-bot border-light">
+                <div class="col-12 col-md-4 offset-md-5 offset-lg-6">
+                    <a class="btn btn-outline-primary text-uppercase font-weight-bold w-100 w-md-auto py-3 px-2x mr-2 mb-2 mb-md-0" href="reserve.html" role="button">edit reservation</a>
+                </div>
+                <div class="col-12  col-md-3 col-lg-2 w-100">
+                    <a class="btn btn-primary text-uppercase font-weight-bold w-100 w-md-auto py-3 px-2x" href="index.html" role="button">Homepage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
