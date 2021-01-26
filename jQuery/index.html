@@ -16,27 +16,27 @@
 
 <body>
     <header>
-        <div class="topmenu">
-            <ul class="d-flex container topmenu_content">
-                <li>
-                    <a href="#" class="d-flex fb">
-                        <img src="img/facebookIcon.png" alt="fb">
-                        <p>粉絲團</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="d-flex twitter">
-                        <img src="img/twitterIcon.png" alt="twitter">
-                        <p>追隨我們</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
         <div class="banner">
+            <div class="topmenu">
+                <ul class="d-flex container topmenu_content">
+                    <li>
+                        <a href="#" class="d-flex fb">
+                            <img src="img/facebookIcon.png" alt="fb">
+                            <p>粉絲團</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex twitter">
+                            <img src="img/twitterIcon.png" alt="twitter">
+                            <p>追隨我們</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="navbar">
-                <div class="container navbar_container">
+                <div class="container navbar_container d-flex">
                     <h1 class="logo"><a href="index.html" class="banner_logo">Hex School</a></h1>
-                    <ul class="links">
+                    <ul class="links d-flex">
                         <li class="mr-16"><a href="index.html" class="active">首頁</a></li>
                         <li class="mr-16">
                             <a href="#" class="dropdown">產品介紹</a>
@@ -77,19 +77,19 @@
         </div>
     </header>
     <main>
-        <section class="intro d-flex container">
-            <div class="box">
+        <ul class="intro d-flex container">
+            <li class="box d-flex">
                 <a href="img/html.png" data-lightbox="Html5"><img src="img/html.png" alt="Html5"></a>
                 <h4>Html5基礎教學</h4>
                 <p>主流前端網站設計的基礎就在六角學院,在這裡不再是填鴨式教學,而是透過實際的範例,瞭解正確的網站開發流程,講師均具有業界開發經驗,讓學員學習業界主流的開發方法。</p>
-            </div>
-            <div class="box">
+            </li>
+            <li class="box d-flex">
                 <a href="img/rwd.png" data-lightbox="RWD"><img src="img/rwd.png" alt="RWD"></a>
 
                 <h4>響應式網站設計</h4>
                 <p>響應式網站設計(Responsive web design),目前大多使用者均是以手機瀏覽的情況下,響應式網站已經是必備的。六角學院將會提供業界響應式開發方法,讓學生瞭解行動版開發技巧。</p>
-            </div>
-            <div class="box">
+            </li>
+            <li class="box d-flex">
                 <a href="img/jQuery.png" data-lightbox="jQuery"><img src="img/jQuery.png" alt="jQuery"></a>
 
                 <h4>jQuery實戰教學</h4>
@@ -100,55 +100,58 @@
                     <li>學習基즈數學運算方法</li>
                     <li>套件的操作及運用</li>
                 </ul>
-            </div>
-        </section>
-        <section class="compare">
+            </li>
+        </ul>
+        <section class="compare container d-flex">
             <h3 class="mb-16">線上及實體課程的差異</h3>
-            <table>
-                <tr>
-                    <th>項目</th>
-                    <th>Hex School線上課程</th>
-                    <th>一般線上課程</th>
-                    <th>實體課程</th>
-                </tr>
-                <tr>
-                    <td>費用</td>
-                    <td class="text-emphasize">較低</td>
-                    <td class="text-emphasize">較低</td>
-                    <td>較高</td>
-                </tr>
-                <tr>
-                    <td>學習效果</td>
-                    <td>一般</td>
-                    <td class="text-emphasize">較低</td>
-                    <td class="text-emphasize">很好</td>
-                </tr>
-                <tr>
-                    <td>Code review</td>
-                    <td class="text-emphasize">有</td>
-                    <td>無</td>
-                    <td>不一定</td>
-                </tr>
-                <tr>
-                    <td>課程更新程度</td>
-                    <td class="text-emphasize">普通</td>
-                    <td class="text-emphasize">普通</td>
-                    <td>較慢</td>
-                </tr>
-                <tr>
-                    <td>多次複習</td>
-                    <td class="text-emphasize">可</td>
-                    <td>可</td>
-                    <td>不可</td>
-                </tr>
-                <tr>
-                    <td>字幕</td>
-                    <td class="text-emphasize">有</td>
-                    <td>不一定</td>
-                    <td>板書</td>
-                </tr>
+            <table class="border-top">
+                <thead>
+                    <tr class="border-bot">
+                        <th>項目</th>
+                        <th>Hex School線上課程</th>
+                        <th>一般線上課程</th>
+                        <th>實體課程</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-bot">
+                        <td>費用</td>
+                        <td class="text-emphasize">較低</td>
+                        <td class="text-emphasize">較低</td>
+                        <td>較高</td>
+                    </tr>
+                    <tr class="border-bot">
+                        <td>學習效果</td>
+                        <td>一般</td>
+                        <td class="text-emphasize">較低</td>
+                        <td class="text-emphasize">很好</td>
+                    </tr>
+                    <tr class="border-bot">
+                        <td>Code review</td>
+                        <td class="text-emphasize">有</td>
+                        <td>無</td>
+                        <td>不一定</td>
+                    </tr>
+                    <tr class="border-bot">
+                        <td>課程更新程度</td>
+                        <td class="text-emphasize">普通</td>
+                        <td class="text-emphasize">普通</td>
+                        <td>較慢</td>
+                    </tr>
+                    <tr class="border-bot">
+                        <td>多次複習</td>
+                        <td class="text-emphasize">可</td>
+                        <td>可</td>
+                        <td>不可</td>
+                    </tr>
+                    <tr class="border-bot">
+                        <td>字幕</td>
+                        <td class="text-emphasize">有</td>
+                        <td>不一定</td>
+                        <td>板書</td>
+                    </tr>
+                </tbody>
             </table>
-
         </section>
         <section class="formdata text-white">
             <div class="container">
@@ -156,13 +159,19 @@
                 <div class="d-flex">
                     <div class="formbox rounded w-50"></div>
                     <form action="" class="w-50">
-                        <label for="name" class="text-xs font-bold">姓名</label>
+                        <div class="form-group">
+                            <label for="name" class="text-xs font-bold">姓名</label>
                         <input type="text" id="name" name="name" class="rounded w-100" placeholder="六角講師">
-                        <label for="tel" class="text-xs font-bold">電話</label>
-                        <input type="text" id="tel" name="tel" class="rounded w-100" placeholder="0912345678">
-                        <label for="mail" class="text-xs font-bold">信箱</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel" class="text-xs font-bold">電話</label>
+                            <input type="text" id="tel" name="tel" class="rounded w-100" placeholder="0912345678"> 
+                        </div>
+                        <div class="form-group">
+                            <label for="mail" class="text-xs font-bold">信箱</label>
                         <input type="text" id="mail" name="mail" class="rounded w-100" placeholder="hexschool@mail.com">
-                        <div class="btn_wrap">
+                        </div>
+                        <div class="form-group btn_wrap d-flex">
                             <input type="button" value="送出" class="rounded btn text-white mb-0">
                         </div>
                     </form>
@@ -170,7 +179,7 @@
             </div>
         </section>
     </main>
-    <footer class="container">
+    <footer class="container d-flex">
         <h2 class="logo"><a href="index.html" class="footer_logo">Hex School</a></h2>
         <div>
             <ul>

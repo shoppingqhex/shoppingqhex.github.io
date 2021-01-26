@@ -1,56 +1,59 @@
-.topmenu {
-    background-color: #F6F6F6;
-    padding: 8px 0;
-
-    .topmenu_content {
-        justify-content: flex-end;
-
-        .fb {
-            color: #4460A0;
-            border-right: 1px solid #ccc;
-            padding-right: 8px;
-            margin-right: 8px;
-
-            align-items: center;
-
-            &:hover p {
-                color: darken(  #4460A0, 12%);
-            }
-        }
-
-        .twitter {
-            color: #00AAEC;
-            align-items: center;
-
-            &:hover p {
-                color: darken(  #00AAEC, 12%);
-            }
-        }
-
-        img {
-            margin-right: 4px;
-        }
-    }
-}
-
 .banner {
     position: relative;
+    .topmenu {
+        background-color: #F6F6F6;
+        padding: 8px 0;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    
+        .topmenu_content {
+            justify-content: flex-end;
+    
+            .fb {
+                color: #4460A0;
+                border-right: 1px solid #ccc;
+                padding-right: 8px;
+                margin-right: 8px;
+    
+                align-items: center;
+    
+                &:hover p {
+                    color: darken(  #4460A0, 12%);
+                }
+            }
+    
+            .twitter {
+                color: #00AAEC;
+                align-items: center;
+    
+                &:hover p {
+                    color: darken(  #00AAEC, 12%);
+                }
+            }
+    
+            img {
+                margin-right: 4px;
+            }
+        }
+    }
     .navbar {
         background-color: #fff;
     
         position: absolute;
-        top: 0;
+        top: 40px;
         left: 0;
         right: 0;
         z-index: 2;
     
         .navbar_container {
-            display: flex;
             justify-content: space-between;
         }
     
         .links {
-            display: flex;
             height: 100%;
     
             &>li {
@@ -118,7 +121,6 @@
 .intro{
     padding: 72px 0;
     .box{
-        display: flex;
         flex-direction: column;
         align-items: center;
         
@@ -153,7 +155,6 @@
     }
 }
 .compare{
-    display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
@@ -170,7 +171,6 @@
     }
 
     .btn_wrap{
-        display: flex;
         justify-content: flex-end;
     }
     .btn{
@@ -185,7 +185,6 @@
 }
 
 footer{
-    display: flex;
     justify-content: space-between;
     padding: 24px 0;
     li{

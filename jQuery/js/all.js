@@ -6,7 +6,11 @@ $(document).ready(function () {
     })
     $('.dropdown').on('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         $('.dropdown_open').slideToggle();
+    })
+    $('body').on('click', function (e) {
+        $('.dropdown_open').slideUp();
     })
     
     
