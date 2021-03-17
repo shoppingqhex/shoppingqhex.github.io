@@ -34,7 +34,8 @@ let data = [{
 const list = document.querySelector(".ticketCard-area");
 const areaSelect = document.querySelector(".regionSearch");
 const searchResult = document.querySelector("#searchResult-text");
-let searchTotal = data.length;
+let newArr = [];
+let searchNum;
 searchResult.textContent = `本次搜尋共 ${searchTotal} 筆資料`;
 const ticketName = document.querySelector("#ticketName");
 const ticketImgUrl = document.querySelector("#ticketImgUrl");
@@ -53,15 +54,19 @@ const inputContent = {
   "套票組數": ticketNum,
   "套票星級": ticketRate,
   "套票描述": ticketDescription,
-
 }
-// const inputArr = [ticketName, ticketImgUrl, ticketRegion, ticketDescription, ticketNum, ticketPrice, ticketRate];
 
+//搜尋次數
+function searchTotal(arr){
+    searchNum = arr.length;
+    searchResult.textContent = `本次搜尋共 ${searchNum} 筆資料`;
+}
+searchTotal(data);
 
-//init
-function init() {
+// init，將data資料渲染到介面上
+function init(arr) {
   let str = "";
-  data.forEach(item => {
+  arr.forEach(item => {
     str +=
       `<li class="ticketCard">
           <div class="ticketCard-img">
@@ -91,82 +96,26 @@ function init() {
             </div>
           </div>
         </li>`;
+    
   })
   list.innerHTML = str;
 }
-init();
+init(data);
+
 
 //監聽地區
 areaSelect.addEventListener('change', function (e) {
-  let str = "";
-  searchTotal = 0;
   data.forEach(item => {
     if (areaSelect.value === "全部地區") {
-      str +=
-        `<li class="ticketCard">
-          <div class="ticketCard-img">
-            <a href="#">
-              <img src="${item.imgUrl}" alt="">
-            </a>
-            <div class="ticketCard-region">${item.area}</div>
-            <div class="ticketCard-rank">${item.rate}</div>
-          </div>
-          <div class="ticketCard-content">
-            <div>
-              <h3>
-                <a href="#" class="ticketCard-name">${item.name}</a>
-              </h3>
-              <p class="ticketCard-description">
-              ${item.description}
-              </p>
-            </div>
-            <div class="ticketCard-info">
-              <p class="ticketCard-num">
-                <span><i class="fas fa-exclamation-circle"></i></span>
-                剩下最後 <span id="ticketCard-num"> ${item.group} </span> 組
-              </p>
-              <p class="ticketCard-price">
-                TWD <span id="ticketCard-price">$${item.price}</span>
-              </p>
-            </div>
-          </div>
-        </li>`;
-      searchTotal++;
+        newArr.push(item);
+        init(newArr);
     } else if (areaSelect.value === item.area) {
-      str +=
-        `<li class="ticketCard">
-          <div class="ticketCard-img">
-            <a href="#">
-              <img src="${item.imgUrl}" alt="">
-            </a>
-            <div class="ticketCard-region">${item.area}</div>
-            <div class="ticketCard-rank">${item.rate}</div>
-          </div>
-          <div class="ticketCard-content">
-            <div>
-              <h3>
-                <a href="#" class="ticketCard-name">${item.name}</a>
-              </h3>
-              <p class="ticketCard-description">
-              ${item.description}
-              </p>
-            </div>
-            <div class="ticketCard-info">
-              <p class="ticketCard-num">
-                <span><i class="fas fa-exclamation-circle"></i></span>
-                剩下最後 <span id="ticketCard-num"> ${item.group} </span> 組
-              </p>
-              <p class="ticketCard-price">
-                TWD <span id="ticketCard-price">$${item.price}</span>
-              </p>
-            </div>
-          </div>
-        </li>`;
-      searchTotal++;
+        newArr.push(item);
+        init(newArr);
     }
   })
-  list.innerHTML = str;
-  searchResult.textContent = `本次搜尋共 ${searchTotal} 筆資料`;
+  searchTotal(newArr);
+  newArr = [];
 })
 
 //新增資料
@@ -182,16 +131,12 @@ function addData() {
   obj.price = parseInt(ticketPrice.value);
   obj.rate = parseInt(ticketRate.value);
   data.push(obj);
+  init(data);
+  searchTotal(data);
 }
 
 btn.addEventListener('click', function (e) {
   //確保欄位不能空白
-  // Object.keys(inputContent).forEach(key => {
-  //   console.log(key);
-  //   if (inputContent[key].value === "") {
-  //     alert(`${key}欄位不可空白`);
-  //   }
-  // })
   for (let i = 0; i < Object.keys(inputContent).length; i++) {
     let newArr = Object.keys(inputContent);
     // console.log(inputContent[newArr[i]].value);
@@ -205,10 +150,8 @@ btn.addEventListener('click', function (e) {
     return;
   }
   addData();
-  init();
-  // inputArr.forEach(item => {
-  //   item.value = "";
-  // })
+  
+  
   Object.values(inputContent).forEach(item => {
     item.value = "";
   })
