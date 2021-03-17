@@ -36,7 +36,6 @@ const areaSelect = document.querySelector(".regionSearch");
 const searchResult = document.querySelector("#searchResult-text");
 let newArr = [];
 let searchNum;
-searchResult.textContent = `本次搜尋共 ${searchTotal} 筆資料`;
 const ticketName = document.querySelector("#ticketName");
 const ticketImgUrl = document.querySelector("#ticketImgUrl");
 const ticketRegion = document.querySelector("#ticketRegion");
