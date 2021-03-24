@@ -1,0 +1,39 @@
+h2 {
+  color: #fff;
+  background-color: #2BBD7E;
+  margin-bottom: 20px;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+table th {
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+}
+
+table td {
+  text-align: center;
+  padding: 5px 0;
+}
+
+table tbody > tr:hover {
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+a:hover {
+  color: #2BBD7E;
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.css.map */
