@@ -227,16 +227,24 @@
     }
   }
   
-  .search-area {
+  .search-area, #chart {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    max-width: 920px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 50px 0;
+  }
+  .search-area{
+    width: 60%;
+  }
+  #chart{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    width: 40%;
   }
   
   .search-area p {
@@ -256,7 +264,7 @@
   }
   
   .regionSearch {
-    width: 27.5%;
+    width: 55%;
     min-height: 38px;
     text-indent: 0.5rem;
     color: #818A91;
@@ -440,4 +448,11 @@
     .cantFind-area {
       margin-top: 0px;
     }
+  }
+
+  .topzone{
+    display: flex;
+    justify-content: space-between;
+    max-width: 920px;
+    margin: 0 auto;
   }
