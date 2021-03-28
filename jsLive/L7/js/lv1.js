@@ -35,6 +35,10 @@ function renderC3() {
   // 將 newData 丟入 c3 產生器
   const chart = c3.generate({
     bindto: "#chart",
+    size: {
+      height: 240,
+      width: 480
+    },
     data: {
       columns: newData,
       type: 'donut',
