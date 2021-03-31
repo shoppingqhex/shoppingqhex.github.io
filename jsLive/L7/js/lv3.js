@@ -90,10 +90,10 @@ function renderC3(arr) {
   // totalObj 會變成 {高雄: 2, 台北: 1, 台中: 2}
   let totalObj = {};
   arr.forEach(item => {
-    if(totalObj[item.area] === undefined){
-      totalObj[item.area] = 1 ;
-    }else{
-      totalObj[item.area] += 1 ;
+    if (totalObj[item.area] === undefined) {
+      totalObj[item.area] = 1;
+    } else {
+      totalObj[item.area] += 1;
     }
   })
 
@@ -101,7 +101,7 @@ function renderC3(arr) {
   let newData = [];
   let area = Object.keys(totalObj);
   // area output ["高雄","台北","台中"]
-  area.forEach(item =>{
+  area.forEach(item => {
     let arr = [];
     arr.push(item);
     arr.push(totalObj[item]);
@@ -123,7 +123,11 @@ function renderC3(arr) {
       type: 'donut',
     },
     donut: {
-      title: "套票地區比重"
+      title: "套票地區比重",
+      label: {
+        show: false, 
+      },
+      width: 25, 
     }
   });
 }
@@ -153,7 +157,7 @@ areaSelect.addEventListener('change', function (e) {
   data.forEach(item => {
     if (areaSelect.value === "全部地區") {
       newArr.push(item);
-      
+
     } else if (areaSelect.value === item.area) {
       newArr.push(item);
     }
