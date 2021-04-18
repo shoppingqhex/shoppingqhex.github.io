@@ -1,5 +1,4 @@
 //DOM
-const apiUrl = "https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer";
 const prodList = document.querySelector(".productWrap");
 const prodSelect = document.querySelector(".productSelect");
 const cartList = document.querySelector(".shoppingCart-table");
@@ -9,13 +8,15 @@ const customerEmail = document.querySelector("#customerEmail");
 const customerAddress = document.querySelector("#customerAddress");
 const tradeWay = document.querySelector("#tradeWay");
 const orderBtn = document.querySelector(".orderInfo-btn");
-let isFilled = false;
+
 
 //var 
+const apiUrl = "https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer";
 const api_path = "shoppingq";
 let prodData = [];
 let prodSelectedData = [];
 let cartData = [];
+let isFilled = false;
 
 //init
 function init() {
@@ -142,17 +143,19 @@ function addCart(e) {
 }
 function addCartItem(id) {
     let cartQty = 1;
+    cartData.forEach(item => {
+        if (item.product.id === id) {
+            cartQty = item.quantity += 1;
+        }
+    })
     let data = {
         "data": {
             "productId": id,
             "quantity": cartQty
         }
     }
-    cartData.forEach(item => {
-        if (item.product.id === id) {
-            cartQty = item.quantity += 1;
-        }
-    })
+    
+    
     axios.post(`${apiUrl}/${api_path}/carts`, data)
         .then((rsp) => {
             swal("成功加入購物車", "歡迎您繼續選購", "success" );
