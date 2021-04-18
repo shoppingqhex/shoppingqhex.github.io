@@ -157,7 +157,7 @@ function delOrder(id){
 //刪除全部訂單
 delAllBtn.addEventListener("click",delAllOrder);
 function delAllOrder(){
-    axios.delete(`${apiUrl}/${api_path}/orders}`, {
+    axios.delete(`${apiUrl}/${api_path}/orders`, {
         headers: {
             authorization: token,
         }
