@@ -162,22 +162,22 @@ function addCart(e) {
         let prodId = e.target.dataset.id;
         let prodNum = e.target.dataset.num;
         addCartItem(prodId, prodNum);
-        console.log()
-        e.target.previousElementSibling.value = 1
+        e.target.previousElementSibling.value = 1;
+        e.target.dataset.num = 1
     };
 }
 
 function addCartItem(id, num) {
-    // let cartQty = 1;
-    // cartData.forEach(item => {
-    //     if (item.product.id === id) {
-    //         cartQty = item.quantity += 1;
-    //     }
-    // })
+    let cartQty = parseInt(num);
+    cartData.forEach(item => {
+        if (item.product.id === id) {
+            cartQty = item.quantity += parseInt(num);
+        }
+    })
     let data = {
         "data": {
             "productId": id,
-            "quantity": parseInt(num)
+            "quantity": cartQty
         }
     }
 

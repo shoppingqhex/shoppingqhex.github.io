@@ -24,13 +24,19 @@ function getOrderList() {
         .then((rsp) => {
             orderData = rsp.data.orders;
             console.log(rsp.data.orders);
-            console.log(rsp);
-            renderOrderList(orderData);
+            sortedOrderData(orderData);
             renderC3();
         })
         .catch(function (error) {
             console.log(error);
         })
+}
+//排列訂單
+function sortedOrderData(arr){
+    orderData = orderData.sort(function (a,b) {
+        return b.createdAt - a.createdAt;
+    })
+    renderOrderList(orderData);
 }
 //渲染orderList
 function renderOrderList(arr) {
@@ -50,7 +56,9 @@ function renderOrderList(arr) {
         arr.forEach(item => {
             //組時間戳字串
             let timeStamp = new Date( item.createdAt *1000);
-            let orderTime = `${timeStamp.getFullYear()}/${timeStamp.getMonth()+1}/${timeStamp.getDate()}`;
+            // let orderTime = `${timeStamp.getFullYear()}/${timeStamp.getMonth()+1}/${timeStamp.getDate()}`;
+            // let orderTime = timeStamp.toLocaleDateString();
+            let orderTime = timeStamp.toLocaleString();
             //訂單品項字串
             let prodStr = "";
             item.products.forEach(prodItem => {
@@ -153,10 +161,9 @@ function delOrder(id){
     })
 }
 
-
 //刪除全部訂單
 delAllBtn.addEventListener("click",delAllOrder);
-function delAllOrder(){
+function delAllOrder(){ 
     axios.delete(`${apiUrl}/${api_path}/orders`, {
         headers: {
             authorization: token,
@@ -176,13 +183,14 @@ function renderC3(){
     let obj = {};
     orderData.forEach(item =>{
         item.products.forEach(prodItem =>{
-            if(prodItem.category === undefined){
+            if(obj[prodItem.category] === undefined){
                 obj[prodItem.category] = prodItem.price * prodItem.quantity;
             }else{
-                obj[prodItem.category] = prodItem.price * prodItem.quantity;
+                obj[prodItem.category] += prodItem.price * prodItem.quantity;
             }
         })
     })
+    console.log(obj)
     let catAry= Object.keys(obj);
     let newData = [];
     catAry.forEach(item =>{
