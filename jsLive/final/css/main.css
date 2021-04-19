@@ -834,3 +834,29 @@ body {
   display: none;
 }
 /*# sourceMappingURL=all.css.map */
+
+.addCartGroup{
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  
+  margin-bottom: 8px;
+}
+
+.addCartNum{
+  width: 20%;
+  height: 20px;
+  margin: 0 16px;
+}
+#addCardBtn{
+  width: 80%;
+  margin-bottom: 0;
+}
+
+.cartAmt{
+  width: 25px;
+  text-align: center;
+  background-color: #000000;
+  color: #fff;
+  border: 0;
+}

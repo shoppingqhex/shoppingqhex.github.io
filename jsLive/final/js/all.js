@@ -9,7 +9,6 @@ const customerAddress = document.querySelector("#customerAddress");
 const tradeWay = document.querySelector("#tradeWay");
 const orderBtn = document.querySelector(".orderInfo-btn");
 
-
 //var 
 const apiUrl = "https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer";
 const api_path = "shoppingq";
@@ -44,7 +43,22 @@ function renderProdList(arr) {
         str += `<li class="productCard">
         <h4 class="productType">新品</h4>
         <img src="${item.images}" alt="">
-        <a href="#" id="addCardBtn" data-id="${item.id}">加入購物車</a>
+        <div class="addCartGroup">
+            <select name="" class="addCartNum">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <a href="#" id="addCardBtn" data-id="${item.id}" data-num ="1">加入購物車</a>
+        </div>
+        
         <h3>${item.title}</h3>
         <del class="originPrice">NT$${item.origin_price}</del>
         <p class="nowPrice">NT$${item.price}</p>
@@ -73,11 +87,13 @@ function getCartList() {
         .then((rsp) => {
             cartData = rsp.data.carts;
             renderCartList(cartData);
+            console.log(cartData);
         })
         .catch(function (error) {
             console.log(error);
         })
 }
+
 function renderCartList(arr) {
     let totalPrice = 0;
     let str =
@@ -100,7 +116,7 @@ function renderCartList(arr) {
                     </div>
                 </td>
                 <td>NT$${item.product.price}</td>
-                <td>${item.quantity}</td>
+                <td><input type="text" class="cartAmt" value="${item.quantity}" data-id="${item.id}" ></td>
                 <td>NT$${parseInt(item.product.price) * parseInt(item.quantity)}</td>
                 <td class="discardBtn">
                     <a href="#" class="material-icons" data-action="removeItem" data-id="${item.id}">
@@ -132,39 +148,93 @@ function renderCartList(arr) {
 }
 
 //加入購物車列表
+prodList.addEventListener("change", function (e) {
+    if (e.target.getAttribute("class") === "addCartNum") {
+        let prodNum = e.target.value;
+        e.target.nextElementSibling.dataset.num = prodNum;
+    };
+});
 prodList.addEventListener("click", addCart);
+
 function addCart(e) {
     e.preventDefault();
-    if (e.target.getAttribute("id") !== "addCardBtn") {
-        return
+    if (e.target.getAttribute("id") === "addCardBtn") {
+        let prodId = e.target.dataset.id;
+        let prodNum = e.target.dataset.num;
+        addCartItem(prodId, prodNum);
+        console.log()
+        e.target.previousElementSibling.value = 1
     };
-    let prodId = e.target.dataset.id;
-    addCartItem(prodId);
 }
-function addCartItem(id) {
-    let cartQty = 1;
-    cartData.forEach(item => {
-        if (item.product.id === id) {
-            cartQty = item.quantity += 1;
-        }
-    })
+
+function addCartItem(id, num) {
+    // let cartQty = 1;
+    // cartData.forEach(item => {
+    //     if (item.product.id === id) {
+    //         cartQty = item.quantity += 1;
+    //     }
+    // })
     let data = {
         "data": {
             "productId": id,
-            "quantity": cartQty
+            "quantity": parseInt(num)
         }
     }
-    
-    
+
     axios.post(`${apiUrl}/${api_path}/carts`, data)
         .then((rsp) => {
-            swal("成功加入購物車", "歡迎您繼續選購", "success" );
+            swal("成功加入購物車", "歡迎您繼續選購", "success");
             cartData = rsp.data.carts;
             renderCartList(cartData);
         })
         .catch(function (error) {
             console.log(error);
         })
+}
+//更改購物車數量
+cartList.addEventListener("change", function (e) {
+    e.preventDefault();
+    if (e.target.getAttribute("class") !== "cartAmt") {
+        return
+    }
+    let changeNum = e.target.value;
+    let cartId = e.target.dataset.id;
+    editCartNum(changeNum, cartId)
+});
+
+function editCartNum(num, id) {
+    if (num > 0) {
+        let data = {
+            "data": {
+                "id": id,
+                "quantity": parseInt(num)
+              }
+        }
+        axios.patch(`${apiUrl}/${api_path}/carts`, data)
+            .then((rsp) => {
+                swal("恭喜您", "成功修改數量", "success");
+                getCartList(cartData);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    }else{
+        let data = {
+            "data": {
+                "id": id,
+                "quantity": 1
+              }
+        }
+        axios.patch(`${apiUrl}/${api_path}/carts`, data)
+            .then((rsp) => {
+                getCartList(cartData);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+        swal("數量錯誤", "數量必須大於1", "error");
+        return;  
+    }
 }
 
 //監控購物車列表點擊行為
@@ -177,30 +247,35 @@ cartList.addEventListener("click", function (e) {
         const cartItemId = e.target.dataset.id;
         removeItem(cartItemId);
     }
-
 });
 //刪除購物車內全部品項
 function removeAll() {
-    axios.delete(`${apiUrl}/${api_path}/carts`)
-        .then((rsp) => {
-            swal(rsp.data.message, "歡迎您繼續選購", "success" );
-            console.log(rsp.status);
-            cartData = rsp.data.carts;
-            renderCartList(cartData);
-        })
-        .catch(function (error) {
-            swal("Error", "購物車已經是清空的狀態", "error" );
-            console.log(error);
-        })
+    if (cartData.length > 0) {
+        axios.delete(`${apiUrl}/${api_path}/carts`)
+            .then((rsp) => {
+                swal(rsp.data.message, "歡迎您繼續選購", "success");
+                console.log(rsp.status);
+                cartData = rsp.data.carts;
+                renderCartList(cartData);
+            })
+            .catch(function (error) {
+
+                console.log(error);
+            })
+    } else {
+        swal("Error", "購物車已經是清空的狀態", "error");
+        return;
+    }
+
 }
 //刪除購物車內單項品項
 function removeItem(id) {
     axios.delete(`${apiUrl}/${api_path}/carts/${id}`)
         .then((rsp) => {
-            if(rsp.data.status === true){
-                swal("成功刪除一筆購物車資料", "歡迎您繼續選購", "success" );
-            }else{
-                swal("Error", rsp.data.message, "error" );
+            if (rsp.data.status === true) {
+                swal("成功刪除一筆購物車資料", "歡迎您繼續選購", "success");
+            } else {
+                swal("Error", rsp.data.message, "error");
             }
             cartData = rsp.data.carts;
             renderCartList(cartData);
@@ -224,6 +299,10 @@ const constraints = {
         format: {
             pattern: "[-0-9]+",
             message: "只能填入數字0-9"
+        },
+        length: {
+            minimum: 8,
+            message: "^請填入多於8個數字"
         }
     },
     "Email": {
@@ -239,7 +318,7 @@ const constraints = {
             message: "是必填欄位"
         },
     },
-}//// message填入^可以消除預設資料
+} //// message填入^可以消除預設資料
 const form = document.querySelector(".orderInfo-form");
 const inputs = document.querySelectorAll(".orderInfo-input");
 inputs.forEach(item => {
@@ -250,7 +329,7 @@ inputs.forEach(item => {
             Object.keys(errors).forEach(item => {
                 document.querySelector(`[data-message ="${item}"]`).textContent = errors[item];
             })
-        }else{
+        } else {
             isFilled = true;
         }
     })
@@ -258,6 +337,7 @@ inputs.forEach(item => {
 
 //送出表單資料
 orderBtn.addEventListener("click", createOrder);
+
 function createOrder(e) {
     e.preventDefault();
     let data = {
@@ -271,24 +351,23 @@ function createOrder(e) {
             }
         }
     }
-    if (cartData.length <= 0){
-        swal("購物車是空的", "請在購物車加入至少一品項", "error" );
+    if (cartData.length <= 0) {
+        swal("購物車是空的", "請在購物車加入至少一品項", "error");
         return;
-    }else if (isFilled !== true){
-        swal("訂購資料不完整", "必填欄位必須填寫且填寫正確", "error" );
+    } else if (isFilled !== true) {
+        swal("訂購資料不完整", "必填欄位必須填寫且填寫正確", "error");
         return;
-    }else{
+    } else {
         axios.post(`${apiUrl}/${api_path}/orders`, data)
-        .then((rsp) => {
-            swal("訂單成功送出", "感謝您選擇WOWOROOM，我們將盡速為您服務", "success" );
-            console.log(rsp);
-            console.log(cartData);
-            getCartList(cartData);
-            form.reset();
-        })
-        .catch(function (error) {
-            console.log(error);
-        })
+            .then((rsp) => {
+                swal("訂單成功送出", "感謝您選擇WOWOROOM，我們將盡速為您服務", "success");
+                console.log(rsp);
+                console.log(cartData);
+                getCartList(cartData);
+                form.reset();
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
     }
 }
-
