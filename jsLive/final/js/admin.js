@@ -26,6 +26,7 @@ function getOrderList() {
             console.log(rsp.data.orders);
             sortedOrderData(orderData);
             renderC3();
+            renderC3_LV2()
         })
         .catch(function (error) {
             console.log(error);
@@ -146,7 +147,6 @@ function changeOrderStatus(status,id){
 }
 //刪除特定訂單
 function delOrder(id){
-    console.log(id);
     axios.delete(`${apiUrl}/${api_path}/orders/${id}`, {
         headers: {
             authorization: token,
@@ -178,7 +178,7 @@ function delAllOrder(){
     })
 }
 
-// 繪製C3圖表
+//繪製C3圖表(LV1)
 function renderC3(){
     let obj = {};
     orderData.forEach(item =>{
@@ -190,7 +190,6 @@ function renderC3(){
             }
         })
     })
-    console.log(obj)
     let catAry= Object.keys(obj);
     let newData = [];
     catAry.forEach(item =>{
@@ -213,3 +212,62 @@ function renderC3(){
     });
 
 }
+
+//繪製C3圖表(LV1)
+function renderC3_LV2(){
+    //資料蒐集
+    let obj = {};
+    orderData.forEach(item =>{
+        item.products.forEach(prodItem =>{
+            if(obj[prodItem.title] === undefined){
+                obj[prodItem.title] = prodItem.price * prodItem.quantity;
+            }else{
+                obj[prodItem.title] += prodItem.price * prodItem.quantity;
+            }
+        })
+    })
+
+    //資料關聯
+    let keysAry = Object.keys(obj);
+    let newData = [];
+    keysAry.forEach(item =>{
+        let ary = [];
+        ary.push(item);
+        ary.push(obj[item]);
+        newData.push(ary);
+    })
+    console.log(newData);
+    
+    //資料排序
+    newData.sort(function(a,b){
+        return b[1]-a[1];
+    })
+
+    //整合成四筆資料
+    let len = newData.length
+    if(len > 3){
+        let otherTotal = 0;
+        newData.forEach((item,i) =>{
+            if(i > 2){
+                otherTotal += newData[i][1];
+            }
+        })
+        newData.splice(3,len-3);
+        newData.push(["其他", otherTotal]);
+        //如果需要的話，可以再次排序
+    }
+
+    //C3圖表
+    let chart = c3.generate({
+        bindto: '#chart_lv2', // HTML 元素綁定
+        data: {
+            type: "pie",
+            columns: newData,
+           
+        },
+        colors: {
+            pattern: ["#DACBFF", "#9D7FEA", "#5434A7", "#301E5F" ]
+        }
+    });
+}
+

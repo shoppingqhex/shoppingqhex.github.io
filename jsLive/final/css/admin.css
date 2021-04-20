@@ -812,3 +812,13 @@ body {
 .text-center{
   text-align: center;
 }
+
+.charts{
+  display: flex;
+}
+.chart-gruop{
+  width: 50%;
+}
+.border-right{
+  border-right: 1px solid #eee;
+}
