@@ -206,14 +206,14 @@ function renderC3(){
             columns: newData,
            
         },
-        colors: {
-            pattern: ["#DACBFF", "#9D7FEA", "#5434A7", "#301E5F" ]
+        color: {
+            pattern: ["#301E5F","#5434A7", "#DACBFF", "#9D7FEA",  ]
         }
     });
 
 }
 
-//繪製C3圖表(LV1)
+//繪製C3圖表(LV2)
 function renderC3_LV2(){
     //資料蒐集
     let obj = {};
@@ -236,7 +236,6 @@ function renderC3_LV2(){
         ary.push(obj[item]);
         newData.push(ary);
     })
-    console.log(newData);
     
     //資料排序
     newData.sort(function(a,b){
@@ -265,8 +264,8 @@ function renderC3_LV2(){
             columns: newData,
            
         },
-        colors: {
-            pattern: ["#DACBFF", "#9D7FEA", "#5434A7", "#301E5F" ]
+        color: {
+            pattern: ["#301E5F","#5434A7", "#DACBFF", "#9D7FEA",  ]
         }
     });
 }
