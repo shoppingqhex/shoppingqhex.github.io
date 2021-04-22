@@ -116,7 +116,7 @@ function renderCartList(arr) {
                     </div>
                 </td>
                 <td>NT$${item.product.price}</td>
-                <td><input type="text" class="cartAmt" value="${item.quantity}" data-id="${item.id}" ></td>
+                <td><input type="number" min="1" class="cartAmt" value="${item.quantity}" data-id="${item.id}" ></td>
                 <td>NT$${parseInt(item.product.price) * parseInt(item.quantity)}</td>
                 <td class="discardBtn">
                     <a href="#" class="material-icons" data-action="removeItem" data-id="${item.id}">
@@ -208,7 +208,7 @@ function editCartNum(num, id) {
             "data": {
                 "id": id,
                 "quantity": parseInt(num)
-              }
+            }
         }
         axios.patch(`${apiUrl}/${api_path}/carts`, data)
             .then((rsp) => {
@@ -218,12 +218,12 @@ function editCartNum(num, id) {
             .catch(function (error) {
                 console.log(error);
             })
-    }else{
+    } else {
         let data = {
             "data": {
                 "id": id,
                 "quantity": 1
-              }
+            }
         }
         axios.patch(`${apiUrl}/${api_path}/carts`, data)
             .then((rsp) => {
@@ -233,9 +233,10 @@ function editCartNum(num, id) {
                 console.log(error);
             })
         swal("數量錯誤", "數量必須大於1", "error");
-        return;  
+        return;
     }
 }
+
 
 //監控購物車列表點擊行為
 cartList.addEventListener("click", function (e) {

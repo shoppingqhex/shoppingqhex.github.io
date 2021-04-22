@@ -854,7 +854,8 @@ body {
 }
 
 .cartAmt{
-  width: 25px;
+  width: 30px;
+  height: 25px;
   text-align: center;
   background-color: #000000;
   color: #fff;

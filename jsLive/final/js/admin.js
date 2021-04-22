@@ -6,7 +6,9 @@ let orderData = []
 
 //DOM
 const delAllBtn = document.querySelector(".discardAllBtn");
-const orderList = document.querySelector(".orderPage-table");
+const orderListWrap = document.querySelector(".orderPage-table");
+const orderListContent = document.querySelector(".orderListContent");
+console.log(orderListWrap);
 
 //init
 function init() {
@@ -41,18 +43,7 @@ function sortedOrderData(arr){
 }
 //渲染orderList
 function renderOrderList(arr) {
-    let str = `<thead>
-    <tr>
-        <th width="10%">訂單編號</th>
-        <th width="10%">聯絡人</th>
-        <th width="10%">聯絡地址</th>
-        <th width="15%">電子郵件</th>
-        <th width="25%">訂單品項</th>
-        <th width="15%">訂單日期</th>
-        <th width="10%">訂單狀態</th>
-        <th width="5%">操作</th>
-    </tr>
-    </thead>`
+    let str = "";
     if (arr.length > 0) {
         arr.forEach(item => {
             //組時間戳字串
@@ -101,12 +92,12 @@ function renderOrderList(arr) {
     <p class="text-center">訂單目前沒有資料</p>
     </td> </tr>`
     }
-    orderList.innerHTML = str;
+    orderListContent.innerHTML = str;
 }
 
 
 //監聽orderList行為
-orderList.addEventListener("click",function(e){
+orderListWrap.addEventListener("click",function(e){
     e.preventDefault();
     let targetAction = e.target.dataset.action;
     let orderId = e.target.getAttribute("data-id");
@@ -139,7 +130,8 @@ function changeOrderStatus(status,id){
     })
     .then((rsp) => {
         swal("恭喜您", "訂單狀態修改成功", "success" );
-        getOrderList(orderData);
+        orderData = rsp.data.orders;
+        renderOrderList(orderData);
     })
     .catch(function (error) {
         console.log(error);
@@ -164,6 +156,10 @@ function delOrder(id){
 //刪除全部訂單
 delAllBtn.addEventListener("click",delAllOrder);
 function delAllOrder(){ 
+    if (orderData.length === 0){
+        swal("很抱歉", "訂單目前沒有資料", "error" );
+        return;
+    }
     axios.delete(`${apiUrl}/${api_path}/orders`, {
         headers: {
             authorization: token,
