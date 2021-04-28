@@ -213,7 +213,8 @@ function editCartNum(num, id) {
         axios.patch(`${apiUrl}/${api_path}/carts`, data)
             .then((rsp) => {
                 swal("恭喜您", "成功修改數量", "success");
-                getCartList(cartData);
+                cartData = rsp.data.carts;
+                renderCartList(cartData);
             })
             .catch(function (error) {
                 console.log(error);
@@ -227,7 +228,8 @@ function editCartNum(num, id) {
         }
         axios.patch(`${apiUrl}/${api_path}/carts`, data)
             .then((rsp) => {
-                getCartList(cartData);
+                cartData = rsp.data.carts;
+                renderCartList(cartData);
             })
             .catch(function (error) {
                 console.log(error);

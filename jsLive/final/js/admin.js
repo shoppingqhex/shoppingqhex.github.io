@@ -2,13 +2,13 @@
 const apiUrl = "https://hexschoollivejs.herokuapp.com/api/livejs/v1/admin";
 const api_path = "shoppingq";
 const token = "r3l0Qj39y7ZWxErj8pZfTfGo3fQ2";
+axios.defaults.headers.common['Authorization'] = token;  //預設axios headers
 let orderData = []
 
 //DOM
 const delAllBtn = document.querySelector(".discardAllBtn");
 const orderListWrap = document.querySelector(".orderPage-table");
 const orderListContent = document.querySelector(".orderListContent");
-console.log(orderListWrap);
 
 //init
 function init() {
@@ -18,14 +18,10 @@ init();
 
 //取得訂單列表
 function getOrderList() {
-    axios.get(`${apiUrl}/${api_path}/orders`, {
-            headers: {
-                authorization: token,
-            }
-        })
+    axios.get(`${apiUrl}/${api_path}/orders`)
         .then((rsp) => {
             orderData = rsp.data.orders;
-            console.log(rsp.data.orders);
+            // console.log(rsp.data.orders);
             sortedOrderData(orderData);
             renderC3();
             renderC3_LV2()
@@ -123,11 +119,7 @@ function changeOrderStatus(status,id){
           "id": id,
           "paid": newStatus
         }
-      }, {
-        headers: {
-            authorization: token,
-        }
-    })
+      })
     .then((rsp) => {
         swal("恭喜您", "訂單狀態修改成功", "success" );
         orderData = rsp.data.orders;
@@ -139,11 +131,7 @@ function changeOrderStatus(status,id){
 }
 //刪除特定訂單
 function delOrder(id){
-    axios.delete(`${apiUrl}/${api_path}/orders/${id}`, {
-        headers: {
-            authorization: token,
-        }
-    })
+    axios.delete(`${apiUrl}/${api_path}/orders/${id}`)
     .then((rsp) => {
         swal("恭喜您", "成功刪除一筆訂單", "success" );
         getOrderList(orderData);
@@ -160,11 +148,7 @@ function delAllOrder(){
         swal("很抱歉", "訂單目前沒有資料", "error" );
         return;
     }
-    axios.delete(`${apiUrl}/${api_path}/orders`, {
-        headers: {
-            authorization: token,
-        }
-    })
+    axios.delete(`${apiUrl}/${api_path}/orders`)
     .then((rsp) => {
         swal("恭喜您", "成功刪除全部訂單", "success" );
         getOrderList(orderData);
