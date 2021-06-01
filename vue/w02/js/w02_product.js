@@ -11,7 +11,6 @@ const app = {
             .then((res) => {
                 // console.log(res.data.products);
                 this.data.products = res.data.products;
-                // console.log(this.data.products);
                 this.render();
             })
     },

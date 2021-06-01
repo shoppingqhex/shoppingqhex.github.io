@@ -23,7 +23,7 @@ function login() {
             if(res.data.success){
                 const {token , expired} = res.data;
                 document.cookie = `hexToken=${token}; expires=${new Date(expired)}; path=/`;
-                window.location = 'w02_produvt.html'
+                window.location = 'w02_product.html'
             }else {
                 alert(res.data.message)
             }  
