@@ -37,7 +37,8 @@ const app = {
         </tr>`
         });
         prodList.innerHTML = str;
-        productCount.textContent = this.data.products.length;
+        prodCount.textContent = this.data.products.length;
+        // productCount.textContent = this.data.products.length;
 
         const delBtn = document.querySelectorAll(".deleteBtn");
         delBtn.forEach((item) => {
