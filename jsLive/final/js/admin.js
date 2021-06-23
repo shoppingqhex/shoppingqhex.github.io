@@ -1,5 +1,5 @@
 //var
-const apiUrl = "https://hexschoollivejs.herokuapp.com/api/livejs/v1/admin";
+const apiUrl = "https://livejs-api.hexschool.io/api/livejs/v1/admin";
 const api_path = "shoppingq";
 const token = "r3l0Qj39y7ZWxErj8pZfTfGo3fQ2";
 axios.defaults.headers.common['Authorization'] = token;  //預設axios headers

@@ -10,7 +10,7 @@ const tradeWay = document.querySelector("#tradeWay");
 const orderBtn = document.querySelector(".orderInfo-btn");
 
 //var 
-const apiUrl = "https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer";
+const apiUrl = "https://livejs-api.hexschool.io/api/livejs/v1/customer";
 const api_path = "shoppingq";
 let prodData = [];
 let prodSelectedData = [];
