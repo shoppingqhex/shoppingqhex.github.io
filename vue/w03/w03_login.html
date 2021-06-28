@@ -21,15 +21,17 @@
             <form id="form" class="form-signin">
               <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="username"
-                  placeholder="name@example.com" required autofocus>
+                  placeholder="name@example.com" required autofocus
+                  v-model="emailAdd">
                 <label for="username">Email address</label>
               </div>
               <div class="form-floating">
                 <input type="password" class="form-control" id="password"
-                  placeholder="Password" required>
+                  placeholder="Password" required v-model="pwd">
                 <label for="password">Password</label>
               </div>
-              <button class="btn btn-lg btn-primary w-100 mt-3" id="loginBtn" type="button">
+              <button class="btn btn-lg btn-primary w-100 mt-3" id="loginBtn" type="button"
+              @click="login">
                 登入
               </button>
             </form>
@@ -50,7 +52,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
       integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
       crossorigin="anonymous"></script>
-    <script src="js/w03_login.js"></script>
+    <script src="js/w03_login.js" type="module"></script>
   </body>
 
 </html>

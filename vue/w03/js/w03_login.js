@@ -1,31 +1,46 @@
-const url = 'https://vue3-course-api.hexschool.io'; // 站點
-const path = 'shoppingq'; // 個人 API Path
+import {
+    createApp
+} from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.1.1/vue.esm-browser.min.js';
 
 //Dom
-const usernameInput = document.querySelector("#username");
-const passwordInput = document.querySelector("#password");
-const loginBtn = document.querySelector("#loginBtn")
 
-//event
-loginBtn.addEventListener("click", login);
 
-function login() {
-    const username = usernameInput.value;
-    const password = passwordInput.value;
-    const data = {
-        username,
-        password
-    };
+const app = createApp({
+    data() {
+        return {
+            apiUrl: 'https://vue3-course-api.hexschool.io', // 站點
+            apiPath: 'shoppingq', // 個人 API Path
+            emailAdd:"",
+            pwd:""
+        }
+    },
+    methods: {
+        login() {
+            const username = this.emailAdd;
+            const password = this.pwd;
+            const data = {
+                username,
+                password
+            };
 
-    axios.post(`${url}/admin/signin`, data)
-        .then((res) => {
-            console.log(res);
-            if(res.data.success){
-                const {token , expired} = res.data;
-                document.cookie = `hexToken=${token}; expires=${new Date(expired)}; path=/`;
-                window.location = 'w03_product.html'
-            }else {
-                alert(res.data.message)
-            }  
-        })
-}
+            axios.post(`${this.apiUrl}/admin/signin`, data)
+                .then((res) => {
+                    console.log(res);
+                    if (res.data.success) {
+                        const {
+                            token,
+                            expired
+                        } = res.data;
+                        document.cookie = `hexToken=${token}; expires=${new Date(expired)}; path=/`;
+                        window.location = 'w03_product.html'
+                    } else {
+                        alert(res.data.message)
+                    }
+                })
+        }
+    },
+    created() {
+    }
+});
+
+app.mount("#app");
