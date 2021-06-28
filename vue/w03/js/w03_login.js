@@ -27,6 +27,7 @@ const app = createApp({
                 .then((res) => {
                     console.log(res);
                     if (res.data.success) {
+                        alert("恭喜您，登入成功")
                         const {
                             token,
                             expired
