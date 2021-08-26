@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS攻略最終關卡 todolist 待辦事項</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>TODO LIST</h1>
+        <div class="card input">
+            <input type="text" class="txt" placeholder="請輸入待辦事項" />
+            <a href="#" class="addBtn">+</a>
+        </div>
+        <div class="card card_list">
+            <ul class="tab">
+                <li class="active whole">全部</li>
+                <li class="pending">待完成</li>
+                <li class="done">已完成</li>
+            </ul>
+            <div class="cart_content">
+                <ul class="list active">
+                    <li>
+                        <label class="checkbox" for="">
+                            <input type="checkbox"/>
+                            <span>把冰箱發霉的檸檬拿去丟</span>
+                        </label>
+                        <a href="#" class="delete"></a>
+                    </li>
+                </ul>
+                <div class="list_footer">
+                    <p class="sum">5個待完成項目</p>
+                    <a href="#" class="deleteAll">清除已完成項目</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
