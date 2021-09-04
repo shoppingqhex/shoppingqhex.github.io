@@ -1,200 +1,132 @@
 let data = JSON.parse(localStorage.getItem('allData')) || [];
-let doneCount = JSON.parse(localStorage.getItem('doneCount')) || 0;
-let pendingCount = data.length ;
+let tabStatus = "whole";
 
 //DOM
 const txt = document.querySelector('.txt');
 const addBtn = document.querySelector('.addBtn');
 const list = document.querySelector('.list');
-const tab = document.querySelector('.tab');
+const tabs = document.querySelector('.tab');
+const tab = document.querySelectorAll(".tab li");
 const sum = document.querySelector('.sum')
 const deleteAll = document.querySelector('.deleteAll');
 
-//清除tab空白節點
-const nodes = tab.childNodes;
-nodes.forEach(node => {
-    if (node.nodeType == 3 && !/\S/.test(node.nodeValue)) {
-        node.parentNode.removeChild(node);
-    }
-})
-
-
-//函式
-//初始化
-function init() {
-    render();
-}
-init()
-
 //渲染畫面
-function render(){
-    renderList();
-    summary()
-}
-function renderList() {
+function renderList(arr) {
     let str = "";
-    data.forEach((item, i) => {
-        if (item.isChecked) {
-            str += `<li  data-status="${item.status}">
+    arr.forEach((item,i) => {
+        str +=`<li data-id="${item.id}"" data-index="${i}">
         <label class="checkbox" for="">
-            <input type="checkbox" data-index="${i}"  checked />
-            <span>${item.key}</span>
+            <input type="checkbox" ${item.checked} />
+            <span>${item.content}</span>
         </label>
-        <a href="#" class="delete" data-index="${i}"></a>
-    </li>`;
-        } else {
-            str += `<li  data-status="${item.status}">
-        <label class="checkbox" for="">
-            <input type="checkbox" data-index="${i}" />
-            <span>${item.key}</span>
-        </label>
-        <a href="#" class="delete" data-index="${i}"></a>
-    </li>`;
-        }
+        <a href="#" class="delete"></a>
+    </li>`
     })
     list.innerHTML = str;
 }
-function summary(){
-    let str = '';
-    if (tab.childNodes[0].classList.contains('active')) {
-        str = `總共有${data.length}個項目`;
-        if(data.length === 0){
-            list.innerHTML = `<p class="message">目前沒有項目</p>`
-        }
-    } else if (tab.childNodes[1].classList.contains('active')) {
-        str = `總共有${pendingCount}個待完成項目`;
-        if(pendingCount === 0){
-            list.innerHTML = `<p class="message">目前沒有待完成項目</p>`
-        }
-    } else if (tab.childNodes[2].classList.contains('active')) {
-        str = `總共有${doneCount}個已完成項目`;
-        if(doneCount === 0){
-            list.innerHTML = `<p class="message">目前沒有已完成項目</p>`
-        }
-    }
-    sum.textContent = str;
+//初始化
+function init() {
+    updateList()
 }
+init()
 
-//移除active
-function removeActive() {
-    const tabs = document.querySelectorAll(".tab li");
-    tabs.forEach(item => {
-        item.classList.remove('active');
-    })
-}
-//隱藏pending或done項目
-function hideItem() {
-    //選定tab節點
-    nodes.forEach(node => {
-        //當tab在某頁時，顯示或隱藏項目
-        const items = list.childNodes;
-        if (node.classList.contains('whole') && node.classList.contains('active')) {
-            items.forEach(item => {
-                item.classList.remove('hide');
-            })
-        } else if (node.classList.contains('pending') && node.classList.contains('active')) {
-            items.forEach(item => {
-                item.classList.remove('hide');
-                if (item.getAttribute('data-status') === "done") {
-                    item.setAttribute("class", "hide")
-                }
-            })
-        } else if (node.classList.contains('done') && node.classList.contains('active')) {
-            items.forEach(item => {
-                item.classList.remove('hide');
-                if (item.getAttribute('data-status') === "pending") {
-                    item.setAttribute("class", "hide")
-                }
-            })
-        }
-    })
-}
-
-//監聽
-//新增資料
-addBtn.addEventListener('click', function () {
-    if(txt.value === "") {
+//1.新增資料
+addBtn.addEventListener('click', addItem);
+function addItem() {
+    if(txt.value.trim() === "") {
         alert('請輸入待辦內容');
         return
     }else{
         const obj = {};
-        obj.key = txt.value;
-        obj.isChecked = false;
-        obj.status = "pending";
+        obj.content = txt.value.trim();
+        obj.checked = "";
+        obj.id = new Date().getTime();
         data.push(obj);
-        pendingCount = data.length ;
         localStorage.setItem('allData', JSON.stringify(data));
-        if(tab.lastChild.classList.contains('active')){
-            removeActive()
-            tab.firstChild.classList.add('active');
+        //優化，在已完成頁面新增事項時直接跳回全部頁面
+        if(tabStatus === "done"){
+            tab.forEach(item => {
+                item.classList.remove('active');
+            });
+            tab[0].classList.add('active');
+            tabStatus = "whole"
         }
-        render();
-        hideItem();
+        updateList();
         txt.value = ""
     }
+}
+//1.1鍵盤事件
+txt.addEventListener('keypress', function(e){
+    if(e.key === "Enter"){
+        addItem()
+    }
 })
 
-//list監聽(checked+刪除資料)
+//2.list監聽(checked+刪除資料)
 list.addEventListener('click', function (e) {
-    const num = e.target.dataset.index;
-
+    const index = e.target.closest('li').dataset.index;
+    const id = e.target.closest('li').dataset.id;
     //checkbox點擊
     if (e.target.localName === "input") {
-        //將checked寫進data
-        data[num].isChecked = e.target.checked;
-        //將狀態寫進data
-        if (e.target.checked) {
-            data[num].status = "done";
-            doneCount ++;
-            pendingCount = data.length - doneCount ;
-            localStorage.setItem('doneCount', JSON.stringify(doneCount));
-        } else {
-            data[num].status = "pending";
-            doneCount --;
-            pendingCount = data.length - doneCount ;
-            localStorage.setItem('doneCount', JSON.stringify(doneCount));
-        }
-        localStorage.setItem('allData', JSON.stringify(data));
-        render();
-        //顯示或隱藏項目
-        hideItem();
+        data.forEach((item, index) => {
+            if(item.id == id){
+              if(item.checked === ""){
+                item.checked = "checked"
+              }else{
+                item.checked = ""
+              }
+            }
+        })
     }
-
     //刪除
     if (e.target.getAttribute('class') === 'delete') {
+        e.preventDefault();
         if (confirm('確定要刪除嗎?')) {
-            data.splice(num, 1);
-            localStorage.setItem('allData', JSON.stringify(data));
-            render();
-            hideItem();
+            data= data.filter(item => item.id != id)
         }
     }
+    localStorage.setItem('allData', JSON.stringify(data));
+    updateList();
+    console.log(data);
 })
 
-//標籤換頁
-tab.addEventListener('click', function (e) {
+//3.標籤換頁
+tabs.addEventListener('click', function (e) {
+    //改變分頁狀態
+    tabStatus = e.target.dataset.tab;
     //增減active
-    removeActive();
+    tab.forEach(item => {
+        item.classList.remove('active');
+    });
     e.target.classList.add('active');
-    render();
-    hideItem();
-    console.log(data.length , pendingCount , doneCount);
+    updateList();
 })
+//3.1 隨分頁切換改變list
+function updateList() {
+    let tabData = [];
+    if(tabStatus == 'whole'){
+        tabData = data
+    }else if(tabStatus == 'pending'){
+        tabData = data.filter(item => item.checked === "")
+    }else if(tabStatus == 'done'){
+        tabData = data.filter(item => item.checked === "checked")
+    };
 
+    renderList(tabData);
+    //總計並顯示目前頁面的項目個數
+    let len = tabData.length;
+    sum.textContent = `總共有${len}個項目`
+    if(len === 0){
+        list.innerHTML = `<p class="message">目前沒有資料</p>`
+    }
+}
+
+//4.刪除全部項目
 deleteAll.addEventListener('click', function (e) {
     e.preventDefault();
-    data.forEach((item, i) => {
-        if (item.status === 'done'){
-            data.splice(i, 1);
-        }
-    })
-    doneCount = 0 ;
-    localStorage.setItem('allData', JSON.stringify(data));
-    localStorage.setItem('doneCount', JSON.stringify(doneCount));
-    render();
+    if(confirm('確定要刪除所有已完成項目?')){
+        data = data.filter(item => item.checked==="");
+        localStorage.setItem('allData', JSON.stringify(data));
+    }
+    updateList();
 })
-
-
-
-
-
