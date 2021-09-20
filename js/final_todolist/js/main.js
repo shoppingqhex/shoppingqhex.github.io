@@ -112,13 +112,14 @@ function updateList() {
         tabData = data.filter(item => item.checked === "checked")
     };
 
-    renderList(tabData);
     //總計並顯示目前頁面的項目個數
     let len = tabData.length;
     sum.textContent = `總共有${len}個項目`
     if(len === 0){
-        list.innerHTML = `<p class="message">目前沒有資料</p>`
+        list.innerHTML = `<p class="message">目前沒有資料</p>`;
+        return
     }
+    renderList(tabData);
 }
 
 //4.刪除全部項目
