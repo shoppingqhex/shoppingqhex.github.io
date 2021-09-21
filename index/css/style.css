@@ -124,4 +124,10 @@ h1 {
 .d-none {
   display: none;
 }
+
+.separate {
+  padding-right: 6px;
+  margin-right: 3px;
+  border-right: 1px solid #15795B;
+}
 /*# sourceMappingURL=style.css.map */
